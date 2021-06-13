@@ -1,22 +1,20 @@
-vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" 
+-- vim.cmd('packadd packer.nvim')
+-- vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" 
 
-return require("packer").startup(function(use)
-    -- Packer can manage itself as an optional plugin
-    use "wbthomason/packer.nvim"
-
-    use {"mattn/emmet-vim", opt = true}
-    use {"tpope/vim-commentary", opt = true}
-    use {"vim-airline/vim-airline", opt = true}
-    use {"vimwiki/vimwiki", opt = true}
-    use {"pangloss/vim-javascript", opt = true}
-    use {"plasticboy/vim-markdown", opt = true}
-    use {"ayu-theme/ayu-vim", opt = true}
-    use {"Yggdroot/indentLine", opt = true}
-    use {"jvirtanen/vim-hcl", opt = true}
-    use {"pearofducks/ansible-vim", opt = true}
-    use {"KabbAmine/zeavim.vim", opt = true}
-    use {"jkramer/vim-checkbox", opt = true}
-    use {"nvim-lua/popup.nvim", opt = true}
-    use {"nvim-lua/plenary.nvim", opt = true}
-    use {"nvim-telescope/telescope.nvim", opt = true}
+return require("packer").startup(function()
+    use "mattn/emmet-vim"
+    use "tpope/vim-commentary"
+    use "vim-airline/vim-airline"
+    use "vimwiki/vimwiki"
+    use "pangloss/vim-javascript"
+    use "plasticboy/vim-markdown"
+    use "ayu-theme/ayu-vim"
+    use "Yggdroot/indentLine"
+    use "jvirtanen/vim-hcl"
+    use "pearofducks/ansible-vim"
+    use "KabbAmine/zeavim.vim"
+    use "jkramer/vim-checkbox"
+    use "nvim-lua/popup.nvim"
+    use "nvim-lua/plenary.nvim"
+    use "nvim-telescope/telescope.nvim"
 end)
