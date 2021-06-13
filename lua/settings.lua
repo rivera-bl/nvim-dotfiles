@@ -1,6 +1,8 @@
 vim.cmd('syntax enable')
 
 vim.g.shell = 'shell'
+vim.g.clipboard = 'unnamedplus'
+
 -- vim.wo.colorcolumn = '80'
 -- vim.cmd[[highlight ColorColumn ctermbg=grey]]
 
