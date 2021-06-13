@@ -137,6 +137,11 @@ _G.packer_plugins = {
     needs_bufread = true,
     path = "/home/rvv/.local/share/nvim/site/pack/packer/opt/vim-markdown"
   },
+  vimwiki = {
+    loaded = false,
+    needs_bufread = true,
+    path = "/home/rvv/.local/share/nvim/site/pack/packer/opt/vimwiki"
+  },
   ["zeavim.vim"] = {
     loaded = false,
     needs_bufread = false,

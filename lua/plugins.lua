@@ -5,6 +5,7 @@ return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
 
     use {"mattn/emmet-vim", opt = true}
+    use {"tpope/vim-commentary", opt = true}
     use {"vim-airline/vim-airline", opt = true}
     use {"vimwiki/vimwiki", opt = true}
     use {"pangloss/vim-javascript", opt = true}
