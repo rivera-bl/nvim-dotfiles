@@ -1,5 +1,14 @@
--- vim.cmd('packadd packer.nvim')
--- vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" 
+-- Auto install packer.nvim if not exists
+local fn = vim.fn
+local execute = vim.api.nvim_command
+local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
+
+if fn.empty(fn.glob(install_path)) > 0 then
+  execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
+end
+
+vim.cmd('packadd packer.nvim')
+vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 
 return require("packer").startup(function()
     use "mattn/emmet-vim"
@@ -8,7 +17,7 @@ return require("packer").startup(function()
     use "vimwiki/vimwiki"
     use "pangloss/vim-javascript"
     use "plasticboy/vim-markdown"
-    use "ayu-theme/ayu-vim"
+    -- use "ayu-theme/ayu-vim"
     use "Yggdroot/indentLine"
     use "jvirtanen/vim-hcl"
     use "pearofducks/ansible-vim"
@@ -17,4 +26,7 @@ return require("packer").startup(function()
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
     use "nvim-telescope/telescope.nvim"
+    use "neovim/nvim-lspconfig"
+    -- use "tjdevries/nlua.nvim"
+    use "nvim-lua/completion-nvim"
 end)
