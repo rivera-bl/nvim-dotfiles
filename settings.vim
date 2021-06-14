@@ -36,6 +36,8 @@ filetype plugin on
 let g:go_auto_sameids = 0
 let g:go_auto_info = 0
 
+let g:airline#extensions#tabline#enabled = 0
+
 "Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "Calcurse notes with markdown
