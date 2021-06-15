@@ -1,15 +1,19 @@
-vim.cmd('syntax enable')
+vim.cmd('syntax on')
 
-vim.g.shell = 'shell'
-vim.g.clipboard = 'unnamedplus'
-
--- vim.wo.colorcolumn = '80'
--- vim.cmd[[highlight ColorColumn ctermbg=grey]]
+vim.g.shell = 'zsh'
+vim.o.clipboard = 'unnamedplus'
+vim.bo.smartindent = true
+vim.o.mouse = "a"
+-- the two bellow highlight the current line number
+vim.wo.number = true -- this alone shows linenumbers
+vim.wo.relativenumber = true -- this alone shows linenumbers and relative
+vim.wo.scrolloff = 10
+vim.o.showmode = false
+vim.o.ruler = false
+vim.cmd('filetype plugin on')
 
 -- syntax enable
--- set shell=zsh
 -- set colorcolumn=80
--- set nu relativenumber
 -- set smartcase
 -- set smartindent
 -- set breakindent
@@ -22,9 +26,6 @@ vim.g.clipboard = 'unnamedplus'
 -- set linebreak
 -- set nocompatible
 -- set viminfo=""
--- set clipboard=unnamedplus   "Allows paste to other vim/terms
--- set scrolloff=20            "Adds 20 viewlines below/above cursor
--- set termguicolors
 -- set splitright              "Opens vertical split on the right
 -- set splitbelow              "Opens horizontal split below
 -- set gdefault                "By default match every ocurrence in a line
@@ -33,7 +34,6 @@ vim.g.clipboard = 'unnamedplus'
 -- " set foldlevelstart=1
 -- " set foldclose=all
 -- " set foldopen=all
--- filetype plugin on
 -- 
 -- " let g:coc_global_extensions = [
 -- "     \ 'coc-tsserver',
