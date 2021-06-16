@@ -13,13 +13,20 @@ vim.api.nvim_set_keymap('n',   'O', 'O<esc>i'			   , {noremap = true})
 -- Clear the search Highlight with ESC
 vim.api.nvim_set_keymap( 'n',   '<esc>'    , ':noh<return><esc>', {noremap = true, silent = true})
 
--- nnoremap <esc> :noh<return><esc>
--- Sources init.vim
--- nnoremap <leader>v :source ~/.config/nvim/init.vim <CR>
--- " to not enter insert mode before inserting multiple lines
--- " doesnt retain indentation tho
--- nnoremap o o<Esc>i
--- nnoremap O O<Esc>i
+
+
+-- "Reload .Xresources
+-- nmap <C-x> :w! \| !xrdb .Xresources %<CR><CR>
+-- "Add Datetime
+-- nmap <leader>d i<C-R>=strftime("%m-%d-%Y")<CR><Esc>
+-- " Inserts a line break
+-- nnoremap <leader>g a<CR><Esc>O
+-- "Easy moving between splits
+-- nnoremap <s-j> <C-w>h
+-- nnoremap <s-k> <C-w>l
+-- " Tab Management 
+-- nnoremap <S-k> :tabnext<CR>
+-- nnoremap <S-j> :tabprev<CR>
 
 -- BINDINGS
 -- Open file on browser
@@ -27,27 +34,11 @@ vim.api.nvim_set_keymap( 'n',   '<esc>'    , ':noh<return><esc>', {noremap = tru
 -- " Open NERDTree. t open in new tab, s open in vsplit
 -- nnoremap <leader>t :NERDTreeToggle<CR>
 -- nnoremap <leader>n :NERDTreeFocus<CR>
--- "Reload .Xresources
--- nmap <C-x> :w! \| !xrdb .Xresources %<CR><CR>
--- "Add Datetime
--- nmap <leader>d i<C-R>=strftime("%m-%d-%Y")<CR><Esc>
 -- "Start FZF
 -- " CTRL-T, CTRL-X or CTRL-V open file in new tab, horizontal splits, or in vertical splits respectively
 -- nmap <leader>f :FZF /home/rvv/dev/ <CR>
--- "Easy moving between splits
--- nnoremap <s-j> <C-w>h
--- nnoremap <s-k> <C-w>l
--- " Tab Management 
--- nnoremap <S-k> :tabnext<CR>
--- nnoremap <S-j> :tabprev<CR>
 -- 
 -- 
--- " Inserts a line break
--- nnoremap <leader>g a<CR><Esc>O
--- " to not enter insert mode before inserting multiple lines
--- " doesnt retain indentation tho
--- nnoremap o o<Esc>i
--- nnoremap O O<Esc>i
 -- " for replacing every word of the last search
 -- nmap <leader>e :%s//
 -- 
