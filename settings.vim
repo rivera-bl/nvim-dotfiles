@@ -1,6 +1,6 @@
 syntax enable
 set shell=zsh
-set colorcolumn=80
+set colorcolumn=90
 set noerrorbells
 set nu relativenumber
 set smartcase
