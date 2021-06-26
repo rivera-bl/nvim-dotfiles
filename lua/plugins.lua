@@ -29,4 +29,5 @@ return require("packer").startup(function()
     use "neovim/nvim-lspconfig"
     -- use "tjdevries/nlua.nvim"
     use "nvim-lua/completion-nvim"
+    use "jiangmiao/auto-pairs"
 end)
