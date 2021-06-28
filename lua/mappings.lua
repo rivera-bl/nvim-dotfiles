@@ -11,10 +11,10 @@ vim.api.nvim_set_keymap('n',   'O', 'O<esc>i'			   , {noremap = true})
 vim.api.nvim_set_keymap('n',   '<esc>'    , ':noh<return><esc>', {noremap = true, silent = true})
 
 -- Easy moving between splits
-vim.api.nvim_set_keymap('n', '<S-j>', '<C-w>h', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-k>', '<C-w>l', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-h>', '<C-w>j', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-l>', '<C-w>k', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {noremap = true, silent = true})
 
 -- Easy moving between buffers (alternate files)
 vim.api.nvim_set_keymap('n', '<C-o>', '<C-^>' ,  {noremap = true, silent = true})
