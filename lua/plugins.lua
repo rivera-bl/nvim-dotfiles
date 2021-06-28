@@ -8,7 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 vim.cmd('packadd packer.nvim')
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
+vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
 
 return require("packer").startup(function()
     use "mattn/emmet-vim"
@@ -30,4 +30,5 @@ return require("packer").startup(function()
     -- use "tjdevries/nlua.nvim"
     use "nvim-lua/completion-nvim"
     use "jiangmiao/auto-pairs"
+    use "mhinz/vim-startify"
 end)
