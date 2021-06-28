@@ -1,10 +1,7 @@
-local config = '$HOME/.config/nvim/init.lua'
-
 vim.g.mapleader = ","
 
 vim.api.nvim_set_keymap('n',   '<leader>s', ':w<CR>'           	    	  , {noremap = true}) -- Write
 vim.api.nvim_set_keymap('n',   '<leader>q', ':q<CR>'			  , {noremap = true}) -- Quit
-vim.api.nvim_set_keymap('n',   '<leader>v', ':source ' .. config .. '<CR>', {noremap = true}) -- Source
 
 -- Don't enter Insert mode before inserting multiple lines
 vim.api.nvim_set_keymap('n',   'o', 'o<esc>i'			   , {noremap = true})
