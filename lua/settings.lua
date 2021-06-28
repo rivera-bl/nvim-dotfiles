@@ -4,6 +4,9 @@
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
+-- make the highlighting a transparent line
+vim.cmd('hi CursorLine term=bold cterm=bold guibg=Grey40')  -- cursorline highlight bold
+vim.cmd('autocmd InsertLeave,InsertEnter * set cul!')       -- cursorline only in Insert Mode
 
 vim.g.shell         = 'zsh'
 vim.o.clipboard     = 'unnamedplus'
@@ -16,18 +19,19 @@ vim.wo.rnu          = true 	        -- shows linenumbers and relative
 vim.wo.scrolloff    = 10
 vim.o.showmode      = false
 vim.o.ruler         = false
+vim.wo.cursorline   = true
 
 vim.o.splitright    = true
 vim.o.splitbelow    = true
 vim.o.gdefault      = true		    -- by default match every ocurrence in a line
 
 vim.bo.smartindent  = true
-vim.wo.breakindent  = true      -- continue indenting on next line
-vim.wo.linebreak    = true      -- break a line by word not by character
-vim.opt.expandtab   = true      -- converts tabs to spaces
-vim.opt.tabstop     = 4         -- insert 2 spaces for a tab                                       
-vim.opt.shiftwidth  = 4         -- change the number of space characters inserted for indentation
-vim.opt.softtabstop = -1        -- treat tabs as tabs and not spaces when editing
+vim.wo.breakindent  = true          -- continue indenting on next line
+vim.wo.linebreak    = true          -- break a line by word not by character
+vim.opt.expandtab   = true          -- converts tabs to spaces
+vim.opt.tabstop     = 4             -- insert 2 spaces for a tab                                       
+vim.opt.shiftwidth  = 4             -- change the number of space characters inserted for indentation
+vim.opt.softtabstop = -1            -- treat tabs as tabs and not spaces when editing
 
 -- "Disables automatic commenting on newline:
 vim.cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
