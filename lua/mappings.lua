@@ -16,6 +16,9 @@ vim.api.nvim_set_keymap('n', '<S-k>', '<C-w>l', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-h>', '<C-w>j', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-l>', '<C-w>k', {noremap = true, silent = true})
 
+-- Easy moving between buffers (alternate files)
+vim.api.nvim_set_keymap('n', '<C-o>', '<C-^>' ,  {noremap = true, silent = true})
+
 -- Reload .Xresources
 vim.api.nvim_set_keymap('n', '<C-x>', ':w! | !xrdb .Xresources <CR><CR>', {silent = true})
 
