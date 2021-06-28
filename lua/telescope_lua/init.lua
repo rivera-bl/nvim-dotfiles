@@ -15,11 +15,12 @@ require('telescope').setup{
         ["<C-l>"] = actions.select_default + actions.center,
       },
       n = {
-        ["u"] = actions.move_to_top,
-        ["d"] = actions.move_to_bottom,
-        ["l"] = actions.select_vertical,
+        ["l"] = actions.select_default + actions.center,
+        ["v"] = actions.select_vertical,
         ["h"] = actions.select_horizontal,
         ["t"] = actions.select_tab,
+        ["u"] = actions.move_to_top,
+        ["d"] = actions.move_to_bottom,
         [",q"] = actions.close
       },
     }
