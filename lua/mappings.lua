@@ -28,10 +28,11 @@ vim.api.nvim_set_keymap('n', '<C-d>', 'i<C-R>=strftime("%m-%d-%Y")<CR><Esc>', {s
 -- For replacing every word of the last search
 vim.api.nvim_set_keymap('n', '<leader>r', ':%s//', {})
 
+-- Don't yank the string to the unnamed register when using 'c' or 'C' in normal or visual mode
+vim.cmd([[noremap c "_c]])
+vim.cmd([[noremap C "_C]])
+
 -- Inserts a line break
 -- nnoremap <leader>g a<CR><Esc>O
 -- Open file on browser
 -- nmap <leader>b :w! \| !xdg-open %<CR><CR>
--- " Open NERDTree. t open in new tab, s open in vsplit
--- nnoremap <leader>t :NERDTreeToggle<CR>
--- nnoremap <leader>n :NERDTreeFocus<CR>

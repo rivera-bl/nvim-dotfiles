@@ -17,7 +17,6 @@ return require("packer").startup(function()
   use "vimwiki/vimwiki"
   use "pangloss/vim-javascript"
   use "plasticboy/vim-markdown"
-  -- use "ayu-theme/ayu-vim"
   use "Yggdroot/indentLine"
   use "jvirtanen/vim-hcl"
   use "pearofducks/ansible-vim"
