@@ -6,7 +6,7 @@ vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
 -- TODO: make the highlighting a transparent line
 vim.cmd('hi CursorLine term=bold cterm=bold guibg=Grey40')  -- cursorline highlight bold
--- TODO: fix that it switches when opening telescope
+-- TODO: fix inconsistent behaviour
 vim.cmd('autocmd InsertLeave,InsertEnter * set cul!')       -- cursorline only in Insert Mode
 
 vim.g.shell         = 'zsh'
@@ -40,6 +40,6 @@ vim.cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatopt
 -- commented cause it's red
 -- vim.wo.colorcolumn = '90'
 
--- "Calcurse notes with markdown
--- autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
--- autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
+-- Calcurse notes with markdown
+vim.cmd('autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown')
+vim.cmd('autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown')
