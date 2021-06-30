@@ -25,11 +25,12 @@ return require("packer").startup(function()
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use "neovim/nvim-lspconfig"
   -- use "tjdevries/nlua.nvim"
   use "nvim-lua/completion-nvim"
   use "jiangmiao/auto-pairs"
   use "mhinz/vim-startify"
   use "kyazdani42/nvim-web-devicons"
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 end)

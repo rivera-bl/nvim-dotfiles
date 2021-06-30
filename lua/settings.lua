@@ -14,7 +14,7 @@ vim.o.clipboard     = 'unnamedplus'
 vim.o.mouse         = 'a'
 
 -- the two bellow highlight the current line number
-vim.wo.number       = true 		    -- shows linenumbers
+vim.wo.number       = true 		      -- shows linenumbers
 vim.wo.rnu          = true 	        -- shows linenumbers and relative
 
 vim.wo.scrolloff    = 10
@@ -24,7 +24,7 @@ vim.wo.cursorline   = true
 
 vim.o.splitright    = true
 vim.o.splitbelow    = true
-vim.o.gdefault      = true		    -- by default match every ocurrence in a line
+vim.o.gdefault      = true		      -- by default match every ocurrence in a line
 
 vim.bo.smartindent  = true
 vim.wo.breakindent  = true          -- continue indenting on next line
