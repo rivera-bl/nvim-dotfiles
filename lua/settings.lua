@@ -37,6 +37,9 @@ vim.opt.softtabstop = -1            -- treat tabs as tabs and not spaces when ed
 -- "Disables automatic commenting on newline:
 vim.cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
 
+-- "When all buffers are closed it defaults to Startify
+vim.cmd([[autocmd BufEnter * if line2byte('.') == -1 && len(tabpagebuflist()) == 1 | Startify | endif]])
+
 -- commented cause it's red
 -- vim.wo.colorcolumn = '90'
 
