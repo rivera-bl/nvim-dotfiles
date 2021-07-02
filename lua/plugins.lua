@@ -13,7 +13,7 @@ vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
 return require("packer").startup(function()
   use "mattn/emmet-vim"
   use "tpope/vim-commentary"
-  use "vim-airline/vim-airline"
+  -- use "vim-airline/vim-airline"
   use "vimwiki/vimwiki"
   use "pangloss/vim-javascript"
   use "plasticboy/vim-markdown"
@@ -31,7 +31,13 @@ return require("packer").startup(function()
   use "nvim-lua/completion-nvim"
   use "jiangmiao/auto-pairs"
   use "mhinz/vim-startify"
-  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-web-devicons"    -- telescope devicons
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use {"akinsho/nvim-toggleterm.lua"}
+  use { 'akinsho/nvim-toggleterm.lua' }
+  use { 'ryanoasis/vim-devicons' }      -- startify devicons
+  use 'folke/tokyonight.nvim'
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
 end)

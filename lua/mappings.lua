@@ -8,16 +8,16 @@ vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true}) -- Quit
 -----------------------------
 
 -- Navigation between splits
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-j>', '<C-w>j', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-k>', '<C-w>k', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-h>', '<C-w>h', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-l>', '<C-w>l', {noremap = true, silent = true})
 
 -- Relocate splits (k and h are kinda excesive, could better use those keys)
-vim.api.nvim_set_keymap('n', '<S-j>', ':wincmd J<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-k>', ':wincmd K<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-h>', ':wincmd H<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-l>', ':wincmd L<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd J<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd K<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd H<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd L<CR>', {noremap = true, silent = true})
 
 -----------------------------
 -- BUFFERS
