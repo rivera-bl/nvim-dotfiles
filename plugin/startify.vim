@@ -1,7 +1,10 @@
 " sessions are saved in .local/share/nvim/sesion
 
-let g:indentLine_enabled = 0
-let g:startify_enable_special = 0
+let g:indentLine_enabled            = 0
+let g:startify_enable_special       = 0 "don't show <empty buffer> and <quit>
+let g:startify_files_number         = 4
+let g:startify_change_to_vcs_root   = 1
+let g:startify_update_oldfiles      = 1 "update recent files on the fly not on exit
 
 let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   Recent']            },

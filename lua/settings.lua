@@ -12,6 +12,7 @@ vim.cmd('autocmd InsertLeave,InsertEnter * set cul!')       -- cursorline only i
 vim.g.shell         = 'zsh'
 vim.o.clipboard     = 'unnamedplus'
 vim.o.mouse         = 'a'
+vim.o.hidden        = true
 
 -- the two bellow highlight the current line number
 vim.wo.number       = true 		      -- shows linenumbers
@@ -36,9 +37,6 @@ vim.opt.softtabstop = -1            -- treat tabs as tabs and not spaces when ed
 
 -- "Disables automatic commenting on newline:
 vim.cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
-
--- "When all buffers are closed it defaults to Startify
-vim.cmd([[autocmd BufEnter * if line2byte('.') == -1 && len(tabpagebuflist()) == 1 | Startify | endif]])
 
 -- commented cause it's red
 -- vim.wo.colorcolumn = '90'

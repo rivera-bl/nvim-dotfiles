@@ -21,7 +21,7 @@ return require("packer").startup(function()
   use "jvirtanen/vim-hcl"
   use "pearofducks/ansible-vim"
   use "KabbAmine/zeavim.vim"
-  use "jkramer/vim-checkbox"
+  -- use "jkramer/vim-checkbox"
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
@@ -33,4 +33,5 @@ return require("packer").startup(function()
   use "mhinz/vim-startify"
   use "kyazdani42/nvim-web-devicons"
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use {"akinsho/nvim-toggleterm.lua"}
 end)
