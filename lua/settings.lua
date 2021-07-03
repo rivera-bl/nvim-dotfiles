@@ -3,22 +3,18 @@
 -- bo = local to buffer
 
 -- theme
-vim.cmd[[colorscheme tokyonight]]
-vim.g.tokyonight_style = "night"
-vim.g.tokyonight_transparent = true
-vim.o.termguicolors = true
+vim.cmd[[colorscheme moonlight]]              -- modified bg (#1d2225), comments (#565f89)
+vim.g.moonlight_italic_comments = true
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
--- TODO: make transparent
--- vim.wo.colorcolumn = '90'
 
 vim.g.shell         = 'zsh'
 vim.o.clipboard     = 'unnamedplus'
 vim.o.mouse         = 'a'
-vim.o.hidden        = true
--- vim.o.cmdheight     = 2
 vim.o.wildmode      = 'longest:full,full'     -- bash like shell autocompletion
+vim.o.hidden        = true
+vim.o.termguicolors = true
 
 -- the two bellow highlight the current line number
 vim.wo.number       = true 		      -- shows linenumbers
@@ -41,6 +37,9 @@ vim.opt.tabstop     = 2             -- insert 2 spaces for a tab
 vim.opt.shiftwidth  = 2             -- number of space characters for tabs
 vim.opt.softtabstop = -1            -- treat tabs as tabs and not spaces when editing
 
+-- Hides tilde chars on endofbuffer
+vim.cmd("set fillchars=fold:\\ ,vert:\\│,eob:\\ ,msgsep:‾")
+
 -- Disables automatic commenting on newline:
 vim.cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
 
@@ -50,6 +49,7 @@ vim.cmd('autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown')
 
 -- cursorline only in Insert Mode
 vim.cmd('autocmd InsertLeave,InsertEnter * set cul!')       
+vim.cmd('hi CursorLine guibg=#252e33')
 
 -- Shows cursorline only in focused window
 vim.cmd([[
@@ -61,6 +61,10 @@ vim.cmd([[
       au WinLeave * setlocal nocursorline
   augroup END
 ]])
+
+-- column
+-- vim.wo.colorcolumn = '100'
+-- vim.cmd('hi ColorColumn guibg=#252e33')
 
 -- Load Telescope find_files when opening a dir with vim 
 -- vim.cmd('autocmd FileType netrw Telescope find_files')

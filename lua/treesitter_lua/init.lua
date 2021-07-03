@@ -1,3 +1,4 @@
+-- :TSInstallInfo lists all the languages available
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,

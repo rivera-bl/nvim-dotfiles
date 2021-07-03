@@ -8,38 +8,43 @@ vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true}) -- Quit
 -----------------------------
 
 -- Navigation between splits
-vim.api.nvim_set_keymap('n', '<S-j>', '<C-w>j', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-k>', '<C-w>k', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-h>', '<C-w>h', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-l>', '<C-w>l', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {noremap = true, silent = true})
 
--- Relocate splits (k and h are kinda excesive, could better use those keys)
-vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd J<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd K<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd H<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd L<CR>', {noremap = true, silent = true})
+-- Relocate splits
+vim.api.nvim_set_keymap('n', '<C-w>jj', ':wincmd J<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-w>kk', ':wincmd K<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-w>hh', ':wincmd H<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-w>ll', ':wincmd L<CR>', {noremap = true, silent = true})
 
 -----------------------------
 -- BUFFERS
 -----------------------------
 
--- vim.api.nvim_set_keymap('n', '<C-q>'    , ':w! | bufdo bw<CR>', {noremap = true, silent = true}) -- Delete all opened buffers
-vim.api.nvim_set_keymap('n', '<C-q>'    , ':bufdo bw | Startify<CR>', {noremap = true, silent = true}) -- Delete all opened buffers
+vim.api.nvim_set_keymap('n', '<C-q>'    , ':w! | :bufdo bw | Startify<CR>', {noremap = true, silent = true}) -- Delete all opened buffers
 vim.api.nvim_set_keymap('n', '<leader>a', ':silent! b#<CR>'   , {noremap = true, silent = true}) -- Cycle through last 2 buffers
-vim.api.nvim_set_keymap('n', '<leader>d', ':w! | bw<CR>'      , {noremap = true, silent = true}) -- Delete current buffer
+vim.api.nvim_set_keymap('n', '<leader>d', ':w! | bp |bd #<CR>'      , {noremap = true, silent = true}) -- Delete current buffer
 vim.api.nvim_set_keymap('n', '<tab>'    , ':bn<CR>'           , {noremap = true, silent = true}) -- Go to next buffer
+vim.api.nvim_set_keymap('n', '<S-tab>'    , ':bp<CR>'           , {noremap = true, silent = true}) -- Go to prev buffer
 
 -----------------------------
 -- TERMINAL
 -----------------------------
 
-vim.api.nvim_set_keymap('n', '<leader>t', ':ToggleTerm<CR>', {})  -- toggle
+vim.api.nvim_set_keymap('n', '<leader>tj', ':ToggleTerm<CR>', {})  -- toggle horizontal
+vim.api.nvim_set_keymap('n', '<leader>tl', '<cmd>lua _term_vertical_toggle()<CR>', {noremap = true, silent = true}) -- toggle vertical
 vim.cmd([[tnoremap <C-k> <C-\><C-n><C-w>k]])                      -- focus upper split
 vim.cmd([[tnoremap <leader>q <C-d>]])                             -- remove
 
 -----------------------------
 -- MISC
 -----------------------------
+
+-- Slightly faster indentation
+vim.api.nvim_set_keymap('n',   '>', '>>', {noremap = true})
+vim.api.nvim_set_keymap('n',   '<', '<<', {noremap = true})
 
 -- Don't enter Insert mode before inserting multiple lines
 vim.api.nvim_set_keymap('n',   'o', 'o<esc>i'			   , {noremap = true})
@@ -48,7 +53,7 @@ vim.api.nvim_set_keymap('n',   'O', 'O<esc>i'			   , {noremap = true})
 -- Clear the search Highlight with ESC
 vim.api.nvim_set_keymap('n',   '<esc>'    , ':noh<return><esc>', {noremap = true, silent = true})
 
--- Reload .Xresources
+-- TODO: Reload .Xresources on save
 vim.api.nvim_set_keymap('n', '<C-x>', ':w! | !xrdb .Xresources <CR><CR>', {silent = true})
 
 -- Add Datetime

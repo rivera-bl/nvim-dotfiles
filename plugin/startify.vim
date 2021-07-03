@@ -15,12 +15,14 @@ endfunction
 
 let g:startify_skiplist = [
           \ '.*startify\.txt$',
+          \ '.*\.gitignore$',
+          \ '^/tmp/calcurse-note.*',
           \]
 
 let g:startify_lists = [
-          \ { 'type': 'files',     'header': ['   Recent']            },
-          \ { 'type': 'bookmarks', 'header': ['   Bookmark']      },
           \ { 'type': 'sessions',  'header': ['   Session']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmark']      },
+          \ { 'type': 'files',     'header': ['   Recent']            },
           \ ]
 
 let g:startify_bookmarks = [

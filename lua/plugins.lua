@@ -11,33 +11,34 @@ vim.cmd('packadd packer.nvim')
 vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
 
 return require("packer").startup(function()
-  use "mattn/emmet-vim"
-  use "tpope/vim-commentary"
-  -- use "vim-airline/vim-airline"
-  use "vimwiki/vimwiki"
+  -- highlight
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use "neovim/nvim-lspconfig"
   use "pangloss/vim-javascript"
   use "plasticboy/vim-markdown"
-  use "Yggdroot/indentLine"
   use "jvirtanen/vim-hcl"
   use "pearofducks/ansible-vim"
+  -- shorts
+  use "mattn/emmet-vim"
+  use "tpope/vim-commentary"
+  use 'chaoren/vim-wordmotion'              -- treat caps as word delimitiers, and others
+  use "jiangmiao/auto-pairs"
   use "KabbAmine/zeavim.vim"
-  -- use "jkramer/vim-checkbox"
+  use 'akinsho/nvim-toggleterm.lua' 
+  use "nvim-lua/completion-nvim"
+  -- telescope
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use "neovim/nvim-lspconfig"
-  -- use "tjdevries/nlua.nvim"
-  use "nvim-lua/completion-nvim"
-  use "jiangmiao/auto-pairs"
-  use "mhinz/vim-startify"
-  use "kyazdani42/nvim-web-devicons"    -- telescope devicons
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'akinsho/nvim-toggleterm.lua' }
-  use { 'ryanoasis/vim-devicons' }      -- startify devicons
+  -- devicons
+  use "kyazdani42/nvim-web-devicons"        -- telescope devicons
+  use 'ryanoasis/vim-devicons'              -- startify devicons
+  -- themes
   use 'folke/tokyonight.nvim'
-  use {
-    'hoob3rt/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
+  use 'shaunsingh/moonlight.nvim'
+  use 'hoob3rt/lualine.nvim'
+  use "mhinz/vim-startify"
+  -- delete
+  use "vimwiki/vimwiki"
 end)
