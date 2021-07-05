@@ -13,26 +13,13 @@ require("toggleterm").setup{
   start_in_insert = true,
   insert_mappings = false, -- whether or not the open mapping applies in insert mode
   persist_size = false,
-  direction = 'horizontal', -- 'float', 'vertical' | 'horizontal' | 'window' | 'float'
   -- close_on_exit = true, -- close the terminal window when the process exits
   -- This field is only relevant if direction is set to 'float'
-  float_opts = {
-    -- The border key is *almost* the same as 'nvim_win_open'
-    -- see :h nvim_win_open for details on borders however
-    -- the 'curved' border is a custom border type
-    -- not natively supported but implemented in this plugin.
-    border = 'single',
-    -- width = <value>,
-    -- height = <value>,
-    winblend = 0,
-    highlights = {
-      border = "Normal",
-      background = "Normal",
-    }
-  }
 }
 
 local Terminal  = require('toggleterm.terminal').Terminal
+
+-- vertical terminal
 local term_vertical = Terminal:new({
   direction = "vertical",
   -- function to run on opening the terminal
@@ -46,6 +33,30 @@ local term_vertical = Terminal:new({
   -- end,
 })
 
+-- horizontal terminal
+local term_horizontal = Terminal:new({
+  direction = "horizontal",
+})
+
+-- floating terminal
+local term_float = Terminal:new({
+  direction = "float",
+  float_opts = {
+    border = 'single',
+    width = 110,
+    height = 25,
+    highlights = {}
+  },   
+})
+
+function _term_horizontal_toggle()
+  term_horizontal:toggle()
+end
+
 function _term_vertical_toggle()
   term_vertical:toggle()
+end
+
+function _term_float_toggle()
+  term_float:toggle()
 end

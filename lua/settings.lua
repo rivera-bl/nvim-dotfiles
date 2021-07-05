@@ -5,6 +5,8 @@
 -- theme
 vim.cmd[[colorscheme moonlight]]              -- modified bg (#1d2225), comments (#565f89)
 vim.g.moonlight_italic_comments = true
+vim.g.moonlight_borders         = true
+vim.g.moonlight_contrast        = false
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
@@ -20,7 +22,7 @@ vim.o.termguicolors = true
 vim.wo.number       = true 		      -- shows linenumbers
 vim.wo.rnu          = true 	        -- shows linenumbers and relative
 
-vim.wo.scrolloff    = 10
+vim.o.scrolloff    = 10
 vim.o.showmode      = false
 vim.o.ruler         = false
 vim.wo.cursorline   = true
@@ -62,9 +64,9 @@ vim.cmd([[
   augroup END
 ]])
 
+-- Startify Unmap q key and others
+vim.cmd([[autocmd User Startified for key in ['q','s','t','v'] | execute 'nunmap <buffer>' key | endfor]])
+
 -- column
 -- vim.wo.colorcolumn = '100'
 -- vim.cmd('hi ColorColumn guibg=#252e33')
-
--- Load Telescope find_files when opening a dir with vim 
--- vim.cmd('autocmd FileType netrw Telescope find_files')

@@ -10,5 +10,6 @@ require'nvim-treesitter.configs'.setup {
     "python",
     "go",
     "regex",
+    "dockerfile",
   }
 }
