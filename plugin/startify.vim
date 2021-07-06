@@ -30,7 +30,7 @@ let g:startify_bookmarks = [
             \ { 'ar': '~/.ansible/roles' },
             \ { 'tf': '~/dev/terraform' },
             \ { 'pk': '~/dev/packer' },
-            \ { 'od': '~/dev/odilo' },
+            \ { 'od': '~/dev/odilo/docs' },
             \ { 'bl': '~/dev/jekyll/codeblog/_posts' },
             \ { 'td': '~/dev/.todo.md' },
             \ { 'ql': '~/dev/python/proj/sonrisasql' },

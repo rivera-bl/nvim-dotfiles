@@ -39,6 +39,8 @@ return require("packer").startup(function()
   use 'shaunsingh/moonlight.nvim'
   use 'hoob3rt/lualine.nvim'
   use "mhinz/vim-startify"
+  -- tmux
+  use 'christoomey/vim-tmux-navigator'
   -- delete
   use "vimwiki/vimwiki"
 end)

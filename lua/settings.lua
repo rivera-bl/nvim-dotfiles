@@ -65,7 +65,10 @@ vim.cmd([[
 ]])
 
 -- Startify Unmap q key and others
-vim.cmd([[autocmd User Startified for key in ['q','s','t','v'] | execute 'nunmap <buffer>' key | endfor]])
+vim.cmd([[autocmd User Startified for key in ['q','s','t','v'] | silent execute 'nunmap <buffer>' key | endfor]])
+
+-- Source tmux config after saving
+vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 
 -- column
 -- vim.wo.colorcolumn = '100'
