@@ -67,6 +67,9 @@ vim.api.nvim_set_keymap('n',   '<', '<<', {noremap = true})
 -- Edit file in split in the same directory of current buffer
 vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-R>=expand("%:p:h") . "/"<CR>', {noremap = true})
 
+-- Save the 'wd path' to clipboard
+vim.cmd('command! PWD redir @+ | pwd | redir END')
+
 -- Don't enter Insert mode before inserting multiple lines
 vim.api.nvim_set_keymap('n',   'o', 'o<esc>i', {noremap = true})
 vim.api.nvim_set_keymap('n',   'O', 'O<esc>i', {noremap = true})
@@ -82,9 +85,6 @@ vim.api.nvim_set_keymap('n', '<C-d>', 'i<C-R>=strftime("%m-%d-%Y")<CR><Esc>', {s
 
 -- Replace every word of the last search
 vim.api.nvim_set_keymap('n', '<leader>r', ':%s//', {})
-
--- Save the 'wd path' to clipboard
-vim.cmd('command! PWD redir @+ | pwd | redir END')
 
 -- Don't yank the string to the unnamed register when using 'c' or 'C' in normal or visual mode
 vim.cmd([[noremap c "_c]])
