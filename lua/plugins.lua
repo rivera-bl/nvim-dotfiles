@@ -24,7 +24,6 @@ return require("packer").startup(function()
   use 'chaoren/vim-wordmotion'              -- treat caps as word delimitiers, and others
   use "jiangmiao/auto-pairs"
   use "KabbAmine/zeavim.vim"
-  use 'akinsho/nvim-toggleterm.lua' 
   use "nvim-lua/completion-nvim"
   -- telescope
   use "nvim-lua/popup.nvim"
