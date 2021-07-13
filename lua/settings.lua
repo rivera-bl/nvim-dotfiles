@@ -14,7 +14,7 @@ vim.cmd('filetype plugin on')
 vim.g.shell         = 'zsh'
 vim.o.clipboard     = 'unnamedplus'
 vim.o.mouse         = 'a'
-vim.o.wildmode      = 'longest:full,full'     -- bash like shell autocompletion
+vim.o.wildmode      = 'longest:full,full'     -- shell autocompletion
 vim.o.hidden        = true
 vim.o.termguicolors = true
 
@@ -22,7 +22,7 @@ vim.o.termguicolors = true
 vim.wo.number       = true 		      -- shows linenumbers
 vim.wo.rnu          = true 	        -- shows linenumbers and relative
 
-vim.o.scrolloff    = 10
+vim.o.scrolloff     = 10
 vim.o.showmode      = false
 vim.o.ruler         = false
 vim.wo.cursorline   = true
@@ -52,6 +52,9 @@ vim.cmd('autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown')
 -- cursorline only in Insert Mode
 vim.cmd('autocmd InsertLeave,InsertEnter * set cul!')       
 vim.cmd('hi CursorLine guibg=#252e33')
+
+-- Maintain same size of splits when resizing the window
+vim.cmd('autocmd VimResized * wincmd =')
 
 -- Shows cursorline only in focused window
 vim.cmd([[
