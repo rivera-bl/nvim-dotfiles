@@ -25,6 +25,7 @@ return require("packer").startup(function()
   use "jiangmiao/auto-pairs"
   use "KabbAmine/zeavim.vim"
   use "nvim-lua/completion-nvim"
+  use "godlygeek/tabular"                   -- line up formatting based on a char, like junegunn/vim-easy-align
   -- telescope
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
