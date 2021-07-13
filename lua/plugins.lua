@@ -20,7 +20,9 @@ return require("packer").startup(function()
   use "pearofducks/ansible-vim"
   -- shorts
   use "mattn/emmet-vim"
+  use "tpope/vim-surround"
   use "tpope/vim-commentary"
+  use "tpope/vim-eunuch"
   use 'chaoren/vim-wordmotion'              -- treat caps as word delimitiers, and others
   use "jiangmiao/auto-pairs"
   use "KabbAmine/zeavim.vim"
@@ -42,6 +44,8 @@ return require("packer").startup(function()
   -- tmux
   use 'christoomey/vim-tmux-navigator'
   use 'preservim/vimux'
+  -- sessions
+  use 'tpope/vim-obsession'
   -- delete
   use "vimwiki/vimwiki"
 end)
