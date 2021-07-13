@@ -33,14 +33,13 @@ vim.api.nvim_set_keymap('n', '<S-tab>'  , ':bp<CR>'           , {noremap = true,
 -- TERMINAL
 -----------------------------
 
--- TODO: fix this mess
-vim.api.nvim_set_keymap('n', '<leader>tt', ':ToggleTerm<CR>', {})  -- toggle terminal
-vim.api.nvim_set_keymap('n', '<leader>tj', '<cmd>lua _term_horizontal_toggle()<CR>', {noremap = true, silent = true}) -- toggle horizontal
-vim.api.nvim_set_keymap('n', '<leader>tl', '<cmd>lua _term_vertical_toggle()<CR>'  , {noremap = true, silent = true}) -- toggle vertical
-vim.api.nvim_set_keymap('n', '<leader>tf', '<cmd>lua _term_float_toggle()<CR>'     , {noremap = true, silent = true}) -- toggle float
-vim.cmd([[tnoremap <C-k> <C-\><C-n><C-w>k]])                      -- focus upper split
-vim.cmd([[tnoremap <C-h> <C-\><C-n><C-w>h]])                      -- focus left split
-vim.cmd([[tnoremap <leader>q <C-d>]])                             -- remove
+vim.api.nvim_set_keymap('c', '<C-j>', '<down>'    , {noremap = true})
+vim.api.nvim_set_keymap('c', '<C-k>', '<up>'      , {noremap = true})
+vim.api.nvim_set_keymap('c', '<C-h>', '<left>'    , {noremap = true})
+vim.api.nvim_set_keymap('c', '<C-l>', '<right>'   , {noremap = true})
+vim.api.nvim_set_keymap('c', '<C-b>', '<C-left>'  , {noremap = true})
+vim.api.nvim_set_keymap('c', '<C-e>', '<C-right>' , {noremap = true})
+vim.api.nvim_set_keymap('c', '<C-n>', '<C-f>'     , {noremap = true})
 
 -----------------------------
 -- MISC
