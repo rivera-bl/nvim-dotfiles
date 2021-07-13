@@ -28,6 +28,11 @@ vim.api.nvim_set_keymap('n', '<leader>a', ':silent! b#<CR>'   , {noremap = true,
 vim.api.nvim_set_keymap('n', '<leader>d', ':bp | set confirm | bw #<CR>'      , {noremap = true, silent = true}) -- Delete current buffer
 vim.api.nvim_set_keymap('n', '<tab>'    , ':bn<CR>'           , {noremap = true, silent = true}) -- Go to next buffer
 vim.api.nvim_set_keymap('n', '<S-tab>'  , ':bp<CR>'           , {noremap = true, silent = true}) -- Go to prev buffer
+vim.api.nvim_set_keymap('n', '<leader>a', ':silent! w | b#<CR>'                   , {noremap = true, silent = true}) -- Cycle through last 2 buffers
+vim.api.nvim_set_keymap('n', '<leader>d', ':b# | set confirm | bw #<CR>'          , {noremap = true, silent = true}) -- Delete current buffer
+-- should use Telescope buffers instead
+-- vim.api.nvim_set_keymap('n', '<S-k>'    , ':bn<CR>'                               , {noremap = true, silent = true}) -- Go to next buffer
+-- vim.api.nvim_set_keymap('n', '<S-j>'    , ':bp<CR>'                               , {noremap = true, silent = true}) -- Go to prev buffer
 
 -----------------------------
 -- TERMINAL
