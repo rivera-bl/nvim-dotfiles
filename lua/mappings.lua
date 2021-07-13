@@ -42,6 +42,17 @@ vim.api.nvim_set_keymap('c', '<C-e>', '<C-right>' , {noremap = true})
 vim.api.nvim_set_keymap('c', '<C-n>', '<C-f>'     , {noremap = true})
 
 -----------------------------
+-- VIMUX
+-----------------------------
+
+vim.api.nvim_set_keymap('n', '<leader>tt', ':VimuxPromptCommand<CR><BS>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>tg', ':VimuxTogglePane<CR>'       , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>tr', ':VimuxRunLastCommand<CR>'   , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>tq', ':VimuxCloseRunner<CR>'      , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ti', ':VimuxInterruptRunner<CR>'  , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>tz', ':VimuxZoomRunner<CR>'       , {noremap = true})
+
+-----------------------------
 -- MISC
 -----------------------------
 

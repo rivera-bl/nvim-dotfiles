@@ -41,6 +41,7 @@ return require("packer").startup(function()
   use "mhinz/vim-startify"
   -- tmux
   use 'christoomey/vim-tmux-navigator'
+  use 'preservim/vimux'
   -- delete
   use "vimwiki/vimwiki"
 end)
