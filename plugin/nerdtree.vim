@@ -7,4 +7,3 @@ let NERDTreeMapJumpPrevSibling='<C-9>'
 
 let g:NERDTreeWinSize=20
 let g:NERDTreeQuitOnOpen = 1
-

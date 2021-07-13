@@ -7,13 +7,13 @@ vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true}) -- Quit
 -- SPLITS
 -----------------------------
 
--- Navigation between splits
+-- Navigation
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {noremap = true, silent = true})
 
--- Relocate splits
+-- Relocate
 vim.api.nvim_set_keymap('n', '<C-w>jj', ':wincmd J<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-w>kk', ':wincmd K<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-w>hh', ':wincmd H<CR>', {noremap = true, silent = true})
@@ -24,10 +24,6 @@ vim.api.nvim_set_keymap('n', '<C-w>ll', ':wincmd L<CR>', {noremap = true, silent
 -----------------------------
 
 vim.api.nvim_set_keymap('n', '<C-q>'    , ':set confirm | bufdo bw | Startify<CR>', {noremap = true, silent = true}) -- Delete all opened buffers
-vim.api.nvim_set_keymap('n', '<leader>a', ':silent! b#<CR>'   , {noremap = true, silent = true}) -- Cycle through last 2 buffers
-vim.api.nvim_set_keymap('n', '<leader>d', ':bp | set confirm | bw #<CR>'      , {noremap = true, silent = true}) -- Delete current buffer
-vim.api.nvim_set_keymap('n', '<tab>'    , ':bn<CR>'           , {noremap = true, silent = true}) -- Go to next buffer
-vim.api.nvim_set_keymap('n', '<S-tab>'  , ':bp<CR>'           , {noremap = true, silent = true}) -- Go to prev buffer
 vim.api.nvim_set_keymap('n', '<leader>a', ':silent! w | b#<CR>'                   , {noremap = true, silent = true}) -- Cycle through last 2 buffers
 vim.api.nvim_set_keymap('n', '<leader>d', ':b# | set confirm | bw #<CR>'          , {noremap = true, silent = true}) -- Delete current buffer
 -- should use Telescope buffers instead
@@ -58,17 +54,33 @@ vim.api.nvim_set_keymap('n', '<leader>ti', ':VimuxInterruptRunner<CR>'  , {norem
 vim.api.nvim_set_keymap('n', '<leader>tz', ':VimuxZoomRunner<CR>'       , {noremap = true})
 
 -----------------------------
+-- TELESCOPE
+-----------------------------
+
+vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<CR>'  , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fg', ':Telescope git_files<CR>'   , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fc', ':Telescope git_commits<CR>' , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<CR>'     , {noremap = true})
+
+vim.api.nvim_set_keymap('n', '<leader>fd', ':lua require("telescope_lua").search_dev()<CR>'   , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fv', ':lua require("telescope_lua").search_config()<CR>', {noremap = true})
+
+-----------------------------
 -- MISC
 -----------------------------
 
--- Slightly faster indentation
-vim.api.nvim_set_keymap('n',   '>', '>>', {noremap = true})
-vim.api.nvim_set_keymap('n',   '<', '<<', {noremap = true})
 -- Edit file in split in the same directory of current buffer
 vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-R>=expand("%:p:h") . "/"<CR>', {noremap = true})
 
 -- Save the 'wd path' to clipboard
 vim.cmd('command! PWD redir @+ | pwd | redir END')
+
+-- Toggle netrw
+vim.api.nvim_set_keymap('n', '<leader>n', ':Lexplore<CR>', {noremap = true, silent = true})
+
+-- Open Startify
+vim.api.nvim_set_keymap('n', '<leader>hh', ':Startify<CR>'          , {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>hl', ':vsplit | Startify<CR>' , {noremap = true, silent = true})
 
 -- Don't enter Insert mode before inserting multiple lines
 vim.api.nvim_set_keymap('n',   'o', 'o<esc>i', {noremap = true})
