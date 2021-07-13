@@ -64,6 +64,8 @@ vim.api.nvim_set_keymap('n', '<leader>tz', ':VimuxZoomRunner<CR>'       , {norem
 -- Slightly faster indentation
 vim.api.nvim_set_keymap('n',   '>', '>>', {noremap = true})
 vim.api.nvim_set_keymap('n',   '<', '<<', {noremap = true})
+-- Edit file in split in the same directory of current buffer
+vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-R>=expand("%:p:h") . "/"<CR>', {noremap = true})
 
 -- Don't enter Insert mode before inserting multiple lines
 vim.api.nvim_set_keymap('n',   'o', 'o<esc>i', {noremap = true})
