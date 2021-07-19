@@ -63,7 +63,7 @@ end
 M.search_config = function()
   require("telescope.builtin").find_files({
     prompt_title = "<Neovim Dotfiles>",
-    cwd = "~/.config/nvim/",
+    cwd = "~/.config/nvim",
   })
 end
 M.search_git = function()
@@ -73,6 +73,7 @@ M.search_git = function()
   })
 end
 
+-- open telescope when opening a dir
 -- not working with startify bookmarks
 _G.open_telescope = function()
     local first_arg = vim.v.argv[2]
