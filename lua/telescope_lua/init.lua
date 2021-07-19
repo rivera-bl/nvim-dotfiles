@@ -38,6 +38,12 @@ require('telescope').setup{
 require('telescope').load_extension('fzf')
 
 local M = {}
+M.search_files = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<Current Buffer Directory>",
+    cwd = vim.fn.expand("%:p:h"),
+  })
+end
 M.search_dev = function()
   require("telescope.builtin").find_files({
     prompt_title = "<Dev Folder>",
@@ -52,11 +58,12 @@ M.search_config = function()
 end
 M.search_git = function()
   require("telescope.builtin").git_files({
-    prompt_title = "<Neovim Dotfiles>",
+    prompt_title = "<Git Files>",
     cwd = vim.fn.expand("%:p:h"),
   })
 end
 
+-- not working with startify bookmarks
 _G.open_telescope = function()
     local first_arg = vim.v.argv[2]
     if first_arg and vim.fn.isdirectory(first_arg) == 1 then
