@@ -40,7 +40,7 @@ require('telescope').load_extension('fzf')
 local M = {}
 M.search_files = function()
   require("telescope.builtin").find_files({
-    prompt_title = "<Current Buffer Directory>",
+    prompt_title = vim.fn.expand("%:p:h"),
     cwd = vim.fn.expand("%:p:h"),
   })
 end
@@ -58,7 +58,7 @@ M.search_config = function()
 end
 M.search_git = function()
   require("telescope.builtin").git_files({
-    prompt_title = "<Git Files>",
+    prompt_title = vim.fn.expand("%:p:h"),
     cwd = vim.fn.expand("%:p:h"),
   })
 end
