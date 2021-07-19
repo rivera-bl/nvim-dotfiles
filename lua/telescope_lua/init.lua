@@ -58,7 +58,7 @@ M.search_config = function()
 end
 M.search_git = function()
   require("telescope.builtin").git_files({
-    prompt_title = vim.fn.expand("%:p:h"),
+    prompt_title = "<Parent Git Directory>",
     cwd = vim.fn.expand("%:p:h"),
   })
 end
