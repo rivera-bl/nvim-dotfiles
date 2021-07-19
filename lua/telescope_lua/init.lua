@@ -13,6 +13,7 @@ require('telescope').setup{
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
         ["<C-l>"] = actions.select_default + actions.center,
+        [",q"] = actions.close
       },
       n = {
         ["l"] = actions.select_default + actions.center,
@@ -23,6 +24,15 @@ require('telescope').setup{
         ["d"] = actions.move_to_bottom,
         [",q"] = actions.close
       },
+    }
+  },
+  pickers = {
+    buffers = {
+      mappings = {
+        n = {
+          ["<C-d>"] = "delete_buffer",
+        }
+      }
     }
   },
   extensions = {
