@@ -57,10 +57,11 @@ vim.api.nvim_set_keymap('n', '<leader>tz', ':VimuxZoomRunner<CR>'       , {norem
 -- TELESCOPE
 -----------------------------
 
-vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<CR>'  , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<CR>'  , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fgf', ':Telescope git_files<CR>'   , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fgs', ':Telescope git_status<CR>'   , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fgc', ':Telescope git_commits<CR>' , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fgr', ':Telescope git_branches<CR>' , {noremap = true})
 
 vim.api.nvim_set_keymap('n', '<leader>fd', ':lua require("telescope_lua").search_dev()<CR>'   , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fv', ':lua require("telescope_lua").search_config()<CR>', {noremap = true})
