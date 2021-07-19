@@ -50,4 +50,11 @@ M.search_config = function()
     cwd = "~/.config/nvim/",
   })
 end
+M.search_git = function()
+  require("telescope.builtin").git_files({
+    prompt_title = "<Neovim Dotfiles>",
+    cwd = vim.fn.expand("%:p:h"),
+  })
+end
+
 return M
