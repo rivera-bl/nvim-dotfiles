@@ -44,6 +44,8 @@ return require("packer").startup(function()
   -- tmux
   use 'christoomey/vim-tmux-navigator'
   use 'preservim/vimux'
+  -- lazygit
+  use 'kdheepak/lazygit.nvim'
   -- sessions
   use 'tpope/vim-obsession'
   -- delete

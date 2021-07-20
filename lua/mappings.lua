@@ -72,6 +72,9 @@ vim.api.nvim_set_keymap('n', '<leader>fv', ':lua require("telescope_lua").search
 -- MISC
 -----------------------------
 
+-- Open Lazygit
+vim.api.nvim_set_keymap('n', '<leader>g', ':LazyGit<CR>', {noremap = true})
+
 -- Edit file in split in the same directory of current buffer
 vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-R>=expand("%:p:h") . "/"<CR>', {noremap = true})
 
