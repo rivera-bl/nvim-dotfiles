@@ -5,7 +5,7 @@ require('telescope').setup{
     file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
     grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
     qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
-    file_ignore_patterns = {},
+    file_ignore_patterns = {"Session.vim"},
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
     mappings = {
@@ -57,7 +57,7 @@ end
 M.search_dev = function()
   require("telescope.builtin").find_files({
     prompt_title = "<Dev Folder>",
-    cwd = "~/dev/",
+    cwd = "~/dev",
   })
 end
 M.search_config = function()
