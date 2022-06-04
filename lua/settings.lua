@@ -74,6 +74,8 @@ vim.cmd([[autocmd User Startified for key in ['q','s','t','v'] | silent execute 
 -- Source tmux config after saving
 vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 
+-- Create .pdf out of current .md file
+vim.cmd('autocmd BufWritePost ~/dev/jekyll/codeblog/_posts/*.md silent !mkdir -p /tmp/blog-preview && pandoc %:p -o /tmp/blog-preview/tmp.pdf &')
 -- column
 -- vim.wo.colorcolumn = '100'
 -- vim.cmd('hi ColorColumn guibg=#252e33')
