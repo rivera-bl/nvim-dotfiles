@@ -10,6 +10,7 @@ vim.g.moonlight_contrast        = false
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
+vim.cmd('set nofoldenable')
 
 vim.g.shell         = 'zsh'
 vim.o.clipboard     = 'unnamedplus'
