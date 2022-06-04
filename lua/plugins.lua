@@ -48,6 +48,7 @@ return require("packer").startup(function()
   use 'kdheepak/lazygit.nvim'
   -- sessions
   use 'tpope/vim-obsession'
+  use { 'ton/vim-bufsurf' }
   -- delete
   use "vimwiki/vimwiki"
 end)
