@@ -1,7 +1,8 @@
 vim.g.mapleader = ","
 
 vim.api.nvim_set_keymap('n', '<leader>s', ':w<CR>', {noremap = true}) -- Write
-vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true}) -- Quit
+vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true}) -- Quit window
+vim.api.nvim_set_keymap('n', '<leader>Q', ':qa<CR>', {noremap = true}) -- Quit all windows
 
 -----------------------------
 -- SPLITS
@@ -78,7 +79,7 @@ vim.api.nvim_set_keymap('n', '<leader>g', ':LazyGit<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-R>=expand("%:p:h") . "/"<CR>', {noremap = true})
 
 -- Save the 'wd path' to clipboard
-vim.cmd('command! PWD redir @+ | pwd | redir END')
+vim.cmd("command! CWD redir @+ | echo expand('%:p:h') | redir END")
 
 -- Toggle netrw
 vim.api.nvim_set_keymap('n', '<leader>n', ':Lexplore<CR>', {noremap = true, silent = true})
@@ -87,13 +88,14 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':Lexplore<CR>', {noremap = true, sile
 vim.api.nvim_set_keymap('n', '<leader>hh', ':Startify<CR>'          , {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>hl', ':vsplit | Startify<CR>' , {noremap = true, silent = true})
 
--- Don't enter Insert mode before inserting multiple lines
-vim.api.nvim_set_keymap('n',   'o', 'o<esc>i', {noremap = true})
-vim.api.nvim_set_keymap('n',   'O', 'O<esc>i', {noremap = true})
+-- Don't enter Insert mode before inserting multiple lines, messes up indentation
+-- vim.api.nvim_set_keymap('n',   'o', 'o<esc>i', {noremap = true})
+-- vim.api.nvim_set_keymap('n',   'O', 'O<esc>i', {noremap = true})
 
 -- Clear the search Highlight with ESC
 vim.api.nvim_set_keymap('n',   '<esc>'    , ':noh<return><esc>', {noremap = true, silent = true})
 
+vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 vim.cmd('autocmd BufWritePost .Xresources silent !xrdb %')
 
 -- Add Datetime
