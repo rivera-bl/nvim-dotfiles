@@ -1,0 +1,23 @@
+{
+        "languageserver": {
+                "terraform": {
+                        "command": "terraform-ls",
+			                  "args": ["serve"],
+                        "filetypes": [
+                                "terraform",
+                                "tf"
+                        ],
+                        "initializationOptions": {},
+                        "settings": {}
+                }
+        },
+        "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+        "hover.target": "float",
+        "hover.previewMaxHeight": 5,
+        "suggest.floatEnable": true,
+        "yaml.completion": true,
+        "yaml.format.enable": true,
+        "yaml.validate": true,
+        "yaml.schemaStore.enable": true,
+        "yaml.schemas":{"kubernetes":"*.y*ml"}
+}
