@@ -94,8 +94,7 @@ vim.api.nvim_set_keymap('n',   'O', 'O<esc>i', {noremap = true})
 -- Clear the search Highlight with ESC
 vim.api.nvim_set_keymap('n',   '<esc>'    , ':noh<return><esc>', {noremap = true, silent = true})
 
--- TODO: Reload .Xresources on save
-vim.api.nvim_set_keymap('n', '<C-x>', ':w! | !xrdb .Xresources <CR><CR>', {silent = true})
+vim.cmd('autocmd BufWritePost .Xresources silent !xrdb %')
 
 -- Add Datetime
 vim.api.nvim_set_keymap('n', '<C-d>', 'i<C-R>=strftime("%m-%d-%Y")<CR><Esc>', {silent = true})
