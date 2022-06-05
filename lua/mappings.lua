@@ -69,6 +69,20 @@ vim.api.nvim_set_keymap('n', '<leader>fgf', ':lua require("telescope_lua").searc
 vim.api.nvim_set_keymap('n', '<leader>fv', ':lua require("telescope_lua").search_config()<CR>', {noremap = true})
 
 -----------------------------
+-- SPELL CHECKING
+-----------------------------
+
+-- Set spell
+vim.cmd('nnoremap <leader>¿¿ :setlocal spell!<CR>')
+vim.cmd('nnoremap <leader>¿s :setlocal spell <bar> setlocal spelllang=es<CR>')
+vim.cmd('nnoremap <leader>¿n :setlocal spell <bar> setlocal spelllang=en<CR>')
+-- Bind only when spell is set on
+vim.cmd('nnoremap <expr> <TAB> ( &spell ) ? "1z=" : "<TAB>"')
+vim.cmd('nnoremap <expr> <CR>  ( &spell ) ? "zg"  : "<CR>"')
+vim.cmd('nnoremap <expr> <C-N> ( &spell ) ? "]S"  : "<C-N>"')
+vim.cmd('nnoremap <expr> <C-P> ( &spell ) ? "[S"  : "<C-P>"')
+
+-----------------------------
 -- MISC
 -----------------------------
 
@@ -88,7 +102,8 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':Lexplore<CR>', {noremap = true, sile
 vim.api.nvim_set_keymap('n', '<leader>hh', ':Startify<CR>'          , {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>hl', ':vsplit | Startify<CR>' , {noremap = true, silent = true})
 
--- Don't enter Insert mode before inserting multiple lines, messes up indentation
+-- Don't enter Insert mode before inserting multiple lines, 
+-- Commenting because it messes up indentation
 -- vim.api.nvim_set_keymap('n',   'o', 'o<esc>i', {noremap = true})
 -- vim.api.nvim_set_keymap('n',   'O', 'O<esc>i', {noremap = true})
 
