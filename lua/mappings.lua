@@ -35,7 +35,7 @@ vim.cmd([[:nnoremap <silent> j :<C-U>execute 'normal!' (v:count > 1 ? "m'" . v:c
 vim.api.nvim_set_keymap('n', '<C-q>'    , ':set confirm | bufdo bw | Startify<CR>', {noremap = true, silent = true}) -- Delete all opened buffers
 vim.api.nvim_set_keymap('n', '<leader>a', ':BufSurfBack<CR>'                      , {noremap = true, silent = true}) -- Go to previous buffer history
 vim.api.nvim_set_keymap('n', '<leader>d', ':BufSurfForward<CR>'                   , {noremap = true, silent = true}) -- Go to next buffer history
-vim.api.nvim_set_keymap('n', '<leader>c', ':b# | set confirm | bw #<CR>'          , {noremap = true, silent = true}) -- Delete current buffer
+vim.api.nvim_set_keymap('n', '<leader>c', ':bn|bw #<CR>'                          , {noremap = true, silent = true}) -- Delete current buffer
 
 -----------------------------
 -- TERMINAL
