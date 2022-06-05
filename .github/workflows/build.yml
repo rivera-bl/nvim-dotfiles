@@ -24,7 +24,7 @@ jobs:
             riverablo/neovim
           # generate Docker tags based on the following events/attributes
           tags: |
-            type=raw,event=latest
+            type=raw,value=latest
             type=sha,format=short
 
       - name: Login to DockerHub
@@ -37,5 +37,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: true
           tags: ${{ steps.meta.outputs.tags }}
