@@ -15,10 +15,12 @@ vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {noremap = true, silent = true})
 
 -- Relocate
-vim.api.nvim_set_keymap('n', '<C-w>jj', ':wincmd J<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-w>kk', ':wincmd K<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-w>hh', ':wincmd H<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-w>ll', ':wincmd L<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>ww', '<C-W>=', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>wf', '<C-W>|', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>wh', ':wincmd H<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>wl', ':wincmd L<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>wj', ':wincmd J<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>wk', ':wincmd K<CR>', {noremap = true, silent = true})
 
 -----------------------------
 -- BUFFERS
