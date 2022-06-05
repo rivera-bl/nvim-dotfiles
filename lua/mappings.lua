@@ -22,6 +22,11 @@ vim.api.nvim_set_keymap('n', '<leader>wl', ':wincmd L<CR>', {noremap = true, sil
 vim.api.nvim_set_keymap('n', '<leader>wj', ':wincmd J<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>wk', ':wincmd K<CR>', {noremap = true, silent = true})
 
+-- Jumplist
+-- Add j,k motion movements to the jumplist
+vim.cmd([[:nnoremap <silent> k :<C-U>execute 'normal!' (v:count > 1 ? "m'" . v:count : '') . 'k'<CR>]])
+vim.cmd([[:nnoremap <silent> j :<C-U>execute 'normal!' (v:count > 1 ? "m'" . v:count : '') . 'j'<CR>]])
+
 -----------------------------
 -- BUFFERS
 -----------------------------
