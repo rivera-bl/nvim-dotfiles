@@ -22,5 +22,8 @@
         "yaml.format.enable": true,
         "yaml.validate": true,
         "yaml.schemaStore.enable": true,
-        "yaml.schemas":{"kubernetes":"*.y*ml"}
+        "yaml.schemas":{
+          "kubernetes":"kubernetes/*.y*ml",
+          "https://json.schemastore.org/github-workflow.json": ".github/workflows/*"
+        }
 }

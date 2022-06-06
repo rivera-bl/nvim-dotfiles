@@ -17,6 +17,8 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {noremap = true, silent = true})
 -- Relocate
 vim.api.nvim_set_keymap('n', '<leader>ww', '<C-W>=', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>wf', '<C-W>|', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>wv', '<C-W>v', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>ws', '<C-W>s', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>wh', ':wincmd H<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>wl', ':wincmd L<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>wj', ':wincmd J<CR>', {noremap = true, silent = true})
@@ -32,10 +34,10 @@ vim.cmd([[:nnoremap <silent> j :<C-U>execute 'normal!' (v:count > 1 ? "m'" . v:c
 -----------------------------
 
 -- using ton/vim-bufsurf to navigate consistently between buffers
-vim.api.nvim_set_keymap('n', '<C-q>'    , ':set confirm | bufdo bw | Startify<CR>', {noremap = true, silent = true}) -- Delete all opened buffers
-vim.api.nvim_set_keymap('n', '<leader>a', ':BufSurfBack<CR>'                      , {noremap = true, silent = true}) -- Go to previous buffer history
-vim.api.nvim_set_keymap('n', '<leader>d', ':BufSurfForward<CR>'                   , {noremap = true, silent = true}) -- Go to next buffer history
-vim.api.nvim_set_keymap('n', '<leader>c', ':bn|bw #<CR>'                          , {noremap = true, silent = true}) -- Delete current buffer
+vim.api.nvim_set_keymap('n', '<leader>a'    , ':BufSurfBack<CR>'                                  , {noremap = true, silent = true}) -- Go to previous buffer history
+vim.api.nvim_set_keymap('n', '<leader>d'    , ':BufSurfForward<CR>'                               , {noremap = true, silent = true}) -- Go to next buffer history
+vim.api.nvim_set_keymap('n', '<leader>c'    , ':bn|bw #<CR>'                                      , {noremap = true, silent = true}) -- Delete current buffer
+vim.api.nvim_set_keymap('n', '<leader><S-c>', ":let var=expand('%:p') | %bw | exec 'edit' var<CR>", {noremap = true, silent = true}) -- Delete all opened buffers but current
 
 -----------------------------
 -- TERMINAL

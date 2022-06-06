@@ -5,7 +5,7 @@ require('telescope').setup{
     file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
     grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
     qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
-    file_ignore_patterns = {"Session.vim"},
+    file_ignore_patterns = {"Session.vim", "NetrwTreeListing"},
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
     mappings = {
@@ -29,6 +29,9 @@ require('telescope').setup{
   pickers = {
     buffers = {
       mappings = {
+        i = {
+          ["<C-d>"] = "delete_buffer",
+        },
         n = {
           ["<C-d>"] = "delete_buffer",
         }
@@ -73,21 +76,21 @@ M.search_git = function()
   })
 end
 
--- open telescope when opening a dir
--- not working with startify bookmarks
-_G.open_telescope = function()
-    local first_arg = vim.v.argv[2]
-    if first_arg and vim.fn.isdirectory(first_arg) == 1 then
-        vim.g.loaded_netrw = true
-        require("telescope.builtin").find_files({search_dirs = {first_arg}})
-    end
-end
+-- -- open telescope when opening a dir
+-- -- not working with startify bookmarks
+-- _G.open_telescope = function()
+--     local first_arg = vim.v.argv[2]
+--     if first_arg and vim.fn.isdirectory(first_arg) == 1 then
+--         vim.g.loaded_netrw = true
+--         require("telescope.builtin").find_files({search_dirs = {first_arg}})
+--     end
+-- end
 
-vim.api.nvim_exec([[
-augroup TelescopeOnEnter
-    autocmd!
-    autocmd VimEnter * lua open_telescope()
-augroup END
-]], false)
+-- vim.api.nvim_exec([[
+-- augroup TelescopeOnEnter
+--     autocmd!
+--     autocmd VimEnter * lua open_telescope()
+-- augroup END
+-- ]], false)
 
 return M

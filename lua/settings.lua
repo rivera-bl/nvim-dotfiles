@@ -3,10 +3,10 @@
 -- bo = local to buffer
 
 -- theme
-vim.cmd[[colorscheme moonlight]]              -- modified bg (#1d2225), comments (#565f89)
-vim.g.moonlight_italic_comments = true
-vim.g.moonlight_borders         = true
-vim.g.moonlight_contrast        = false
+-- vim.cmd[[colorscheme moonlight]]              -- modified bg (#1d2225), comments (#565f89)
+-- vim.g.moonlight_italic_comments = true
+-- vim.g.moonlight_borders         = true
+-- vim.g.moonlight_contrast        = false
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
@@ -76,6 +76,7 @@ vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 
 -- Create .pdf out of current .md file
 vim.cmd('autocmd BufWritePost ~/dev/jekyll/codeblog/_posts/*.md silent !mkdir -p /tmp/blog-preview && pandoc %:p -o /tmp/blog-preview/tmp.pdf &')
+
 -- column
 -- vim.wo.colorcolumn = '100'
 -- vim.cmd('hi ColorColumn guibg=#252e33')
