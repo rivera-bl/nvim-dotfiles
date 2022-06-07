@@ -1,4 +1,11 @@
+-- so nvim doesnt break on first start up before PackerInstall
+local status_ok, _ = pcall(require, "telescope")
+if not status_ok then
+  return
+end
+
 local actions = require('telescope.actions')
+
 require('telescope').setup{
   defaults = {
     initial_mode = "insert",
