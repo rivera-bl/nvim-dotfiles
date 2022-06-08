@@ -8,11 +8,34 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 vim.cmd('packadd packer.nvim')
-vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
+
+-- packer as a floating window
+require("packer").init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
 
 return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim" }
-  use { 'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile' }
+
+  -- completion
+  use { 'hrsh7th/nvim-cmp' } -- completion
+  use { 'hrsh7th/cmp-buffer' } -- sources
+  use { 'hrsh7th/cmp-path' } -- sources
+  use { 'hrsh7th/cmp-cmdline' } -- sources
+  use { 'hrsh7th/cmp-nvim-lsp' } --  sources
+  use { 'saadparwaiz1/cmp_luasnip' } -- sources
+  -- snippets
+  use { 'L3MON4D3/LuaSnip' } -- snippet engine
+  use { 'honza/vim-snippets' } -- snippets
+  -- lsp
+  use { 'neovim/nvim-lspconfig' }
+  use { 'williamboman/nvim-lsp-installer' }
+
+  -- use { 'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile' }
   use { 'hashivim/vim-terraform' }
   use { 'andrewstuart/vim-kubernetes' }
   use { 'nvim-treesitter/nvim-treesitter' }
@@ -25,8 +48,7 @@ return require("packer").startup(function(use)
   use "tpope/vim-eunuch"
   use 'chaoren/vim-wordmotion'              -- treat caps as word delimitiers, and others
   use "jiangmiao/auto-pairs"
-  -- use "KabbAmine/zeavim.vim"
-  -- use "nvim-lua/completion-nvim"
+  use "KabbAmine/zeavim.vim"
   use "godlygeek/tabular"                   -- line up formatting based on a char, like junegunn/vim-easy-align
   -- telescope
   use "nvim-lua/popup.nvim"
@@ -35,12 +57,12 @@ return require("packer").startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   -- devicons
   use "kyazdani42/nvim-web-devicons"        -- telescope devicons
-  -- use 'ryanoasis/vim-devicons'              -- startify devicons
+  use 'ryanoasis/vim-devicons'              -- startify devicons
   -- themes
   use 'folke/tokyonight.nvim'
   use 'shaunsingh/moonlight.nvim'
   use 'hoob3rt/lualine.nvim'
-  -- use "mhinz/vim-startify"
+  use "mhinz/vim-startify"
   -- tmux
   use 'christoomey/vim-tmux-navigator'
   use 'preservim/vimux'
@@ -54,15 +76,6 @@ return require("packer").startup(function(use)
   -- use "vim-pandoc/vim-pandoc-syntax"
   -- "buffers"
   use { 'ton/vim-bufsurf' }
-  use 'honza/vim-snippets' -- general snippets
   use { 'folke/which-key.nvim' }
-  -- -- native neovim-lsp with nvim-cmp
-  -- use "neovim/nvim-lspconfig"
-  -- use "hrsh7th/nvim-cmp"
-  -- use 'hrsh7th/cmp-nvim-lsp'
-  -- use 'hrsh7th/cmp-buffer'
-  -- use 'hrsh7th/cmp-path'
-  -- use 'L3MON4D3/LuaSnip'
-  -- use 'saadparwaiz1/cmp_luasnip'
-  -- highlight
 end)
+
