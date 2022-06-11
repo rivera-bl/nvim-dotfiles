@@ -32,48 +32,38 @@ return require("packer").startup(function(use)
   -- lsp
   use { 'neovim/nvim-lspconfig' }
   use { 'williamboman/nvim-lsp-installer' }
-
-  -- use { 'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile' }
-  use { 'hashivim/vim-terraform' }
-  use { 'andrewstuart/vim-kubernetes' }
+  -- highlight
   use { 'nvim-treesitter/nvim-treesitter' }
-  use "pangloss/vim-javascript"
-  use "pearofducks/ansible-vim"
-  -- shorts
-  use "mattn/emmet-vim"
-  -- use "tpope/vim-surround"
-  use "tpope/vim-commentary"
-  use "tpope/vim-eunuch"
-  use 'chaoren/vim-wordmotion'              -- treat caps as word delimitiers, and others
-  use "jiangmiao/auto-pairs"
-  use "KabbAmine/zeavim.vim"
-  use "godlygeek/tabular"                   -- line up formatting based on a char, like junegunn/vim-easy-align
-  -- telescope
-  use "nvim-lua/popup.nvim"
-  use "nvim-lua/plenary.nvim"
+  use { 'plasticboy/vim-markdown' }
+
+  -- fuzzy search
+  use { 'nvim-lua/popup.nvim' }
+  use { 'nvim-lua/plenary.nvim' }
   use { "nvim-telescope/telescope.nvim" }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  -- devicons
-  use "kyazdani42/nvim-web-devicons"        -- telescope devicons
-  use 'ryanoasis/vim-devicons'              -- startify devicons
-  -- themes
-  use 'folke/tokyonight.nvim'
-  use 'shaunsingh/moonlight.nvim'
-  use 'hoob3rt/lualine.nvim'
-  use "mhinz/vim-startify"
-  -- tmux
-  use 'christoomey/vim-tmux-navigator'
-  use 'preservim/vimux'
-  -- lazygit
-  use 'kdheepak/lazygit.nvim'
-  -- sessions
-  use 'tpope/vim-obsession'
-  -- markdown
-  use "plasticboy/vim-markdown"
-  -- use "vim-pandoc/vim-pandoc" 
-  -- use "vim-pandoc/vim-pandoc-syntax"
-  -- "buffers"
-  use { 'ton/vim-bufsurf' }
-  use { 'folke/which-key.nvim' }
-end)
 
+  -- looks
+  use { 'tjdevries/colorbuddy.nvim',    commit = 'cdb5b06' }
+  use { 'norcalli/nvim-colorizer.lua',  commit = '36c610a' }
+  use { 'hoob3rt/lualine.nvim' }
+  use { 'kyazdani42/nvim-web-devicons' }
+
+  -- functions
+  use { 'godlygeek/tabular' }
+  use { 'chaoren/vim-wordmotion' }              -- treat caps as word delimitiers, and others
+  use { 'tpope/vim-commentary' }
+  use { 'tpope/vim-eunuch' }                    -- :Delete a file on disk and the buffer too.
+  use { 'tpope/vim-obsession' }
+  use { 'jiangmiao/auto-pairs' }
+  use { 'ton/vim-bufsurf' }
+
+  -- external
+  use { 'KabbAmine/zeavim.vim' }
+  use { 'kdheepak/lazygit.nvim' }
+  use { 'christoomey/vim-tmux-navigator' }
+  use { 'preservim/vimux'                }
+
+  -- misc
+  use { 'folke/which-key.nvim' }
+  use { 'mhinz/vim-startify' }
+end)
