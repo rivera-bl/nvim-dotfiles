@@ -40,7 +40,7 @@ vim.api.nvim_set_keymap('n', '<leader>c'    , ':bn|bw #<CR>'                    
 vim.api.nvim_set_keymap('n', '<leader><S-c>', ":let var=expand('%:p') | %bw | exec 'edit' var<CR>", {noremap = true, silent = true}) -- Delete all opened buffers but current
 
 -----------------------------
--- TERMINAL
+-- COMMAND MODE
 -----------------------------
 
 vim.api.nvim_set_keymap('c', '<C-j>', '<down>'    , {noremap = true})
@@ -60,7 +60,7 @@ vim.api.nvim_set_keymap('n', '<leader>tg', ':VimuxTogglePane<CR>'       , {norem
 vim.api.nvim_set_keymap('n', '<leader>tr', ':VimuxRunLastCommand<CR>'   , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>tq', ':VimuxCloseRunner<CR>'      , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>ti', ':VimuxInterruptRunner<CR>'  , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>tz', ':VimuxZoomRunner<CR>'       , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>tf', ':VimuxZoomRunner<CR>'       , {noremap = true})
 
 -----------------------------
 -- TELESCOPE
@@ -82,7 +82,7 @@ vim.api.nvim_set_keymap('n', '<leader>fv', ':lua require("telescope_lua").search
 -----------------------------
 
 -- Set spell
-vim.cmd('nnoremap <leader>¿¿ :setlocal spell!<CR>')
+vim.cmd('nnoremap <leader>¿¿ :setlocal spell!<CR>') -- toggle spellcheck
 vim.cmd('nnoremap <leader>¿s :setlocal spell <bar> setlocal spelllang=es<CR>')
 vim.cmd('nnoremap <leader>¿n :setlocal spell <bar> setlocal spelllang=en<CR>')
 -- Bind only when spell is set on
@@ -111,7 +111,7 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':Lexplore<CR>', {noremap = true, sile
 vim.api.nvim_set_keymap('n', '<leader>hh', ':Startify<CR>'          , {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>hl', ':vsplit | Startify<CR>' , {noremap = true, silent = true})
 
--- Don't enter Insert mode before inserting multiple lines, 
+-- Don't enter Insert mode before inserting multiple lines
 -- Commenting because it messes up indentation
 -- vim.api.nvim_set_keymap('n',   'o', 'o<esc>i', {noremap = true})
 -- vim.api.nvim_set_keymap('n',   'O', 'O<esc>i', {noremap = true})
