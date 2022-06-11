@@ -73,7 +73,7 @@ end
 M.search_config = function()
   require("telescope.builtin").find_files({
     prompt_title = "<Neovim Dotfiles>",
-    cwd = "~/.config/nvim",
+    cwd = "~/.config",
   })
 end
 M.search_git = function()
