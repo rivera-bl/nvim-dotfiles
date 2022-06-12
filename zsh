@@ -1,0 +1,1 @@
+/home/rvv/.config/zsh
