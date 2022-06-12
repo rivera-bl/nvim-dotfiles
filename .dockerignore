@@ -1,0 +1,6 @@
+.dockerignore
+.git*
+Session.vim
+zsh/history
+zsh/*.backup
+zsh/.zcompdump*
