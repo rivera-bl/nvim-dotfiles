@@ -123,8 +123,10 @@ vim.api.nvim_set_keymap('n', '<leader>hl', ':vsplit | Startify<CR>' , {noremap =
 -- Clear the search Highlight with ESC
 vim.api.nvim_set_keymap('n',   '<esc>'    , ':noh<return><esc>', {noremap = true, silent = true})
 
+-- Auto source when saving
 vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 vim.cmd('autocmd BufWritePost .Xresources silent !xrdb %')
+vim.cmd('autocmd BufWritePost .zshrc,.zshenv,.zsyntax,.zprompt,.zalias silent !source ~/.config/zsh/.zshrc')
 
 -- Add Datetime
 vim.api.nvim_set_keymap('n', '<C-d>', 'i<C-R>=strftime("%m-%d-%Y")<CR><Esc>', {silent = true})
