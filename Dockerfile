@@ -2,10 +2,8 @@ FROM alpine:3.16
 
 ENV USER=vim
 
-# basic pkgs,treesitter deps
-# ls -> lua:bash,ninja - yamlls:yarn,npm - json:npm
 RUN apk add --no-cache \
-            neovim tmux \
+            neovim tmux zsh zsh-vcs zsh-syntax-highlighting \
             git curl \
             cmake make build-base libstdc++ \
             bash ninja yarn npm \
@@ -21,8 +19,4 @@ COPY --chown=$USER:$USER . .config/
 
 USER $USER
 
-ENTRYPOINT [".config/nvim/entrypoint.sh"]
-# CMD ["/bin/sh", "-c"]
-
-# TODO: find and elegant way of leaving the container open
-# TODO: get lua to work, it works when installing manually but not through lsp-installer
+ENTRYPOINT [".config/entrypoint.sh"]

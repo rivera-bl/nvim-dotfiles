@@ -8,7 +8,7 @@ only with neovim installed the image is of 25mb
 * LOCAL
 
 1. docker build -t neovim-test .
-2. docker run --name neovim-test -ti --rm neovim-test sh
+2. docker run --name neovim-test -ti --rm neovim-test
 3. export PATH="$HOME/.local:$PATH"
 3. nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 4. nvim
@@ -34,14 +34,18 @@ only with neovim installed the image is of 25mb
     - did what we can
 - [x] add vim user to sudoers
 - [x] add tmux
-- [ ] add tmux config
-- [ ] create docker compose to mount volumes
-
-- [ ] install packer plugins as part of the workflow, entrypoint?
+- [x] add tmux config
+- [x] install packer plugins as part of the workflow, entrypoint?
     - nvim -c "autocmd User PackerComplete quitall" -c "PackerSync"
-- [ ] try nvim LSP to get rid of coc.nvim
+- [x] try nvim LSP to get rid of coc.nvim
     - have to create a kubernetes folder to get k8 suggestions
-- [ ] add zsh shell
-- [ ] add set -o vi
-- [ ] alias para vi=nvim
-- [ ] create a repo for our dev env ide, with zsh, tmux and nvim
+- [x] add zsh shell
+- [x] add set -o vi
+- [x] alias para vi=nvim
+- [x] create a repo for our dev env ide, with zsh, tmux and nvim
+
+- [ ] create docker compose to mount volumes
+- [ ] solve posible performance issues by running on docker
+    - lsp feels slow to start
+- [ ] get lua to work, it works when installing manually but not through lsp-installer
+- [ ] get colors?
