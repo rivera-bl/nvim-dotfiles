@@ -66,12 +66,7 @@ vim.api.nvim_set_keymap('n', '<leader>tf', ':VimuxZoomRunner<CR>'       , {norem
 -- TELESCOPE
 -----------------------------
 
-vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<CR>'  , {noremap = true})
--- vim.api.nvim_set_keymap('n', '<leader>fgf', ':Telescope git_files<CR>'   , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fgs', ':Telescope git_status<CR>'   , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fgc', ':Telescope git_commits<CR>' , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fgr', ':Telescope git_branches<CR>' , {noremap = true})
-
+vim.api.nvim_set_keymap('n', '<leader>fb',  ':Telescope buffers<CR>'  , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>ff',  ':lua require("telescope_lua").project_files()<CR>' , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fd',  ':lua require("telescope_lua").search_dev()<CR>'   , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fc',  ':lua require("telescope_lua").search_config()<CR>', {noremap = true})
@@ -110,10 +105,6 @@ vim.cmd("command CDC cd %:p:h")
 -- Toggle netrw
 vim.api.nvim_set_keymap('n', '<leader>n', ':Lexplore<CR>', {noremap = true, silent = true})
 
--- Open Startify
-vim.api.nvim_set_keymap('n', '<leader>hh', ':Startify<CR>'          , {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>hl', ':vsplit | Startify<CR>' , {noremap = true, silent = true})
-
 -- Don't enter Insert mode before inserting multiple lines
 -- Commenting because it messes up indentation
 -- vim.api.nvim_set_keymap('n',   'o', 'o<esc>i', {noremap = true})
@@ -126,9 +117,6 @@ vim.api.nvim_set_keymap('n',   '<esc>'    , ':noh<return><esc>', {noremap = true
 vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 vim.cmd('autocmd BufWritePost .Xresources silent !xrdb %')
 vim.cmd('autocmd BufWritePost .zshrc,.zshenv,.zsyntax,.zprompt,.zalias silent !source ~/.config/zsh/.zshrc')
-
--- Add Datetime
-vim.api.nvim_set_keymap('n', '<C-d>', 'i<C-R>=strftime("%m-%d-%Y")<CR><Esc>', {silent = true})
 
 -- Replace every word of the last search
 vim.api.nvim_set_keymap('n', '<leader>r', ':%s//', {})
