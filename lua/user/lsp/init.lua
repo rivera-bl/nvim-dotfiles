@@ -46,7 +46,7 @@ require'lspconfig'.jsonls.setup{}
 
 -- requires yarn
 -- https://www.schemastore.org/json/
-require('lspconfig').yamlls.setup {
+require'lspconfig'.yamlls.setup {
   settings = {
     yaml = {
       schemas = {
@@ -54,4 +54,20 @@ require('lspconfig').yamlls.setup {
       },
     },
   }
+}
+
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  }
+}
+
+-- Terraform
+require'lspconfig'.terraformls.setup{
+    capabilities = capabilities
 }
