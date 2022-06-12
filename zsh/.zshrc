@@ -1,4 +1,6 @@
+export SHELL="zsh"
 # export ZDOTDIR=$HOME/.config/zsh#Source aliases
+
 source "$HOME/.config/zsh/.zalias"
 #Source prompt style
 source "$HOME/.config/zsh/.zprompt"

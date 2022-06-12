@@ -18,7 +18,8 @@ telescope.setup{
       ".git",
       ".zcompdump*",
       ".backup*",
-      "tmux/plugins"
+      "tmux/plugins",
+      "nvim/snippets"
     },
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
