@@ -105,6 +105,9 @@ vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-R>=expand("%:p:h") . "/"<CR>', 
 -- Save the 'wd path' to clipboard
 vim.cmd("command! CWD redir @+ | echo expand('%:p:h') | redir END")
 
+-- Change to directory of current file
+vim.cmd("command CDC cd %:p:h")
+
 -- Toggle netrw
 vim.api.nvim_set_keymap('n', '<leader>n', ':Lexplore<CR>', {noremap = true, silent = true})
 
