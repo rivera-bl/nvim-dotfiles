@@ -1,12 +1,12 @@
 services:
   editor:
-    image: neovim-test
+    image: riverablo/neovim:${TAG}
     container_name: ${CONTAINER_NAME}
     volumes:
       # maps a host path with a container path, any change made in either place will persist
-      - type: bind
-        source: ${BIND_MOUNT_SOURCE}
-        target: ${BIND_MOUNT_TARGET}
+      # - type: bind
+      #   source: ${BIND_MOUNT_SOURCE}
+      #   target: ${BIND_MOUNT_TARGET}
       # persists the data of /home/vim, managed by docker
       - type: volume
         source: editor-data
