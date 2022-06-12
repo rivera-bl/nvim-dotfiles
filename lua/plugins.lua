@@ -74,5 +74,4 @@ return require("packer").startup(function(use)
 
   -- misc
   use { 'folke/which-key.nvim' }
-  use { 'mhinz/vim-startify' }
 end)
