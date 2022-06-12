@@ -69,12 +69,14 @@ telescope.setup{
 telescope.load_extension('fzf')
 
 local M = {}
-M.search_files = function()
-  require("telescope.builtin").find_files({
+M.project_files = function()
+  local opts = {
     prompt_title = vim.fn.expand("%:p:h"),
     cwd = vim.fn.expand("%:p:h"),
     hidden = true
-  })
+  } -- define here if you want to define something
+  local ok = pcall(require"telescope.builtin".git_files, opts)
+  if not ok then require"telescope.builtin".find_files(opts) end
 end
 M.search_dev = function()
   require("telescope.builtin").find_files({
@@ -93,33 +95,9 @@ end
 M.search_vim = function()
   require("telescope.builtin").find_files({
     prompt_title = "<Vim>",
-    cwd = "~/.config/nvim",
+    cwd = "~/editor",
     hidden = true
   })
 end
-M.search_git = function()
-  require("telescope.builtin").git_files({
-    prompt_title = "<Parent Git Directory>",
-    cwd = vim.fn.expand("%:p:h"),
-    hidden = true
-  })
-end
-
--- -- open telescope when opening a dir
--- -- not working with startify bookmarks
--- _G.open_telescope = function()
---     local first_arg = vim.v.argv[2]
---     if first_arg and vim.fn.isdirectory(first_arg) == 1 then
---         vim.g.loaded_netrw = true
---         require("telescope.builtin").find_files({search_dirs = {first_arg}})
---     end
--- end
-
--- vim.api.nvim_exec([[
--- augroup TelescopeOnEnter
---     autocmd!
---     autocmd VimEnter * lua open_telescope()
--- augroup END
--- ]], false)
 
 return M
