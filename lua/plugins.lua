@@ -7,6 +7,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
 end
 
+vim.cmd('packadd packer.nvim')
+
 -- source this file on save
 vim.cmd([[
   augroup packer_user_config

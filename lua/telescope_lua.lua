@@ -1,12 +1,12 @@
 -- so nvim doesnt break on first start up before PackerInstall
-local status_ok, _ = pcall(require, "telescope")
+local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
   return
 end
 
 local actions = require('telescope.actions')
 
-require('telescope').setup{
+telescope.setup{
   defaults = {
     initial_mode = "insert",
     file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
@@ -61,7 +61,7 @@ require('telescope').setup{
     }
   }
 }
-require('telescope').load_extension('fzf')
+telescope.load_extension('fzf')
 
 local M = {}
 M.search_files = function()

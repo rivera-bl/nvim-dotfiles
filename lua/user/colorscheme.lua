@@ -1,9 +1,9 @@
-local status_ok, _ = pcall(require, "colorbuddy")
+local status_ok, colorbuddy = pcall(require, "colorbuddy")
 if not status_ok then
 	return
 end
 
-local Color, colors, Group, groups, styles = require('colorbuddy').setup()
+local Color, colors, Group, groups, styles = colorbuddy.setup()
 
 -- for some reason this block of colors is hardcoded inside the colorbuddy plugin
 -- pinned the commit for the plugin is any case

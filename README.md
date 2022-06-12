@@ -1,4 +1,4 @@
-## BUILDING AS A DOCKER CONTAINER
+# BUILDING AS A DOCKER CONTAINER
 
 alpine:1.16
 only with neovim installed the image is of 25mb
@@ -10,7 +10,7 @@ only with neovim installed the image is of 25mb
 1. docker build -t neovim-test .
 2. docker run --name neovim-test -ti --rm neovim-test sh
 3. export PATH="$HOME/.local:$PATH"
-3. nvim -c "autocmd User PackerComplete quitall" -c "PackerSync"
+3. nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 4. nvim
 
 * AUTOMATED

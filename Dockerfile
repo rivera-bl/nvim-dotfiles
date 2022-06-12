@@ -9,7 +9,7 @@ RUN apk add --no-cache \
             neovim tmux \
             git curl \
             cmake make build-base libstdc++ \
-            apk add bash ninja yarn npm \
+            bash ninja yarn npm \
             sudo && \
             adduser -D $USER && \
             echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER && \
