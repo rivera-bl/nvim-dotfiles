@@ -1,6 +1,5 @@
 FROM alpine:3.16
 
-# coc-snippets needs python3..
 ENV USER=vim
 
 # basic pkgs,treesitter deps
@@ -16,9 +15,14 @@ RUN apk add --no-cache \
             chmod 0440 /etc/sudoers.d/$USER && \
             mkdir -p /home/$USER/.config && chown -R $USER:$USER /home/$USER/.config
 
-COPY --chown=$USER:$USER . /home/vim/.config/nvim/ 
+WORKDIR /home/$USER
+
+COPY --chown=$USER:$USER . .config/nvim/ 
 
 USER $USER
 
+ENTRYPOINT [".config/nvim/entrypoint.sh"]
+# CMD ["/bin/sh", "-c"]
+
+# TODO: find and elegant way of leaving the container open
 # TODO: get lua to work, it works when installing manually but not through lsp-installer
-# TODO: export the $HOME/.local PATH
