@@ -1,68 +1,77 @@
--- Auto install packer.nvim if not exists
+-- auto install packer.nvim if not exists
 local fn = vim.fn
 local execute = vim.api.nvim_command
-local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
   execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
 end
 
-vim.cmd('packadd packer.nvim')
-vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
+-- source this file on save
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source %
+  augroup end
+]])
+
+-- packer as a floating window
+require("packer").init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
 
 return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim" }
-  use { 'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile' }
-  use { 'hashivim/vim-terraform' }
-  use { 'andrewstuart/vim-kubernetes' }
+
+  -- completion
+  use { 'hrsh7th/nvim-cmp' } -- completion
+  use { 'hrsh7th/cmp-buffer' } -- sources
+  use { 'hrsh7th/cmp-path' } -- sources
+  use { 'hrsh7th/cmp-cmdline' } -- sources
+  use { 'hrsh7th/cmp-nvim-lsp' } --  sources
+  use { 'saadparwaiz1/cmp_luasnip' } -- sources
+  -- snippets
+  use { 'L3MON4D3/LuaSnip' } -- snippet engine
+  use { 'honza/vim-snippets' } -- snippets
+  -- lsp
+  use { 'neovim/nvim-lspconfig' }
+  use { 'williamboman/nvim-lsp-installer' }
+  -- highlight
   use { 'nvim-treesitter/nvim-treesitter' }
-  use "pangloss/vim-javascript"
-  use "pearofducks/ansible-vim"
-  -- shorts
-  use "mattn/emmet-vim"
-  -- use "tpope/vim-surround"
-  use "tpope/vim-commentary"
-  use "tpope/vim-eunuch"
-  use 'chaoren/vim-wordmotion'              -- treat caps as word delimitiers, and others
-  use "jiangmiao/auto-pairs"
-  -- use "KabbAmine/zeavim.vim"
-  -- use "nvim-lua/completion-nvim"
-  use "godlygeek/tabular"                   -- line up formatting based on a char, like junegunn/vim-easy-align
-  -- telescope
-  use "nvim-lua/popup.nvim"
-  use "nvim-lua/plenary.nvim"
+  use { 'plasticboy/vim-markdown' }
+  use { 'hashivim/vim-terraform' }
+
+  -- fuzzy search
+  use { 'nvim-lua/popup.nvim' }
+  use { 'nvim-lua/plenary.nvim' }
   use { "nvim-telescope/telescope.nvim" }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  -- devicons
-  use "kyazdani42/nvim-web-devicons"        -- telescope devicons
-  -- use 'ryanoasis/vim-devicons'              -- startify devicons
-  -- themes
-  use 'folke/tokyonight.nvim'
-  use 'shaunsingh/moonlight.nvim'
-  use 'hoob3rt/lualine.nvim'
-  -- use "mhinz/vim-startify"
-  -- tmux
-  use 'christoomey/vim-tmux-navigator'
-  use 'preservim/vimux'
-  -- lazygit
-  use 'kdheepak/lazygit.nvim'
-  -- sessions
-  use 'tpope/vim-obsession'
-  -- markdown
-  use "plasticboy/vim-markdown"
-  -- use "vim-pandoc/vim-pandoc" 
-  -- use "vim-pandoc/vim-pandoc-syntax"
-  -- "buffers"
+
+  -- looks
+  use { 'tjdevries/colorbuddy.nvim',    commit = 'cdb5b06' }
+  use { 'norcalli/nvim-colorizer.lua',  commit = '36c610a' }
+  use { 'hoob3rt/lualine.nvim' }
+  use { 'kyazdani42/nvim-web-devicons' }
+
+  -- functions
+  use { 'godlygeek/tabular' }
+  use { 'chaoren/vim-wordmotion' }              -- treat caps as word delimitiers, and others
+  use { 'tpope/vim-commentary' }
+  use { 'tpope/vim-eunuch' }                    -- :Delete a file on disk and the buffer too.
+  use { 'tpope/vim-obsession' }
+  use { 'jiangmiao/auto-pairs' }
   use { 'ton/vim-bufsurf' }
-  use 'honza/vim-snippets' -- general snippets
+
+  -- external
+  use { 'KabbAmine/zeavim.vim' }
+  use { 'kdheepak/lazygit.nvim' }
+  use { 'christoomey/vim-tmux-navigator' }
+  use { 'preservim/vimux'                }
+
+  -- misc
   use { 'folke/which-key.nvim' }
-  -- -- native neovim-lsp with nvim-cmp
-  -- use "neovim/nvim-lspconfig"
-  -- use "hrsh7th/nvim-cmp"
-  -- use 'hrsh7th/cmp-nvim-lsp'
-  -- use 'hrsh7th/cmp-buffer'
-  -- use 'hrsh7th/cmp-path'
-  -- use 'L3MON4D3/LuaSnip'
-  -- use 'saadparwaiz1/cmp_luasnip'
-  -- highlight
 end)

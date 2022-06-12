@@ -12,7 +12,13 @@ require('telescope').setup{
     file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
     grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
     qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
-    file_ignore_patterns = {"Session.vim", "NetrwTreeListing"},
+    file_ignore_patterns = {
+      "Session.vim",
+      "NetrwTreeListing",
+      ".git",
+      ".zcompdump*",
+      ".backup*"
+    },
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
     mappings = {
@@ -62,24 +68,35 @@ M.search_files = function()
   require("telescope.builtin").find_files({
     prompt_title = vim.fn.expand("%:p:h"),
     cwd = vim.fn.expand("%:p:h"),
+    hidden = true
   })
 end
 M.search_dev = function()
   require("telescope.builtin").find_files({
     prompt_title = "<Dev Folder>",
     cwd = "~/dev",
+    hidden = true
   })
 end
 M.search_config = function()
   require("telescope.builtin").find_files({
-    prompt_title = "<Neovim Dotfiles>",
+    prompt_title = "<Dotfiles>",
+    cwd = "~/.config",
+    hidden = true
+  })
+end
+M.search_vim = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<Vim>",
     cwd = "~/.config/nvim",
+    hidden = true
   })
 end
 M.search_git = function()
   require("telescope.builtin").git_files({
     prompt_title = "<Parent Git Directory>",
     cwd = vim.fn.expand("%:p:h"),
+    hidden = true
   })
 end
 

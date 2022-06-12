@@ -2,12 +2,6 @@
 -- wo = local to window
 -- bo = local to buffer
 
--- theme
--- vim.cmd[[colorscheme moonlight]]              -- modified bg (#1d2225), comments (#565f89)
--- vim.g.moonlight_italic_comments = true
--- vim.g.moonlight_borders         = true
--- vim.g.moonlight_contrast        = false
-
 vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
 vim.cmd('set nofoldenable')
@@ -18,6 +12,7 @@ vim.o.mouse         = 'a'
 vim.o.wildmode      = 'longest:full,full'     -- shell autocompletion
 vim.o.hidden        = true
 vim.o.termguicolors = true
+vim.wo.signcolumn   = "number"
 
 -- the two bellow highlight the current line number
 vim.wo.number       = true 		      -- shows linenumbers
@@ -32,6 +27,7 @@ vim.o.splitright    = true
 vim.o.splitbelow    = true
 vim.o.gdefault      = true		      -- by default match every ocurrence in a line
 
+vim.o.autoread      = true          -- reload if file has been changed outside of ivm
 vim.bo.smartindent  = true
 vim.wo.breakindent  = true          -- continue indenting on next line
 vim.wo.linebreak    = true          -- break a line by word not by character
@@ -51,7 +47,7 @@ vim.cmd('autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown')
 vim.cmd('autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown')
 
 -- cursorline only in Insert Mode
-vim.cmd('autocmd InsertLeave,InsertEnter * set cul!')       
+vim.cmd('autocmd InsertLeave,InsertEnter * set cul!')
 vim.cmd('hi CursorLine guibg=#252e33')
 
 -- Maintain same size of splits when resizing the window
@@ -76,7 +72,3 @@ vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 
 -- Create .pdf out of current .md file
 vim.cmd('autocmd BufWritePost ~/dev/jekyll/codeblog/_posts/*.md silent !mkdir -p /tmp/blog-preview && pandoc %:p -o /tmp/blog-preview/tmp.pdf &')
-
--- column
--- vim.wo.colorcolumn = '100'
--- vim.cmd('hi ColorColumn guibg=#252e33')

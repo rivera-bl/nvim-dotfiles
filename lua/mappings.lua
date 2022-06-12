@@ -40,7 +40,7 @@ vim.api.nvim_set_keymap('n', '<leader>c'    , ':bn|bw #<CR>'                    
 vim.api.nvim_set_keymap('n', '<leader><S-c>', ":let var=expand('%:p') | %bw | exec 'edit' var<CR>", {noremap = true, silent = true}) -- Delete all opened buffers but current
 
 -----------------------------
--- TERMINAL
+-- COMMAND MODE
 -----------------------------
 
 vim.api.nvim_set_keymap('c', '<C-j>', '<down>'    , {noremap = true})
@@ -60,7 +60,7 @@ vim.api.nvim_set_keymap('n', '<leader>tg', ':VimuxTogglePane<CR>'       , {norem
 vim.api.nvim_set_keymap('n', '<leader>tr', ':VimuxRunLastCommand<CR>'   , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>tq', ':VimuxCloseRunner<CR>'      , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>ti', ':VimuxInterruptRunner<CR>'  , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>tz', ':VimuxZoomRunner<CR>'       , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>tf', ':VimuxZoomRunner<CR>'       , {noremap = true})
 
 -----------------------------
 -- TELESCOPE
@@ -72,17 +72,18 @@ vim.api.nvim_set_keymap('n', '<leader>fgs', ':Telescope git_status<CR>'   , {nor
 vim.api.nvim_set_keymap('n', '<leader>fgc', ':Telescope git_commits<CR>' , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fgr', ':Telescope git_branches<CR>' , {noremap = true})
 
-vim.api.nvim_set_keymap('n', '<leader>ff', ':lua require("telescope_lua").search_files()<CR>'  , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fd', ':lua require("telescope_lua").search_dev()<CR>'   , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ff',  ':lua require("telescope_lua").search_files()<CR>' , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fd',  ':lua require("telescope_lua").search_dev()<CR>'   , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fgf', ':lua require("telescope_lua").search_git()<CR>'   , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fv', ':lua require("telescope_lua").search_config()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fc',  ':lua require("telescope_lua").search_config()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fv',  ':lua require("telescope_lua").search_vim()<CR>', {noremap = true})
 
 -----------------------------
 -- SPELL CHECKING
 -----------------------------
 
 -- Set spell
-vim.cmd('nnoremap <leader>¿¿ :setlocal spell!<CR>')
+vim.cmd('nnoremap <leader>¿¿ :setlocal spell!<CR>') -- toggle spellcheck
 vim.cmd('nnoremap <leader>¿s :setlocal spell <bar> setlocal spelllang=es<CR>')
 vim.cmd('nnoremap <leader>¿n :setlocal spell <bar> setlocal spelllang=en<CR>')
 -- Bind only when spell is set on
@@ -104,6 +105,9 @@ vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-R>=expand("%:p:h") . "/"<CR>', 
 -- Save the 'wd path' to clipboard
 vim.cmd("command! CWD redir @+ | echo expand('%:p:h') | redir END")
 
+-- Change to directory of current file
+vim.cmd("command CDC cd %:p:h")
+
 -- Toggle netrw
 vim.api.nvim_set_keymap('n', '<leader>n', ':Lexplore<CR>', {noremap = true, silent = true})
 
@@ -111,7 +115,7 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':Lexplore<CR>', {noremap = true, sile
 vim.api.nvim_set_keymap('n', '<leader>hh', ':Startify<CR>'          , {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>hl', ':vsplit | Startify<CR>' , {noremap = true, silent = true})
 
--- Don't enter Insert mode before inserting multiple lines, 
+-- Don't enter Insert mode before inserting multiple lines
 -- Commenting because it messes up indentation
 -- vim.api.nvim_set_keymap('n',   'o', 'o<esc>i', {noremap = true})
 -- vim.api.nvim_set_keymap('n',   'O', 'O<esc>i', {noremap = true})
@@ -119,8 +123,10 @@ vim.api.nvim_set_keymap('n', '<leader>hl', ':vsplit | Startify<CR>' , {noremap =
 -- Clear the search Highlight with ESC
 vim.api.nvim_set_keymap('n',   '<esc>'    , ':noh<return><esc>', {noremap = true, silent = true})
 
+-- Auto source when saving
 vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 vim.cmd('autocmd BufWritePost .Xresources silent !xrdb %')
+vim.cmd('autocmd BufWritePost .zshrc,.zshenv,.zsyntax,.zprompt,.zalias silent !source ~/.config/zsh/.zshrc')
 
 -- Add Datetime
 vim.api.nvim_set_keymap('n', '<C-d>', 'i<C-R>=strftime("%m-%d-%Y")<CR><Esc>', {silent = true})
