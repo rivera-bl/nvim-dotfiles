@@ -52,7 +52,7 @@ telescope.setup{
       }
     },
     find_files = {
-      find_command = { "rg", "--ignore", "-L", "--hidden", "--files"}
+      -- find_command = { "rg", "--ignore", "-L", "--hidden", "--files"}
     }
   },
   extensions = {
