@@ -1,0 +1,2719 @@
+poweroff
+nvim -S
+nvim -S
+skey
+clear
+poweroff
+nvim -S
+nvim -S
+git checkout -b lsp-native
+vi
+vi
+git checkout docker-image
+vi
+git checkout lsp-native
+ls
+vi .gitignore
+vi
+vi
+tmux --version
+tmux -version
+tmux -v
+tmux version
+tmux -h
+tmux --help
+man tmux
+t -V
+t
+t
+vi
+t
+vi
+clear
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+clear
+vi
+vi
+vi
+vi
+vi
+npm -i g neovim
+npm i -g neovim
+sudo npm i -g neovim
+vi
+vi
+pip install pynvim
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+mv lua/cmp.lua lua/_cmp.lua
+vi init.lua
+vi
+vi
+vi
+vi
+clear
+clear
+history
+clear
+echo history
+history
+vi ../zsh/history
+hola
+history
+clear
+clear
+vi README.md
+docker build -t neovim-test .
+vi README.md
+vi
+vi
+vi
+vi
+vi
+vi lua/plugins.lua
+vi lua/plugins.lua
+vi lua/plugins.lua
+cd lua
+ls
+mkdir lsp
+cd lsp
+mkdir servers
+vi lsp-installer.lua
+vi init.lua
+ls
+cd servers
+vi
+vi sumneko_lua.lua
+ls
+cd ..
+vi lsp-installer.lua
+vi servers/jsonls.lua
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+mv lua/lsp lua/_lsp
+vi init.lua
+vi
+vi 
+vi
+clear
+vi
+mv handlers.lua _handlers.lua
+mv lsp-installer.lua _lsp-installer.lua
+ls
+ls ../lualine_lua
+vi
+mv servers _servers
+vi init.lua
+vi 
+ls
+mv _lsp-installer.lua lsp-installer.lua
+mv _handlers.lua handlers.lua
+mv _servers servers
+ls
+vi init.lua
+vi lsp-installer.lua
+vi
+vi
+cd .
+cd ..
+vi
+cd ..
+ls
+cd lua
+vi
+cd ..
+vi init.lua
+cd lua
+ls
+rm -rf lsp_lua
+rm lsp_lua
+ls
+vi _lsp/lsp-installer.lua
+ls
+cd _lsp
+ls
+ls servers
+cat lsp-installer.lua
+ls
+vi handlers.lua
+ls
+mv handlers.lua _handlers.lua
+vi init.lua
+cd ..
+vi
+cd _lsp
+ls
+vi init.lua
+vi lsp-installer.lua
+vi
+mv _handlers.lua handlers.lua
+vi lsp-installer.lua
+mv handlers.lua _handlers.lua
+mv lsp-installer.lua _lsp-installer.lua
+vi _lsp-installer.lua
+vi
+vi init.lua
+ls
+vi
+vi init.lua
+ls
+vi init.lua
+ls servers
+vi _lsp-installer.lua
+vi _lsp-installer.lua
+vi _lsp-installer.lua
+cd ..
+ls
+mkdir user
+mv mappings.lua plugins.lua settings.lua telescope_lua treesitter_lua lualine_lua _cmp.lua _lsp user
+ls
+vi ../init.lua
+vi
+cd user
+ls
+ls
+cd _lsp
+ls
+vi init.lua
+vi
+ls
+tree
+cd ..
+ls
+cd _lsp
+ls
+cd servers
+ls
+cd ..
+vi _lsp-installer.lua
+ls
+vi init.lua
+mv _lsp-installer.lua lsp-installer.lua
+mv _handlers.lua handlers.lua
+vi init.lua
+ls
+cd ..
+ls
+vi
+ls
+vi 
+vi ../../init.lua
+cd /tmp
+git clone https://github.com/LunarVim/Neovim-from-scratch/tree/06-LSP
+mkdir backupd
+mv ~/.config/nvim backupd
+ls backupd
+git clone https://github.com/LunarVim/Neovim-from-scratch
+ls
+ls Neovim-from-scratch
+mv Neovim-from-scratch ~/.config/nvim
+ls ~/.config/nvim
+vi
+vi
+vi
+cd 
+cd .config/nvim
+ls
+git checkout 06-LSP
+vi
+ls 
+tree lua
+vi
+vi
+cd /tmp/backupd
+ls
+cd nvim
+ls
+tree lua
+tree ~/.config/nvim/lua
+tree /tmp/backupd/nvim/lua
+cd /tmp/backupd/nvim/lua
+cd user
+mv _cmp.lua cmp.lua
+mv _lsp lsp
+ls
+vi ../../init.lua
+ls
+vi lsp/init.lua
+ls lsp
+vi lsp/lsp-installer.lua
+cd ..
+ls
+cd user
+ls
+mv telescope_lua treesitter_lua ..
+ls
+mv lualine_lua ..
+ls
+cd ..
+ls
+vi ../init.lua
+cd ..
+..
+mv nvim ~/.config/nvim
+vi
+cd vi
+ls
+cd ~/.config
+ls
+cd nvim
+ls
+ls
+ls nvim
+cd ..
+mv nvim/nvim .
+mv -r nvim/nvim .
+ls
+cd nvim/nvim nvim2
+mv nvim/nvim nvim2
+ls nvim
+ls nvim2
+rm -rf nvim
+rm nvim
+mv nvim2 nvim2
+mv nvim2 nvim
+cd nvim
+ls
+vi
+ls
+vi lua/user/settings.lua
+vi
+vi
+vi lua
+cd lua
+ls
+cd user
+ls
+vi ../../init.lua
+vi ../../init.lua
+vi plugins.lua
+vi plugins.lua
+vi plugins.lua
+vi
+vi plugins.lua
+vi plugins.lua
+ls
+cd ..
+ls
+cd ..
+ls
+vi init.lua
+vi
+vi init.lua
+vi 
+git checkout docker-image
+vi
+git checkout lsp-native
+ls
+git switch docker-image 
+vi
+ls
+tree lua
+git checkout lsp-native
+git stash
+git checkout docker-image
+vi
+vi
+git checkout lsp-native
+git status
+git stash apply
+tree
+ls
+cd lua
+ls
+tree user
+ls
+ls user
+ls
+mv user/mappings.lua user/plugins.lua user/settings.lua user/cmp.lua .
+ls
+ls user
+ls
+vi ../init.lua
+vi
+vi
+mv cmp.lua _cmp.lua
+vi ../init.lua
+vi
+vi plugins.lua
+vi
+mv plugins.lua plugin-back.lua
+git checkout docker-image plugins.lua
+vi plugins.lua
+mv plugin-back.lua plugins.lua
+vi plugins.lua
+vi
+vi plugins.lua
+mv plugins.lua plugin-back.lua
+git checkout docker-image plugins.lua
+vi plugins.lua
+vi
+mv plugins.lua plugins-good.lua
+mv plugin-back.lua plugins.lua
+vi plugins.lua
+vi
+vi plugins-good.lua
+vi plugins
+rm -rf plugins
+rm plugins
+ls
+rm plugins-good.lua
+vi plugins.lua
+vi plugins.lua
+vi
+ls
+vi
+ls
+mv _cmp.lua user/cmp.lua
+vi ../init.lua
+vi
+ls
+cd user
+ls
+vi
+cd lsp
+vi
+vi ../../../init.lua
+vi
+vi lsp-installer.lua
+cd /tmp
+git clone https://github.com/LunarVim/Neovim-from-scratch
+cd Neovim-from-scratch
+git checkout 06-LSP
+cd ~/.config/nvim
+vi
+vi
+vi
+vi
+vi 
+vi
+vi
+ls
+vi
+clear
+vi
+ls
+ls -al
+cd ..
+ls
+cd nvim
+vi
+docker build -t neovim-test-lsp .
+cd ..
+cd ..
+docker build -t neovim-test-lsp .
+docker build -t neovim-test-lsp .
+docker build -t neovim-test-lsp .
+vi
+vi
+docker build -t neovim-test-lsp .
+vi 
+vi
+vi lua/settings.lua
+vi
+vi lua/settings.lua
+vi
+docker imgaes
+docker images
+vi Dockerfile
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+vi init.lua
+docker build -t neovim-test-lsp .
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+vi README.md
+lua-language-server
+docker build -t neovim-test-lsp .
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker build -t neovim-test-lsp .
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+echo $PATH
+ps aux | grep
+ps aux | grep lua
+which lua-language-server
+cd
+ps aux | grep lua
+ps auxwe | grep lua
+ps auxw | grep lua
+ps auxe | grep lua
+clear
+ps auxwe | grep lua
+ps aux | grep lua
+ps auxwe | grep 434643
+echo $PATH
+vi a.lua
+ps -auxwe | grep 434643
+ps aux | grep lua
+pwdx 434643
+cd .local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin
+ls
+lua-language-server
+sh lua-language-server
+ls -al
+cd ..
+ls
+cd ..
+ls
+cd server
+ls
+tree
+clear
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+pwd
+echo $PATH | grep .local
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+ls
+docker build -t neovim-test-lsp .
+docker build -t neovim-test-lsp .
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+vi
+vi init.lua
+cd
+vi a.lua
+ls
+clear
+cd .config/nvim
+vi
+docker build -t neovim-test-lsp .
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker build -t neovim-test-lsp .
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+docker build -t neovim-test-lsp .
+docker images
+docker run --name neovim-test -ti --rm neovim-test-lsp sh
+dk images
+ls
+rm lua/user/lsp/lsp-installer.lua
+rm lua/user/lsp/servers
+vi
+poweroff
+ls -al
+vi .tmux
+ls .config/tmux/
+cd dev
+cd kubernetes
+vi
+vi a.yaml
+vi
+nvim -S
+nvim -S
+c 62+32+4+8+2+2
+c 12+6+1++1+1+0.2
+poweroff
+nvim -S
+nvim -S
+ls
+clear
+clear
+shutdown -h 22:10
+nvim -S
+nvim -S
+clera
+clear
+youtube-dl help
+youtube-dl -h
+man youtube-dl
+ls
+vi vimwiki/Registro.md
+youtube-dl -q --add-metadata -o '$HOME/music/bandcamp/%(artist)s - %(album)s/%(track_number)s - %(track)s.%(ext)s' https://nonlocalresearch.bandcamp.com/album/edens-fuselage
+ls ~/music/bandcamp
+youtube-dl -q --add-metadata -o '$HOME/music/bandcamp/%(artist)s - %(album)s/%(track_number)s - %(track)s.%(ext)s' https://embassadordulgoon.bandcamp.com/album/elementals-orrery
+ls ~/music/bandcamp/Embassador\ Dulgoon\ -\ Eden\'s\ Fuselage
+youtube-dl -q --add-metadata -o '$HOME/music/bandcamp/%(artist)s - %(album)s/%(track_number)s - %(track)s.%(ext)s' https://embassadordulgoon.bandcamp.com/album/the-inner-round
+youtube-dl -q --add-metadata -o '$HOME/music/bandcamp/%(artist)s - %(album)s/%(track_number)s - %(track)s.%(ext)s' https://embassadordulgoon.bandcamp.com/album/as-the-braided-streamlets-run
+youtube-dl -q --add-metadata -o '$HOME/music/bandcamp/%(artist)s - %(album)s/%(track_number)s - %(track)s.%(ext)s' https://embassadordulgoon.bandcamp.com/album/myriad-tongues
+bluetoothctl
+vi ~/.local/bin/bta
+14:3F:A6:DE:24:49
+vi ~/.local/bin/bta
+vi ~/.local/bin/yt-bandcamp
+vi ~/.local/bin/yt-bandcamp
+bta
+mpc -h
+mpc --help
+man mpc
+mpc status
+cd music/bandcamp
+ls
+cd ../soulseek
+cd Embassador\ Dulgoon\ -\ Hydrorion\ Remnants\ 2018
+ls
+ls
+ls -al
+mv ../*.jpg .
+ls
+feh a0093552537_10.jpg
+mpc status
+mpc --format %file% current
+ ffmpeg -y -i "$(mpc --format ~/music/bandcamp/%file% | head -n 1)" \\
+            /tmp/mpd_cover.jpg
+ls
+ ffmpeg -y -i "$(mpc --format '~/music/bandcamp/%file%' | head -n 1)" \\
+            /tmp/mpd_cover.jpg
+ ffmpeg -y -i "$(mpc --format '~/music/%file%' | head -n 1)" \\
+            /tmp/mpd_cover.jpg
+ls /tmp
+pwd
+ ffmpeg -y -i "$(mpc --format '/home/rvv/music/%file%' | head -n 1)" \\
+            /tmp/mpd_cover.jpg
+ls /tmp
+feh /tmp/mpd_cover.jpg
+sudo pip3 install ueberzug
+cd .config/ncmpcpp
+ls
+git clonehttps://github.com/tam-carre/ncmpcpp-ueberzug 
+git clone https://github.com/tam-carre/ncmpcpp-ueberzug 
+cd ncmpcpp-ueberzug
+ls
+ls -al
+cd ..
+ls
+vi config
+cd ncmpcpp-ueberzug
+ls
+vi ncmpcpp_cover_art.sh
+ ~/.ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+~/config/.ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+ls
+vi ncmpcpp
+vi ncmpcpp_cover_art.sh
+cd ..
+vi config
+~/config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+clear
+ls
+vi config
+vi ncmpcpp-ueberzug/ncmpcpp_cover_art.sh
+~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+vi ncmpcpp-ueberzug/ncmpcpp_cover_art.sh
+vi config
+vi ncmpcpp-ueberzug/ncmpcpp_cover_art.sh
+~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+vi ncmpcpp-ueberzug/ncmpcpp_cover_art.sh
+vi config
+~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+vi config
+~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+cd .config/ncmpcpp
+vi config
+vi ncmpcpp-ueberzug/ncmpcpp_cover_art.sh
+tmux
+cd .config/ncmpcpp
+./.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+cd .config/ncmpcpp
+vi ncmpcpp-ueberzug/ncmpcpp_cover_art.sh
+./.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+./.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+./.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+./.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+./.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+./.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+./.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+./.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
+tmux session 6
+tmux session-attach 6
+tmux attach-session 6
+tmux attach-session -t 6
+tmux attach-session -t 5
+exit
+tmux attach-session -t 6
+tmux attach-session -t 7
+tmux attach-session -t 2
+exit
+exit
+tmux attach-session -t 1
+tmux attach-session -t 2
+tmux attach-session -t 3
+exit
+exit
+tmux attach-session -t 4
+exit
+clear
+i3c
+tmux
+i3c
+cd .config/ncmpcpp
+vi ncmpcpp-ueberzug/ncmpcpp_cover_art.sh
+cd music/soulseek
+grep Stalliong
+grep Stallion
+ls | grep Stallion
+ls 1967\ Song\ of\ the\ Stallion\ -\ flac
+feh 1967\ Song\ of\ the\ Stallion\ -\ flac/Robbie\ Basho\ -\ Song\ Of\ The\ Stallion\ -\ full\ front.jpg
+feh --scale-down 1967\ Song\ of\ the\ Stallion\ -\ flac/Robbie\ Basho\ -\ Song\ Of\ The\ Stallion\ -\ full\ front.jpg
+feh --scale-down 1967\ Song\ of\ the\ Stallion\ -\ flac/Robbie\ Basho\ -\ Song\ Of\ The\ Stallion\ -\ inside.jpg
+tmux attach-session -t 7
+ls
+cd music/soulseek/1967\ Song\ of\ the\ Stallion\ -\ flac
+ls
+mkdir image
+mv Robbie\ Basho\ -\ Song\ Of\ The\ Stallion\ -\ inside.jpg image
+ls
+cd /tmp
+git clone https://github.com/desbma/sacad
+cd sacad
+python3 setup.py install
+sudo python3 setup.py install
+sacad_r -h
+cd
+cd music
+cd soulseek
+cd ..
+cd soulseek
+sacad_r
+cd ..
+sacad_r soulseek 600 front_sacad.jpg
+vi
+vi
+vi
+vi lua/user/cmp.lua
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+clear
+clear
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+cd .local/share/nvim/site/pack/packer/start/colorbuddy.nvim
+ls
+cd lua
+ls
+tree
+vi
+cd colorbuddy
+ls
+vi color.lua
+vi .Xresources
+vi .Xresources
+clear
+cd .local/share/nvim/site/pack/packer/start/colorbuddy.nvim/lua/colorbuddy
+ls
+vi color.lua
+vi .Xresources
+vi a.yaml
+bta
+bta
+t kill-server
+i3c
+nvim -S
+nvim -S
+nvim -S
+cd music/soulseek/
+ls
+ls grep | Robbie
+ls | grep country
+ls | grep Country
+ls | grep -i country
+cd Robbie\ Basho\ -\ 1978\ -\ Visions\ of\ the\ Country\ \[2013\]
+ls
+cd music/soulseek/
+cd Robbie\ Basho\ -\ 1978\ -\ Visions\ of\ the\ Country\ \[2013\]
+ls
+mv front_sacad.jpg ../
+cd .
+..
+ls | grep -i stallion
+mv front_sacad.jpg 1967\ Song\ of\ the\ Stallion\ -\ flac
+vi .Xresources
+vi 
+poweroff
+vi .Xresources
+skey
+vi .Xresources
+bta &
+bta
+bta
+nvim -S
+nvim -S
+clear
+ls
+ld plugin
+ls plugin
+clear
+vi
+vi a.lua
+vi a.lua
+cd music/soulseek
+ls
+ls | grep -i rainbow
+ls \(1981\)\ Rainbow\ Thunder\ Songs\ of\ the\ American\ West
+rm \(1981\)\ Rainbow\ Thunder\ Songs\ of\ the\ American\ West
+rm 1981\ Rainbow\ Thunder\ _\ Songs\ of\ the\ American\ West\ \(Remastered\ 2015\)\ -\ flac
+vi a.lua
+vi a.lua
+vi a.lua
+ls .local/share/Trash
+ls .local/share/Trash/files
+gio --help
+git restore
+gio restore
+git list
+gio list
+gio list music
+gio list music soulseek
+gio list music/soulseek
+ls
+clear
+mv .local/share/Trash/files/1981\ Rainbow\ Thunder\ _\ Songs\ of\ the\ American\ West\ \(Remastered\ 2015\)\ -\ flac music/soulseek
+cd music/soulseek
+ls | grep -i thunder
+rm robbie\ basho\ -\ rainbow\ thunder
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi
+vi
+vi
+vi
+vi a.lua
+clear
+clear
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi
+vi
+vi
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+rm a.lua
+vi a.lua
+rm a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi
+vi
+vi a.lua
+vi a.lua
+vi a.lua
+rm a.lua
+nvim -S
+nvim -S
+nvim -S
+nvim -S
+nvim -S
+nvim -S
+nvim -S
+nvim -S
+clear
+nvim -S
+nvim -S
+nvim -S
+vi
+vi lua/user/colorscheme.lua
+nvim -S
+nvim -S
+clear
+vi 
+vi 
+vi 
+vi lua/user/colorizer.lua
+vi lua/user/colorscheme.lua
+vi lua/user/colorscheme.lua
+nvim -S
+vi lua/user/colorscheme.lua
+vi lua/user/colorscheme.lua
+vi lua/user/colorscheme.lua
+vi lua/user/colorscheme.lua
+vi lua/user/colorscheme.lua
+vi lua/user/colorscheme.lua
+vi lua/user/colorscheme.lua
+vi a.lua
+clear
+clear
+clear
+nvim -S
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+vi a.lua
+rm a.lua
+ls
+rm tmux-client-57904.log
+clear
+nvim -S
+vi 
+vi ../zsh/.zshrc
+vi ../zsh/.zprompt
+nvim -S
+vi
+clear
+cd .local/share/nvim/site
+ls
+cd pack
+ls
+cd packer
+ls
+ls start
+ls opt
+ls opt
+nvim -S
+nvim -S
+ls
+vi hola.lua
+ls
+vi
+ls
+vi plugin/startify.vim
+vi
+vi plugin/startify.vim
+vi
+vi plugin/startify.vim
+vi
+vi a.lua
+bta
+bta
+bta
+ls plugin
+ls
+exit
+nvim -S
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+clear
+vi Dockerfile
+nvim -S
+ls
+ls snippets/
+clear
+clear
+nvim -S
+../.co
+..
+cd ncmpcpp/
+vi config
+ls
+vi bindings
+man youtube-dl
+vi ~/.local/bin/yt-bandcamp
+man youtube-dl
+vi ~/.local/bin/yt-bandcamp
+yt-bandcamp https://nonlocalresearch.bandcamp.com/album/bornite-nights
+yt-bandcamp https://nonlocalresearch.bandcamp.com/album/apofenia
+yt-bandcamp https://nonlocalresearch.bandcamp.com/album/apofenias
+ls music/bandcamp/Martes\ Muerto\ -\ Apofenias
+rm music/bandcamp/Martes\ Muerto\ -\ Apofenias
+yt-bandcamp https://nonlocalresearch.bandcamp.com/album/apofenias
+ls music/bandcamp/Martes\ Muerto\ -\ Apofenias
+ls music/bandcamp/Martes\ Muerto\ -\ Apofenias
+ls music/bandcamp/Martes\ Muerto\ -\ Apofenias
+ls music/bandcamp/Martes\ Muerto\ -\ Apofenias
+ls music/bandcamp/Martes\ Muerto\ -\ Apofenias
+ls music/bandcamp/Martes\ Muerto\ -\ Apofenias
+watch ls music/bandcamp/Martes\ Muerto\ -\ Apofenias
+watch "ls music/bandcamp/Martes\ Muerto\ -\ Apofenias"
+ls music/bandcamp/Borange\ -\ Bornite\ Nights
+watch "ls music/bandcamp/Martes\ Muerto\ -\ Apofenias"
+clear
+vi config
+clear
+ls
+cd
+clear
+cd .config/nvim
+ls
+tree
+clear
+ls
+cd lua
+ls
+mv user main
+ls
+ls lualine_lua
+mv lualine_lua/init.lua main/lualine.lua
+ls telescope_lua
+mv telescope_lua main/telescope.lua
+ls
+mv treesitter_lua/init.lua main/treesitter.lua
+ls treesitter_lua
+rm treesitter_lua
+ls lualine_lua
+rm lualine_lua
+ls
+cd main
+ls
+ls telescope.lua
+mv telescope.lua/init.lua telescope.lua2
+ls
+ls telescope.lua
+rm telescope.lua
+mv telescope.lua2 telescope.lua
+ls
+ls lsp
+cd ..
+ls
+cd ..
+ls
+cd plugin
+ls
+cat ansible.vim
+rm ansible.vim
+cat bracey.vim
+rm bracey.vim
+ls
+cat netrw.vim
+cat nerdtree.vim
+ls
+rm nerdtree.vim
+ls
+ls packer_compiled.lua
+cat packer_compiled.lua
+ls
+rm packer_compiled.lua
+ls
+ls terraform.vim
+cat terraform.vim
+cat vimwiki.vim
+rm vimwiki.vim
+ls
+cat markdown.vim
+cat telescope.vim
+rm telescope.vim
+cat startify.vim
+ls
+vi plugins.vim
+vi ../init.lua
+vi ../init.lua
+vi ../init.lua
+vi ../lua/main/lsp/init.lua
+vi ../lua/main/lsp/init.lua
+vi ../lua/main/lsp/init.lua
+vi
+ls
+cd ..
+ls
+cd lua
+ls
+cd main
+ls
+vi lualine.lua
+vi ../../init.lua
+vi ../../init.lua
+clear
+ls
+cd ..
+ls
+cd ..
+ls
+cd plugin
+ls
+vi plugins.vim
+cd ..
+ls
+vi lua/main/telescope.lua
+vi
+vi lua/main/telescope.lua
+vi lua/mappings.lua
+vi
+vi lua/mappings.lua
+vi init.lua
+mv lua/main/telescope.lua lua/main/_telescope.lua
+vi init.lua
+vi
+vi
+vi lua/main/_telescope.lua
+vi
+vi lua/main/_telescope.lua
+vi init.lua
+vi
+vi
+git reset HEAD --hard
+vi
+vi
+vi
+ls
+vi init.lua
+ls lua
+cd lua
+mv telescope_lua telescope_lua2
+mv telescope_lua2/init.lua telescope_lua
+ls
+rm telescope_lua2
+cd ..
+vi
+vi
+mv lua/telescope_lua lua/telescope_lua.lua
+vi
+mv lua/telescope_lua.lua lua/telescope.lua
+vi init.lua
+vi
+vi lua/mappings.lua
+vi
+vi lua/telescope.lua
+vi lua/settings.lua
+ls
+ls lua
+ls lua/main
+ls
+vi init.lua
+mv lua/telescope.lua lua/telescope_lua.lua
+ls
+clear
+vi
+vi lua/ma
+vi lua/mappings.lua
+vi
+vi lua/telescope_lua.lua
+vi lua/mappings.lua
+vi
+clear
+ls
+rm lua/main
+poweroff
+cd music/soulseek/
+ls | grep -i guitar 
+cd 1965\ Guitar\ Soli\ -\ flac
+ls
+ls -al
+cd ..
+ls | grep -i robbie
+ls robbie\ basho\ -\ 
+ls robbie\ basho\ -\ basho\ sings\ \(1967\)
+ls fingerstyle\ -\ robbie\ basho\ -\ the\ grail\ and\ the\ blue\ lotus
+rm fingerstyle\ -\ robbie\ basho\ -\ the\ grail\ and\ the\ blue\ lotus
+ls
+ls | grep -i robbie
+rm robbie\ basho\ -\ basho\ sings\ \(1967\)/robbie\ basho\ -\ basho\ sings\ -\ vinyl\ -\ 1967.jpg
+ls | grep -i marcianeke
+rm 40\ -\ Marcianeke,\ Pailita\ -\ Dimelo\ Ma.mp3
+ls | grep -i M.I.A
+rm M.I.A-\ -\ Matangi
+ls | grep -i mia
+nvim -S
+nvim -S
+tmux kill-session -t 2
+tmux kill-session -t 3
+tmux kill-session -t 4
+tmux kill-session -t 5
+tmux kill-session -t 6
+tmux kill-session -t 7\
+
+clear
+fc-match
+fc -list
+fc-list
+fc-list | grep -i symbola
+make clean install
+cd ../st
+make clean install
+sudo make clean install
+vi
+vi a.lua
+make clean install
+sudo make clean install
+vi a.lua
+sudo make clean install
+vi a.lua
+vi ~/.local/bin/bar/weather
+sudo make clean install
+cd ../st
+sudo make clean install
+sudo make clean install
+sudo make clean install
+vi .local/bin/bar/weather
+sudo make clean install
+sudo make clean install
+sudo make clean install
+fc-list
+fc-list | grep -i nerd
+sudo make clean install
+sudo make clean install
+sudo make clean install
+sudo make clean install
+pacman -h
+pacman -Q font
+pacman -Q 
+pacman -Q | grep -i font
+pacman -h
+sudo pacman -R noto-fonts-emoji
+fc-list | grep -i noto
+fc-list | grep -i emoji
+sudo pacman -R noto-fonts
+vi .local/bin/bar/weather
+fc-list | grep -i noto
+fc-list 
+cat /etc/fonts/fonts.conf
+vi /etc/fonts/fonts.conf
+vi /etc/X11/xorg.conf.d/fonts.conf
+fc-list | grep -i nerd
+vi /etc/X11/xorg.conf.d/fonts.conf
+sudo nvim /etc/X11/xorg.conf.d/fonts.conf
+fc-cache -fv
+vi .local/bin/bar/weather
+fc-cache
+reboot
+fc-list
+fc-list | grep -i inconsolata
+vi .local/bin/bar/weather
+vi .config/st/config.h
+sudo make clean install
+cd .config/st/
+sudo make clean install
+bta
+clear
+sudo pacman -Q
+sudo pacman -Q | grep -i front
+sudo pacman -Q | grep -i font
+sudo pacman -Q | grep -i tff
+pacman -R gnu-free-fonts
+sudo pacman -R gnu-free-fonts
+fc-list
+cd /usr/share/fonts
+ls
+rm joypixels
+sudo rm joypixels
+sudo rm -r joypixels
+ls
+sudo rm -r nerdfont
+vi /etc/X11/xorg.conf.d/fonts.conf
+sudo pacman -S noto-fonts-emoji
+fc-cache -fv
+cd ~/usr/share/fonts && curl -fLo "Fira Code Regular Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.otf
+cd /usr/share/fonts && curl -fLo "Fira Code Regular Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.otf
+cd /usr/share/fonts && curl -fLo "Fira Code Regular Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf
+sudo cd /usr/share/fonts && curl -fLo "Fira Code Regular Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf
+cd /usr/share/fonts && sudo curl -fLo "Fira Code Regular Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf
+cd /usr/share/font
+cd /usr/share/fonts
+ls
+ls fira-code
+nvim -S
+nvim -S
+clear
+clear
+cd
+cd /usr/share/font
+cd /usr/share/fontd
+cd /usr/share/fonts
+fc-list
+fc-list | grep fira
+fc-list | grep -i fira
+sudo make clean install
+cd ../st
+sudo make clean install
+sudo make clean install
+ls
+mv Fira\ Code\ Regular\ Nerd\ Font\ Complete.otf fira-code
+sudo mv Fira\ Code\ Regular\ Nerd\ Font\ Complete.otf fira-code
+ls
+ls -al
+cd fira-code
+ls
+ls -al
+mv Fira\ Code\ Regular\ Nerd\ Font\ Complete.otf FiraCode-Complete
+chown rvv:rvv FiraCode-Complete
+sudo chown rvv:rvv FiraCode-Complete
+mv FiraCode-Complete FiraCode-Complete.otf
+sudo make clean install
+sudo make clean install
+sudo pacman -Ss nerd
+fc-cache -vf
+cd downloads
+ls
+unzip 3270.zip
+ls
+ls
+cd .
+..
+ls
+ls hack
+ls adobe-source-code-pro
+ls -al
+ls
+ls hack
+sudo make clean install
+ls -al /
+ls -al /root
+sudo ls -al /root
+ls
+ls noto
+sudo make clean install
+ls
+ls -al
+sudo chown -r rvv:rvv noto
+sudo chown rvv:rvv noto
+ls noto
+ls -al noto
+man chown
+sudo chown -R rvv:rvv noto
+ls noto
+ls -al
+ls noto
+ls fira-code
+vi .local/bin/bar/weather
+ls downloads
+ls downloads | grep -i hack
+sudo mkdir nerd-font
+ls
+ls -al
+mv downloads/* /usr/share/fonts/nerd-font
+sudo mv downloads/* /usr/share/fonts/nerd-font
+sudo chown -R rvv:rvv nerd-font
+cd nerd-font
+ls
+rm -rf 3270.zip
+rm 3270.zip
+cd ..
+ls nerd-font
+sudo make clean install
+sudo make clean install
+sudo make clean install
+ls
+cd downloads
+unzip UbuntuMono.zip
+rm UbuntuMono.zip 
+mv * /usr/share/fonts/nerd-font
+ls
+ls -al
+cd nerd-font
+ls
+fc-cache -vf
+ls
+ls -al
+ls -al
+cd ..
+rm nerd-font
+sudo rm -rf nerd-font
+vi /root/.bashrc
+sudo vi /root/.bashrc
+sudo nvim /root/.bashr
+sudo nvim /root/.bashrc
+sudo pacman -Ss nerds-fonts-complete
+sudo pacman -Ss nerd
+ls
+curl -sS https://webinstall.dev/nerdfont | bash
+cd ../st
+vi
+vi
+exit
+sudo make clean install
+vi x.c
+sudo make clean install
+cd
+ls
+mv .config/st /tmp
+cd .config
+git clone https://github.com/Dreomite/st
+cd st
+sudo make clean install
+cd ..
+rm -rf st
+rm st
+mv /tmp/st .
+cd st
+sudo make clean install
+cd /usr/share/font
+cd /usr/share/fonts
+ls
+ls
+ls -al
+cd ~/.local/share/fonts
+ls
+rm Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf
+cd
+cd donw
+cd downloads
+cd /usr/share/fonts
+mkdir nerd-fonts
+sudo mkdir nerd-fonts
+chown -R rvv:rvv nerd-fonts
+sudo chown -R rvv:rvv nerd-fonts
+unzip Cousine.zip /user/share/fonts/nerd-fonts
+unzip -h
+man unzio
+man uzip
+man unzip
+unzip Cousine.zip -d /user/share/fonts/nerd-fonts
+sudo unzip Cousine.zip -d /user/share/fonts/nerd-fonts
+ls
+rm -rf nerd-fonts
+rm nerd-fonts
+sudo rm nerd-fonts
+ls
+ls -al
+unzip Cousine.zip -d /user/share/fonts/a
+sudo unzip Cousine.zip -d /user/share/fonts/a
+unzip Cousine.zip
+ls
+rm Cousine
+rm Cousine.zip
+mv * /usr/share/fonts/nerd-fonts
+ls nerd-fonts
+fc-cache -fv
+vi a.lua
+cd nerd-fonts
+ls
+rm *
+wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/3270/Medium/complete/3270-Medium%20Nerd%20Font%20Complete.ttf
+ls
+rm 3270-Medium\ Nerd\ Font\ Complete.ttf
+mv * /usr/share/fonts/nerd-fonts
+ls
+vi a.lua
+bta
+clear
+cd ..
+mv st /tmp
+ls
+git clone https://github.com/LukeSmithxyz/st
+fontconfig
+sudo pacman -Ss fontconfig
+sudo pacman -Ss libX11
+sudo pacman -Ss libXft
+cd st
+sudo make clean install
+vi a.lua
+cd ..
+rm st/
+mv /tmp/st .
+cd st
+sudo make clean install
+vi
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+ls
+vi
+a.lua
+vi a.lua
+.local/kitty.app
+ls
+cd bin
+ls
+kitty
+./kitty
+clear
+vi
+cd ..nvi
+cd ../nvim
+ls
+vi 
+vi
+vi a.lua
+ls
+./.local/kitty.app/bin/kitty
+vi
+vi a.lua
+vi a.lua
+vi
+nvim -S
+t kill-server
+nvim -S
+nvim -S
+clear
+cd ../kitty
+ls
+vi kitty.conf
+ln -s .local/kitty.app/bin/kitty /usr/local/bin/kitty
+sudo ln -s .local/kitty.app/bin/kitty /usr/local/bin/kitty
+kitty
+ls -al /usr/local/bin/kitty
+chmod +x /usr/local/bin/kitty
+chmod +x .local/kitty.app/bin/kitty
+kitty
+kitty
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+vi
+vi a.lua
+.local/kitty.app/bin/kitty
+vi .Xresources
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+vi a.lua
+vi a.lua
+.local/kitty.app/bin/kitty
+vi
+vi a.lua
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+.local/kitty.app/bin/kitty
+exit
+ls .local/kitty.app/bin/kitty /usr/local/bin/kitty
+kitty
+ls
+ls -al
+ls /usr/local/bin/kitty
+ls a-l /usr/local/bin/kitty
+ls -al /usr/local/bin/kitty
+unlink /usr/local/bin/kitty
+sudo unlink /usr/local/bin/kitty
+ls -al /usr/local/bin/kitty
+cp .local/kitty.app/bin/kitty /usr/local/bin/kitty
+sudo cp .local/kitty.app/bin/kitty /usr/local/bin/kitty
+ls -al /usr/local/bin/kitty
+kitty
+kitty
+echo $PATH
+rm /usr/local/bin/kitty
+sudo rm /usr/local/bin/kitty
+cd music/soulseek/
+ls | grep -i robbie
+ls | grep -i soli
+cd 1965\ Guitar\ Soli\ -\ flac
+ls
+cd ..
+ls | grep -i robbie
+ls | grep -i guitar
+cd Guitar\ Soli
+ls
+mv ../1965\ Guitar\ Soli\ -\ flac/Basho,\ Robbie\ -\ Guitar\ Soli.jpg .
+ls
+cd music/soulseek
+rm 1965\ Guitar\ Soli\ -\ flac
+cd /tmp
+ls
+rm mpd_cover.jpg
+sudo rm mpd_cover.jpg
+cd music/soulseek/Guitar\ Soli
+ls
+feh 'Basho, Robbie - Guitar Soli.jpg'
+mv 'Basho, Robbie - Guitar Soli.jpg' front_sacad.jpg
+ls
+cd music/soulseek
+ls
+ls | grep -i guitar
+ls | grep -i robbie
+export PATH=$PATH:.local/kitty.app/bin/kitty 
+echo $PATH
+kitty
+echo $PATH
+export PATH=/home/rvv/.nix-profile/bin:/home/rvv/.nix-profile/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/rvv/.gem/ruby/2.7.0/bin:/home/rvv/.gem/ruby/2.7.0/gems:/home/rvv/.local/bin:/usr/local/go/bin:/home/rvv/.local/kitty.app/bin/kitty\
+
+kitty
+export PATH=/home/rvv/.nix-profile/bin:/home/rvv/.nix-profile/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/rvv/.gem/ruby/2.7.0/bin:/home/rvv/.gem/ruby/2.7.0/gems:/home/rvv/.local/bin:/usr/local/go/bin\
+
+echo $PATH
+reboot
+c 38*16
+c 83+37
+bta
+nvim -S
+nvim -S
+vi
+rm plugin/telescope.vim
+ls plugin
+cd plugin
+ls
+cat ansible.vim
+rm ansible.vim
+rm bracey.vim
+cat nerdtree.vim
+rm nerdtree.vim
+rm vimwiki.vim
+ls
+cat markdown.vim
+cat vimux.vim
+cat bufsurf.vim
+cat bufsurf.vim >> plugins.vim
+cat plugins.vim
+cat auto-pairs.vim >> plugins.vim
+cat plugins.vim
+cat netrw.vim >> plugins.vim
+cat terraform.vim >> plugins.vim
+cat zeavim.vim >> plugins.vim
+cat markdown.vim >> plugins.vim
+cat vimux.vim >> plugins.vim
+cat startify.vim >> plugins.vim
+vi plugins.vim
+ls
+rm auto-pairs.vim netrw.vim startify.vim vimux.vim bufsurf.vim markdown.vim terraform.vim zeavim.vim
+ls
+cd ..
+ls
+vi
+vi
+.local/kitty.app/bin/kitty
+vi
+clear
+cd ..
+vi
+ls
+ls nvim
+cd nvim
+ls
+cd ..
+cd nvim
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+make clean instal
+sudo make clean install
+ls
+clear
+vi
+vi
+vi
+echo $HOSTNAME
+hostnamectl set-hostname dusk
+echo $HOSTNAME
+source ~/.zshrc
+echo $HOSTNAME
+clear
+cd
+clear
+cd .config/zsh
+vi
+ls
+vi
+ls
+ls -al
+vi
+vi
+vi
+vi
+ls -al
+vi
+clear
+source ~/.zshrc
+source ~/.config/zsh/.zshrc
+clear
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+man zsh
+man zshmisc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+ls
+clear
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrource ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+ls
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+cd .config
+cd tmux
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+cd
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+cd .config
+cd zsh
+cd zsh
+source ~/.config/zsh/.zshrc
+cd
+source ~/.config/zsh/.zshrc
+clear
+colorpicker
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+cd /
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+cd
+cd .config
+source ~/.config/zsh/.zshrc
+cd .config
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+clear
+cd
+ls
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+cd zsh
+cd .config
+cd .config
+cd .config
+ls
+cd .config
+ls
+cd .config
+cd .config
+cd .config
+cd .co
+cd .config
+ls
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+cd .config
+cd .config
+cd
+cd .config
+cd .config
+ls
+cd .config
+clear
+ls
+clear
+cd .config
+cd .config
+ls
+clear
+cd .config
+cd nvim
+cd .config
+clear
+ls
+cd .config
+ls
+cd .config
+cd .config
+ls
+cd .config
+ls
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+ls
+clear
+ls
+clear
+cd nvim
+pwd
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+cd .config
+ls .config
+cd .config
+clear
+cd .con
+cd nvim
+ls
+ls
+ls
+clear
+echo "hola que tal"
+clear
+cd .config
+cd
+cd music
+cd .config
+cd .config
+ls
+cd .config
+clear
+cd .config
+cd nvim
+cd .config
+cd .config
+cd .config
+cd .config
+sudo ls
+clear
+cd
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+clear
+cd ../zsh
+source .zshrc
+clear
+t kill-server 
+cd .config
+clear
+nvim -S
+nvim -S
+clear
+nvim -S
+nvim -S
+ls
+cd .config
+poweroff
+cd .config
+ls
+nvim -S
+nvim -S
+bta
+clear
+vi .bashrc
+vi .bashrc
+vi .zprofile
+ls
+echo $LS_COLORS
+export LS_COLORS=""
+ls
+echo LS_COLORS
+echo $LS_COLORS
+export LS_COLORS=""
+ls
+echo $LS_COLORS
+ls
+vi .zshrc
+vi
+ls
+ls -al
+rm .v8flags.8.6.395.17-node.28.ea5ab042ab51a16fd4c0f89d383e8731.json
+rm .wget-hsts
+ls
+ls
+ls
+ls -al
+ls
+ls -l
+ls
+ls
+ls music
+ls music/soulseek
+ls music/soulseek/1999-4°-\ Il\ Giorno\ Perfetto\ \(Raccolta\ Con\ Inediti\)\ ++
+clear
+ls music/soulseek/1999-4°-\ Il\ Giorno\ Perfetto\ \(Raccolta\ Con\ Inediti\)\ ++
+ls music/soulseek/1999-4°-\ Il\ Giorno\ Perfetto\ \(Raccolta\ Con\ Inediti\)\ ++
+ls music/soulseek/1999-4°-\ Il\ Giorno\ Perfetto\ \(Raccolta\ Con\ Inediti\)\ ++
+ls music/soulseek/1999-4°-\ Il\ Giorno\ Perfetto\ \(Raccolta\ Con\ Inediti\)\ ++
+ls
+ls
+source ~/.config/zsh/zshrc
+source ~/.config/zsh/.zshrc
+ls
+clear
+clear
+ls
+ls
+source ~/.config/zsh/.zshrc
+t kill-server
+nvim -S
+nvim -S
+t kill-server
+nvim -S
+nvim -S
+clear
+ls
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+clear
+t -q respawn-pane -k
+t respawn-pane -k -q
+clear
+clear
+ls
+t respawn-pane -k -q
+ls
+t respawn-pane -k
+ls
+ls
+t respawn-pane -k
+ls
+man ls
+pacman -S vivid
+sudo pacman -S vivid
+for theme in $(vivid themes); do\
+    echo "Theme: $theme"\
+    LS_COLORS=$(vivid generate $theme)\
+    ls\
+    echo\
+done
+for theme in $(vivid themes); do\
+    echo "Theme: $theme"\
+    LS_COLORS=$(vivid generate $theme)\
+    ls -al\
+    echo\
+done
+clear
+t respawn-pane -k
+ls
+ls -al
+clear
+tree
+ls
+cd .config
+ls
+cd nvim
+ls
+tree
+ls
+t respawn-pane -k
+ls
+tree
+clear
+ls
+clear
+ls
+ls
+t respawn-pane -k
+ls
+sudo pacman -R vivid
+clear
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+ls -al
+ls
+t respawn-pane -k
+ls
+vi .zshrc
+vi .zprofile
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+tree
+ls
+clear
+ls
+clear
+clear
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+ls
+t respawn-pane -k
+ls
+ls
+ls
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+ls
+ls -la
+ls -al
+ls
+clear
+ls
+clear
+ls
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+ls
+ls
+ls
+t respawn-pane -k
+ls
+t respawn-pane -k
+ls
+ls .config
+t respawn-pane -k
+ls
+ls
+ls
+clear
+clear
+ls
+t respawn-pane -k
+ls
+clear
+clear
+t respawn-pane -k
+t respawn-pane -k
+t respawn-pane -k
+	t respawn-pane -k
+	t respawn-pane -k
+ls -al
+ls -l
+ls
+clear
+clear
+	t respawn-pane -k
+	t respawn-pane -k
+	t respawn-pane -k
+	t respawn-pane -k
+	t respawn-pane -k
+	t respawn-pane -k
+clear
+stty -a | grep '\^S'
+	t respawn-pane -k
+	t respawn-pane -k
+stty stop undef
+	t respawn-pane -k
+stty stop undef
+stty -a | grep '\^S'
+ls
+ls -al
+ls -l
+clear
+fzf
+clear
+sudo make clean install
+exit
+: 1654993978:0;cd .local/share/Trash
+: 1654993979:0;ls
+: 1654993981:0;cd files
+: 1654993982:0;ls
+: 1654993985:0;ls
+: 1654994005:0;rm *
+: 1654994006:0;ls
+: 1654994018:0;unalias rm *
+: 1654994020:0;ls
+: 1654994045:0;ls
+: 1654994046:0;gio help
+: 1654994060:0;gio remove *
+: 1654994062:0;ls -al
+: 1654994069:0;gio remove -r *
+: 1654994079:0;gio remove --force *
+: 1654994081:0;ls
+: 1654994132:0;unalias rm
+: 1654994138:0;rm -rf *
+: 1654994140:0;ls
+: 1654996218:0;bta
+: 1654996785:0;/usr/share/fonts
+: 1654997015:0;gs
+: 1654997047:0;git merge help
+: 1654997052:0;git merge -h
+: 1654997070:0;git merge docker-image
+: 1654997102:0;git checkout docker-image
+: 1654997106:0;gs
+: 1654997108:0;vi
+: 1654997146:0;git checkout lsp-native
+: 1654997149:0;vi
+: 1654997151:0;vi
+: 1654997166:0;git checkout docker-image
+: 1654997172:0;git checkout lsp-native
+: 1654997213:0;git reset --hard ORIG_HEAD
+: 1654997215:0;vi
+: 1654997232:0;git checkout docker-image
+: 1654997235:0;git merge lsp-native
+: 1654997265:0;ls -la
+: 1654997301:0;vi
+: 1654997308:0;vi
+: 1654997406:0;vi Dockerfile
+: 1654997439:0;vi Dockerfile
+: 1654997453:0;clear
+: 1654997465:0;nvim -S
+: 1654997473:0;docker build -t neovim-test .
+: 1654997514:0;docker build -t neovim-test .
+: 1654997572:0;clear
+: 1654997695:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654997947:0;docker build -t neovim-test .
+: 1654997953:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654998149:0;docker build -t neovim-test .
+: 1654998153:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654998309:0;docker build -t neovim-test .
+: 1654998312:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654998385:0;docker build -t neovim-test .
+: 1654998388:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654998494:0;docker build -t neovim-test .
+: 1654998497:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654998568:0;docker build -t neovim-test .
+: 1654998572:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654998599:0;docker build -t neovim-test .
+: 1654998606:0;docker build -t neovim-test .
+: 1654998608:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654998750:0;docker build -t neovim-test .
+: 1654998755:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654998895:0;docker build -t neovim-test .
+: 1654998898:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654998937:0;docker build -t neovim-test .
+: 1654998940:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654999044:0;docker build -t neovim-test .
+: 1654999051:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654999117:0;docker build -t neovim-test .
+: 1654999122:0;export PATH="$HOME/.local:$PATH"
+: 1654999133:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654999174:0;export PATH="$HOME/.local:$PATH"
+: 1654999177:0;docker build -t neovim-test .
+: 1654999182:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654999299:0;docker build -t neovim-test .
+: 1654999304:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654999343:0;docker build -t neovim-test .
+: 1654999346:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654999425:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1654999495:0;dk images
+: 1654999509:0;dk system prune
+: 1654999516:0;clear
+: 1654999557:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655000775:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655001164:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655001266:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655001290:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655001351:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655001632:0;bta
+: 1655001888:0;vi
+: 1655001895:0;vi a.tf
+: 1655002004:0;vi
+: 1655002014:0;vi a.tf
+: 1655002032:0;ls
+: 1655002033:0;ls -al
+: 1655002035:0;clear
+: 1655002038:0;cd dev/terraform
+: 1655002039:0;ls
+: 1655002044:0;cd terraform-demos/eks
+: 1655002050:0;ls
+: 1655002054:0;vi eks.tf
+: 1655002251:0;vi a.ytf
+: 1655002254:0;vi a.tf
+: 1655002300:0;rm a.tf
+: 1655002389:0;cd ..
+: 1655002390:0;ls
+: 1655002395:0;cd ec2-3-rds
+: 1655002396:0;clear
+: 1655002397:0;ls
+: 1655002399:0;vi main.tf
+: 1655002531:0;cd ..
+: 1655002531:0;ls
+: 1655002537:0;mkdir test 
+: 1655002539:0;cd test
+: 1655002540:0;vi main.tf
+: 1655002571:0;tf init
+: 1655002604:0;vi main.tf
+: 1655002760:3;docker build -t neovim-test .
+: 1655002776:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655002812:0;docker build -t neovim-test .
+: 1655002816:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655002861:0;docker build -t neovim-test .
+: 1655002867:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655002887:0;docker build -t neovim-test .
+: 1655002892:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655002952:0;docker build -t neovim-test .
+: 1655002956:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003004:0;docker build -t neovim-test .
+: 1655003008:0;docker run --name neovim-test -ti neovim-test sh
+: 1655003022:0;docker ps -a
+: 1655003034:0;docker build -t neovim-test .
+: 1655003041:0;docker run --name neovim-test -ti neovim-test sh
+: 1655003049:0;dk ps
+: 1655003051:0;dk ps -a
+: 1655003053:0;dk system prune
+: 1655003059:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003077:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003080:0;dk system prune
+: 1655003085:0;docker build -t neovim-test .
+: 1655003089:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003111:0;docker build -t neovim-test .
+: 1655003115:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003151:0;docker build -t neovim-test .
+: 1655003155:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003178:0;docker build -t neovim-test .
+: 1655003182:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003214:0;docker build -t neovim-test .
+: 1655003219:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003237:0;docker run --name neovim-test --rm neovim-test
+: 1655003265:0;docker build -t neovim-test .
+: 1655003269:0;docker run --name neovim-test --rm neovim-test
+: 1655003280:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003303:0;docker build -t neovim-test .
+: 1655003307:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003390:0;docker build -t neovim-test .
+: 1655003399:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655003555:0;clear
+: 1655003574:0;exi
+: 1655003576:0;clear
+: 1655003582:0;clear
+: 1655003778:0;poweroff
+: 1655034911:0;nvim -S
+: 1655034911:0;nvim -S
+: 1655035575:0;skey
+: 1655035608:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655035819:0;bta
+: 1655036046:0;	t respawn-pane -k
+: 1655036093:0;	t respawn-pane -k
+: 1655036127:0;	t respawn-pane -k
+: 1655036145:0;	t respawn-pane -k
+: 1655036209:0;	t respawn-pane -k
+: 1655036223:0;	t respawn-pane -k
+: 1655036301:0;	t respawn-pane -k
+: 1655036325:0;colorpicker
+: 1655036348:0;	t respawn-pane -k
+: 1655036371:0;	t respawn-pane -k
+: 1655036482:0;	t respawn-pane -k
+: 1655036512:0;	t respawn-pane -k
+: 1655036534:0;	t respawn-pane -k
+: 1655036567:0;clear
+: 1655036572:0;clear
+: 1655036592:0;	t respawn-pane -k
+: 1655036605:0;	t respawn-pane -k
+: 1655036621:0;	t respawn-pane -k
+: 1655036638:0;	t respawn-pane -k
+: 1655036724:0;t respawn-pane -k
+: 1655036765:0;t respawn-pane -k
+: 1655036788:0;t respawn-pane -k
+: 1655036932:0;cd 
+: 1655037007:0;t respawn-pane -k
+: 1655037010:0;cd
+: 1655037032:0;t respawn-pane -k
+: 1655037374:0;docker run --name neovim-test -ti --rm neovim-test sh
+: 1655037659:0;t respawn-pane -k
+: 1655037896:0;t respawn-pane -k
+: 1655037953:0;t respawn-pane -k
+: 1655037961:0;t respawn-pane -k
+: 1655037978:0;ls
+: 1655038000:0;t respawn-pane -k
+: 1655038035:0;t respawn-pane -k
+: 1655038081:0;t respawn-pane -k
+: 1655038111:0;t respawn-pane -k
+: 1655038132:0;t respawn-pane -k
+: 1655038157:0;t respawn-pane -k
+: 1655038232:0;t respawn-pane -k
+: 1655038290:0;t respawn-pane -k
+: 1655038323:0;t respawn-pane -k
+: 1655038359:0;t respawn-pane -k
+: 1655038381:0;t respawn-pane -k
+: 1655038454:0;t respawn-pane -k
+: 1655038539:0;t respawn-pane -k
+: 1655038561:0;t respawn-pane -k
+: 1655038610:0;t respawn-pane -k
+: 1655038611:0;cd
+: 1655038645:0;clear
+: 1655038661:0;clear
+: 1655038688:0;t respawn-pane -k
+: 1655038719:0;t respawn-pane -k
+: 1655038735:0;t respawn-pane -k
+: 1655038819:0;ls
+: 1655038846:0;t respawn-pane -k
+: 1655038848:0;cd
+: 1655038848:0;ls
+: 1655038859:0;t respawn-pane -k
+: 1655038861:0;ls
+: 1655038931:0;man zsh
+: 1655038954:0;man zsh zshcontrib
+: 1655038959:0;man zshcontrib
+: 1655039056:0;clear
+: 1655039071:0;clear
+: 1655039121:0;t respawn-pane -k
+: 1655039174:0;t respawn-pane -k
+: 1655039283:0;t respawn-pane -k
+: 1655039318:0;t respawn-pane -k
+: 1655039330:0;t respawn-pane -k
+: 1655039337:0;t respawn-pane -k
+: 1655039349:0;t respawn-pane -k
+: 1655039413:0;t respawn-pane -k
+: 1655039465:0;t respawn-pane -k
+: 1655039562:0;zsh --version
+: 1655039576:0;t respawn-pane -k
+: 1655039599:0;t respawn-pane -k
+: 1655039613:0;t respawn-pane -k
+: 1655039628:0;t respawn-pane -k
+: 1655039648:0;clear
+: 1655039691:0;man dir_colors
+: 1655039732:0;ls
+: 1655039735:0;t respawn-pane -k
+: 1655039736:0;ls
+: 1655039752:0;man dircolors
+: 1655039784:0;\
+info coreutils aqdircolors invocationaq
+: 1655039816:0;\
+info coreutils aqdircolors invocationaq
+: 1655039928:0;t respawn-pane -k
+: 1655039929:0;ls
+: 1655040001:0;ls -al
+: 1655040039:0;t respawn-pane -k
+: 1655040040:0;ls
+: 1655040085:0;t respawn-pane -k
+: 1655040120:0;t respawn-pane -k
+: 1655040385:0;t respawn-pane -k
+: 1655040390:0;ls -al
+: 1655040398:0;clear
+: 1655040744:0;cd music/soulseek
+: 1655040745:0;ls
+: 1655040758:0;cd
+: 1655040832:0;cd music/soulseek
+: 1655040833:0;ls
+: 1655040850:0;ls -al
+: 1655040857:0;cd music/soulseek
+: 1655040858:0;ls
+: 1655040862:0;ls -al
+: 1655040883:0;cd music/soulseek
+: 1655040884:0;ls
+: 1655040886:0;ls -al
+: 1655040890:0;t respawn-pane -k
+: 1655040891:0;ls
+: 1655040924:0;t respawn-pane -k
+: 1655040924:0;ls
+: 1655040942:0;cd music/soulseek
+: 1655040945:0;ls
+: 1655040961:0;ls | grep -i boards
+: 1655040972:0;cd Boards\ of\ Canada\ -\ 1996\ -\ A\ Few\ Old\ Tunes\ \(Cassette\)\ \[16-44\]
+: 1655040973:0;ls
+: 1655041012:0;source ~/.config/zsh/.zshrc
+: 1655041013:0;ls
+: 1655041023:0;source ~/.config/zsh/.zsyntax
+: 1655041024:0;ls
+: 1655041047:0;source ~/.config/zsh/.zshrc
+: 1655041048:0;ls
+: 1655041061:0;source ~/.config/zsh/.zshrc
+: 1655041061:0;ls
+: 1655041326:0;cd ../Boards\ of\ Canada\ -\ 1996\ -\ Hi\ Scores\ \[SKA008\]
+: 1655041326:0;ls
+: 1655041334:0;rm front_sacad.jpg
+: 1655041334:0;ls
+: 1655041356:0;mv cover.jpg front_sacad.jpg
+: 1655041370:0;cd ..
+: 1655041371:0;ls
+: 1655041385:0;cd Boards\ of\ Canada\ -\ 1996\ -\ Hi\ Scores\ \[SKA008\]
+: 1655041395:0;cd ..
+: 1655041409:0;cd Boards\ of\ Canada\ -\ 1996\ -\ Old\ Tunes\ Vol.\ 2\ \(CD\)\ \[CANCAS003\]
+: 1655041410:0;ls
+: 1655041448:0;cp ../Boards\ of\ Canada\ -\ 1996\ -\ A\ Few\ Old\ Tunes\ \(Cassette\)\ \[16-44\]/front_sacad.jpg .
+: 1655041520:0;clear
+: 1655041725:0;fzf
+: 1655042418:0;find . -type f | fzf
+: 1655042701:0;cd /**
+: 1655042834:0;psaux
+: 1655042836:0;ps aux
+: 1655042837:0;ps
+: 1655042839:0;clear
+: 1655045930:0;bta
+: 1655046272:0;ls
+: 1655046280:0;ls Downloads
+: 1655046285:0;ls Downloads/webi
+: 1655046295:0;rm Downloads
+: 1655046316:0;ls -al
+: 1655046323:0;rm .sqldeveloper
+: 1655046331:0;cat .zshrc
+: 1655046346:0;cat .zprofile
+: 1655046433:0;clear
+: 1655046434:0;cd .config
+: 1655046437:0;ls -al .zprofile
+: 1655046440:0;vi .zprofile
+: 1655046480:0;rm .zprofile
+: 1655046487:0;ls
+: 1655046489:0;echo $EDITOR
+: 1655046502:0;mv ../.zprofile .
+: 1655046503:0;ls
+: 1655046508:0;echo $EDITOR
+: 1655046511:0;ls -al
+: 1655046515:0;cd 
+: 1655046515:0;ls
+: 1655046518:0;ls -al
+: 1655046523:0;vi .zshrc
+: 1655046539:0;vi .zshrc.backup
+: 1655046551:0;echo $EDITOR
+: 1655046556:0;cd .config/zsh
+: 1655046556:0;vi
+: 1655046622:0;ls
+: 1655046626:0;vi history
+: 1655046628:0;ls
+: 1655046630:0;ls -al
+: 1655046635:0;rm .zshenv
+: 1655046642:0;echo $nvim
+: 1655046647:0;echo $EDITOR
+: 1655046651:0;ls
+: 1655046652:0;ls -al
+: 1655046670:0;vi .zshrc
+: 1655046676:0;clear
+: 1655046683:0;cd
+: 1655046683:0;ls
+: 1655046698:0;mkdir editor
+: 1655046698:0;ls
+: 1655046723:0;source ~/.config/zsh/.zshrc
+: 1655046725:0;clear
+: 1655046725:0;ls
+: 1655046728:0;cd editor
+: 1655046737:0;colorpicker
+: 1655046814:0;ls
+: 1655046817:0;..
+: 1655046818:0;ls
+: 1655046820:0;colorpicker
+: 1655046856:0;clear
+: 1655046859:0;source ~/.config/zsh/.zshrc
+: 1655046860:0;ls
+: 1655046892:0;source ~/.config/zsh/.zshrc
+: 1655046906:0;ls
+: 1655046909:0;colorpicker
+: 1655046930:0;source ~/.config/zsh/.zshrc
+: 1655046931:0;ls
+: 1655046964:0;colorpicker
+: 1655046974:0;ls
+: 1655046978:0;colorpicker
+: 1655046986:0;ls
+: 1655046987:0;colorpicker
+: 1655047019:0;source ~/.config/zsh/.zshrc
+: 1655047020:0;ls
+: 1655047041:0;clear
+: 1655047043:0;ls
+: 1655047045:0;cd editor
+: 1655047193:0;ln -s ~/.config/nvim .
+: 1655047194:0;ls
+: 1655047195:0;ls -al
+: 1655047200:0;cd nvim
+: 1655047201:0;cd ..
+: 1655047203:0;clear
+: 1655047206:0;ls
+: 1655047278:0;ln -s ~/.config/tmux .
+: 1655047283:0;ln -s ~/.config/zsh .
+: 1655047284:0;ls
+: 1655050324:0;bta
+: 1655050590:0;vi .xinitrc
+: 1655050684:0;mv nvim/.git .
+: 1655050687:0;clear
+: 1655050694:0;vi
+: 1655050725:0;mv nvim/.github .
+: 1655050728:0;vi
+: 1655050757:0;ls nvim
+: 1655050760:0;ls -al nvim
+: 1655050762:0;tree nvim
+: 1655050769:0;clear
+: 1655050769:0;ls
+: 1655050771:0;ls -al
+: 1655050772:0;ls nvim
+: 1655050775:0;clear
+: 1655050779:0;ls
+: 1655050785:0;mv nvim/Dockerfile .
+: 1655050798:0;mv nvim/README.md .
+: 1655050798:0;vi
+: 1655050814:0;mv nvim/.dockerignore .
+: 1655050817:0;vi
+: 1655050825:0;mv nvim/entrypoint.sh .
+: 1655050826:0;ls
+: 1655050882:0;source ~/.config/zsh/.zshrc
+: 1655050883:0;ls
+: 1655050907:0;source ~/.config/zsh/.zshrc
+: 1655050907:0;ls
+: 1655050933:0;source ~/.config/zsh/.zshrc
+: 1655050934:0;ls
+: 1655050944:0;source ~/.config/zsh/.zshrc
+: 1655050945:0;ls
+: 1655051024:0;ls -al
+: 1655051033:0;ls
+: 1655051034:0;clear
+: 1655051036:0;ls -al
+: 1655051038:0;ls
+: 1655051044:0;vi
+: 1655051073:0;git checkout -b my-editor
+: 1655051075:0;vi
+: 1655051167:0;git checkout docker-image
+: 1655051167:0;ls
+: 1655051169:0;vi
+: 1655051176:0;ls
+: 1655051192:0;cd ..
+: 1655051196:0;cd editor
+: 1655051197:0;ls
+: 1655051199:0;ls -al
+: 1655051206:0;cd ..
+: 1655051207:0;ls
+: 1655051208:0;cd editor
+: 1655051217:0;git checkout -b my-editor
+: 1655051221:0;git checkout my-editor
+: 1655051223:0;ls
+: 1655051231:0;git checkout docker-image
+: 1655051243:0;git checkout my-editor
+: 1655051244:0;ls
+: 1655051245:0;clear
+: 1655051248:0;ls
+: 1655051273:0;clear
+: 1655051274:0;cd
+: 1655051275:0;ls
+: 1655051276:0;cd editor
+: 1655051277:0;ls
+: 1655051281:0;cd
+: 1655051294:0;source .config/zsh/.zshrc
+: 1655051296:0;ls
+: 1655051302:0;cd editor
+: 1655051303:0;clear
+: 1655051304:0;ls
+: 1655051308:0;vi Dockerfile
+: 1655051377:0;\
+/home/rvv/editor
+: 1655052314:0;cd edito
+: 1655052316:0;cd editor
+: 1655052317:0;vi
+: 1655052335:0;cd editor
+: 1655052336:0;vi
+: 1655052362:0;cd editor
+: 1655052363:0;vi
+: 1655052376:0;cd editor
+: 1655052377:0;vi
+: 1655052442:0;cd editor
+: 1655052443:0;vi
+: 1655052484:0;cd editor
+: 1655052485:0;vi
+: 1655052589:0;cd editor
+: 1655052589:0;vi
+: 1655052603:0;ls tmux
+: 1655052609:0;vi
+: 1655052647:0;ls
+: 1655052652:0;vi
+: 1655052676:0;ls
+: 1655052677:0;cd
+: 1655052680:0;clear
+: 1655052691:0;vi
+: 1655052698:0;cd editor
+: 1655052699:0;vi
+: 1655052714:0;cd nvim
+: 1655052715:0;ls
+: 1655052723:0;vi
+: 1655052735:0;cd
+: 1655052737:0;cd .config
+: 1655052738:0;vi
+: 1655052742:0;ls
+: 1655052748:0;vi
+: 1655052755:0;ls -al
+: 1655052765:0;cd ..
+: 1655052771:0;vi .gitignore
+: 1655052813:0;git rm -r --cached nvim/
+: 1655052817:0;cd nvim
+: 1655052818:0;clear
+: 1655052823:0;ls
+: 1655052827:0;vi
+: 1655053096:0;cd ..
+: 1655053097:0;ls
+: 1655053144:0;cd ..
+: 1655053150:0;cp editor /tmp
+: 1655053151:0;cp -r editor /tmp
+: 1655053191:0;ls
+: 1655053192:0;ls /tmp
+: 1655053223:0;clear
+: 1655053226:0;..
+: 1655053228:0;cd
+: 1655053232:0;editor/nvim
+: 1655053253:0;ls
+: 1655053255:0;cd ..
+: 1655053256:0;ls
+: 1655053260:0;ls -al
+: 1655053313:0;ls -al /tmp/editor
+: 1655053326:0;ls
+: 1655053330:0;unalias rm
+: 1655053331:0;which rm
+: 1655053339:0;rm nvim
+: 1655053340:0;ls
+: 1655053343:0;rm tmux
+: 1655053346:0;rm zsh
+: 1655053348:0;ls
+: 1655053351:0;ls -al
+: 1655053374:0;cp -r ~/.config/nvim .
+: 1655053376:0;cp -r ~/.config/tmux .
+: 1655053378:0;cp -r ~/.config/zsh .
+: 1655053671:0;t
+: 1655053608:0;ln -s ~/editor/nvim ~/.config/nvim
+: 1655053610:0;ls nvim
+: 1655053613:0;cd nvim
+: 1655053660:0;ln -s ~/editor/zsh ~/.config/zsh
+: 1655053677:0;ls -al
+: 1655053682:0;ls
+: 1655053686:0;cd ..
+: 1655053692:0;ls
+: 1655053704:0;ln -s ~/editor/tmux ~/.config/tmux
+: 1655053711:0;cd
+: 1655053714:0;ca .tmux
+: 1655053717:0;cat .tmux
+: 1655053719:0;cd .tmux
+: 1655053720:0;ls
+: 1655053721:0;ls -al
+: 1655053725:0;cd resurrect
+: 1655053726:0;ls
+: 1655053730:0;clear
+: 1655053730:0;cd
+: 1655053733:0;cd editor
+: 1655053734:0;ls
+: 1655053734:0;vi
+: 1655053742:0;cd ../.config
+: 1655053743:0;ls
+: 1655053747:0;cd ../editor
+: 1655053748:0;ls
+: 1655053749:0;clear
+: 1655053762:0;ls
+: 1655053778:0;vi
+: 1655053788:0;cd nvim
+: 1655053790:0;ls
+: 1655053791:0;cd ..
+: 1655053791:0;ls
+: 1655053795:0;ls -al
+: 1655053797:0;clear
+: 1655053800:0;vi

@@ -17,7 +17,7 @@ RUN apk add --no-cache \
 
 WORKDIR /home/$USER
 
-COPY --chown=$USER:$USER . .config/nvim/ 
+COPY --chown=$USER:$USER . .config/
 
 USER $USER
 
