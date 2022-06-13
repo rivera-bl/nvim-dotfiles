@@ -4,6 +4,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #################################################
 ### SETTINGS
 #################################################
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 
 bindkey -v                      # vim keys
 setopt autocd                   # auto-cd
@@ -14,6 +15,7 @@ stty stop undef
 bindkey "^S" history-incremental-pattern-search-forward
 
 # autocompletion
+bindkey '\0' forward-char
 autoload -U compinit
 zmodload zsh/complist
 compinit
@@ -24,6 +26,7 @@ zstyle ':completion:*' menu yes select  # suggestions with tab
 bindkey '^[[Z' reverse-menu-complete
 
 # history settings
+
 HISTFILE=~/.config/zsh/history
 HISTSIZE=100000
 SAVEHIST=100000
@@ -82,8 +85,11 @@ PROMPT='%F{$COLDIR}@%m:%F{46} %1~${vcs_info_msg_0_} %(?.%F{COLDIR}$ENDSYM.%F{$CO
 # DIRS
 alias cdb="cd $HOME/.local/bin"
 alias cdc="cd $HOME/.config"
+alias cde="cd $HOME/editor"
+alias cdt="cd $HOME/.local/share/Trash/files/"
 
 # MAIN
+alias sos="source $HOME/.config/zsh/.zshrc"
 alias mki="sudo make clean install"
 alias ki="sudo killall"
 alias ls="ls --color"
@@ -187,7 +193,6 @@ x11-clip-wrap-widgets paste  $paste_widgets
 ### PATHS
 #################################################
 
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/rvv/temp/google-cloud-sdk/path.zsh.inc' ]; then . '/home/rvv/temp/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -196,4 +201,4 @@ if [ -f '/home/rvv/temp/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/rv
 
 if [ -e /home/rvv/.nix-profile/etc/profile.d/nix.sh ]; then source /home/rvv/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh
