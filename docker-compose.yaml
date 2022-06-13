@@ -12,6 +12,7 @@ services:
         source: editor-data
         target: /home/vim
     working_dir: ${WORKING_DIR}
+    command: "tail -f /dev/null"
 
 volumes:
   editor-data:

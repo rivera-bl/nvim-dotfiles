@@ -15,7 +15,6 @@ telescope.setup{
     file_ignore_patterns = {
       "Session.vim",
       "NetrwTreeListing",
-      ".git",
       ".zcompdump*",
       ".backup*",
       "tmux/plugins",

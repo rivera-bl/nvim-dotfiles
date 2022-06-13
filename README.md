@@ -43,8 +43,9 @@ only with neovim installed the image is of 25mb
 - [x] add set -o vi
 - [x] alias para vi=nvim
 - [x] create a repo for our dev env ide, with zsh, tmux and nvim
+- [ ] build fzf from source
 
-- [ ] create docker compose to mount volumes
+- [x] create docker compose to mount volumes
 - [ ] solve posible performance issues by running on docker
     - lsp feels slow to start
 - [ ] get lua to work, it works when installing manually but not through lsp-installer

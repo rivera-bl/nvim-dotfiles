@@ -3,9 +3,9 @@ FROM alpine:3.16
 ENV USER=vim
 
 RUN apk add --no-cache \
-            neovim tmux zsh zsh-vcs zsh-syntax-highlighting \
+            neovim tmux zsh zsh-vcs zsh-syntax-highlighting fzf \
             git curl \
-            cmake make build-base libstdc++ \
+            cmake make build-base libstdc++ perl \
             bash ninja yarn npm \
             sudo && \
             adduser -D $USER && \
