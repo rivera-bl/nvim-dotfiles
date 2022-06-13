@@ -16,3 +16,5 @@ sudo unzip /tmp/terraform-ls.zip -d /usr/local/bin
 
 # install packer plugins
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync' && zsh
+
+tail -f /dev/null
