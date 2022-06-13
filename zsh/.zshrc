@@ -1,26 +1,34 @@
 export SHELL="zsh"
 # export ZDOTDIR=$HOME/.config/zsh#Source aliases
+# can't use it because autocomplete overrides the map
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source "$HOME/.config/zsh/.zalias"
 #Source prompt style
 source "$HOME/.config/zsh/.zprompt"
+#################################################
+### SETTINGS
+#################################################
 
-bindkey -v                      #Enable Vi-Mode
+bindkey -v                      # vim keys
+setopt autocd                   # auto-cd
+
+# CTR-R search
 bindkey "^R" history-incremental-pattern-search-backward
-# ^S is taken by: stty -a | grep '\^S'
-# We have to unmap it:
 stty stop undef
 bindkey "^S" history-incremental-pattern-search-forward
-setopt autocd                   #Enable Auto-cd	
-# setopt rcquotes
 
-#Enable Auto-Completion
+# autocompletion
 autoload -U compinit
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)		# Include hidden files.
+_comp_options+=(globdots)		            # include hidden files
 
-#For limiting and storing .zsh_history on a specific dir
+# menu movement
+zstyle ':completion:*' menu yes select  # suggestions with tab
+bindkey '^[[Z' reverse-menu-complete
+
+# history settings
 HISTFILE=~/.config/zsh/history
 HISTSIZE=100000
 SAVEHIST=100000
