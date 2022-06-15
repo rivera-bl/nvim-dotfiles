@@ -126,6 +126,9 @@ alias k="kubectl"
 alias tf="terraform"
 alias tfaa="terraform apply --auto-approve"
 
+# TERRAFORM
+alias va="vagrant"
+
 # TMUX
 alias t="tmux"
 alias ta="t a -t"

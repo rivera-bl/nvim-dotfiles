@@ -1,3 +1,13 @@
+# VAGRANT
+
+vagrant up
+vagrant ssh
+vagrant destroy
+vagrant box list
+vagrant box remove
+
+* Running our dev environment as a container on windows on top of wsl hasn't been so comfortable, feels heavy and clunky, so we are trying with a vm now
+
 # BUILDING AS A DOCKER CONTAINER
 
 alpine:1.16
