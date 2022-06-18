@@ -2,6 +2,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "generic/alpine316"
   config.vm.box_version = "4.0.2"
   config.vm.hostname = "editor"
+  # name that vagrants uses to define the box, replaces 'default'
+  config.vm.define "editor"
 
   config.vm.provider :virtualbox do |vb|
       vb.name = "editor"
