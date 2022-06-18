@@ -1,3 +1,4 @@
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
 	return
@@ -43,6 +44,7 @@ require'lspconfig'.sumneko_lua.setup {
 
 -- requires npm
 require'lspconfig'.jsonls.setup{}
+require'lspconfig'.bashls.setup{}
 
 -- requires yarn
 -- https://www.schemastore.org/json/
@@ -57,6 +59,7 @@ require'lspconfig'.yamlls.setup {
 }
 
 
+-- terraform
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.resolveSupport = {
@@ -67,7 +70,6 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
   }
 }
 
--- Terraform
 require'lspconfig'.terraformls.setup{
     capabilities = capabilities
 }
