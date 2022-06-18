@@ -1,12 +1,36 @@
+# PACKER
+
+* We are going to use Packer to build the base box of Vagrant
+
+packer init -> installs the `required_plugins`
+
 # VAGRANT
 
-vagrant up
-vagrant ssh
+* Running our dev environment as a container on windows on top of wsl hasn't been so comfortable, feels heavy and clunky, so we are trying with a vm now
+
+## BASE COMMANDS
+
+vagrant provision   -> exec the provisioners
+vagrant up          -> gets the base box running and provisions
+vagrant ssh         -> connects to the box
 vagrant destroy
 vagrant box list
 vagrant box remove
 
-* Running our dev environment as a container on windows on top of wsl hasn't been so comfortable, feels heavy and clunky, so we are trying with a vm now
+* If the build of the box fails, run `provision` instead of `up`
+* vagrant provision --provision-with shell
+* du -h ~/.vagrant.d/boxes
+
+## EXPORT
+
+* Useful commands if the `package` fails
+vboxmanage list vms
+vboxmanage unregistervm <vm-name> –delete
+px aux | grep /usr/lib/virtualbox/VBoxHeadless -> kill -9 pid
+vagrant global-status --prune
+
+* Export as a vm (this poweroffs the machine so we have to run vagrant up again if we want to ssh to it)
+`vagrant package <output of vagrant status> --output <vm-name>.tar.gz`
 
 # BUILDING AS A DOCKER CONTAINER
 
@@ -36,6 +60,9 @@ only with neovim installed the image is of 25mb
 
 ## TODO
 
+- [ ] vagrant box built with packer (hcl)
+- [ ] check cannot find guest additions
+- [ ] virtualbox start automatically as part of the build process?
 - [x] setup the pipeline in github actions for building the container and pushing to dockerhub
 - [x] add the repository contents to the image and they work good
 - [x] excluir del checkout o del COPY el .git folder
