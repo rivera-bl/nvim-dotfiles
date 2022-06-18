@@ -28,11 +28,12 @@ let g:terraform_align=1
 """""""""""""""""""""""
 let g:zv_get_docset_by = ['ext', 'file', 'ft']
 let g:zv_file_types = {
-            \   'tf'        : 'terraform',
-            \   'pkr.hcl'   : 'packer',
-            \   'yml'       : 'kubernetes,ansible',
-            \   'yaml'      : 'kubernetes,ansible',
-            \   'tex'       : 'latex'
+            \   'tf'                : 'terraform',
+            \   'pkr.hcl'           : 'packer',
+            \   'yml'               : 'kubernetes,ansible',
+            \   'yaml'              : 'kubernetes,ansible',
+            \   'tex'               : 'latex',
+            \   'Vagrantfile'       : 'vagrant'
             \ }
 
 """""""""""""""""""""""
