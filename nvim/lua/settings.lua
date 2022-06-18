@@ -5,6 +5,7 @@
 vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
 vim.cmd('set nofoldenable')
+vim.cmd('set noswapfile')
 
 vim.g.shell         = 'zsh'
 vim.o.clipboard     = 'unnamedplus'
@@ -38,6 +39,9 @@ vim.opt.softtabstop = -1            -- treat tabs as tabs and not spaces when ed
 
 -- Hides tilde chars on endofbuffer
 vim.cmd("set fillchars=fold:\\ ,vert:\\│,eob:\\ ,msgsep:‾")
+
+-- Set versplit separator to the same color of the background
+vim.cmd("hi VertSplit guifg=#1d2225 guibg=#1d2225")
 
 -- Disables automatic commenting on newline:
 vim.cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
