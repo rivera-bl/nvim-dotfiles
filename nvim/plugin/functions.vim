@@ -34,3 +34,8 @@ nnoremap <expr> i IndentWithI()
 "     endif
 " endfunction
 " map <leader>r :call RenameFile()<cr>
+
+" get highlight group hex color
+function! GetHiVal(name, layer)
+  return synIDattr(synIDtrans(hlID(a:name)), a:layer . '#')
+endf
