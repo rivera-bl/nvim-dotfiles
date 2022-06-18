@@ -37,6 +37,8 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 
+source <(kubectl completion zsh)
+
 #################################################
 ### SYNTAX HIGHLIGHTING
 #################################################
