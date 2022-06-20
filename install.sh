@@ -1,7 +1,7 @@
 #!/bin/sh
 apk add --no-cache \
         neovim tmux zsh zsh-vcs zsh-syntax-highlighting zsh-autosuggestions fzf \
-        git curl \
+        git curl xclip xauth \
         cmake make build-base libstdc++ perl \
         bash ninja yarn npm \
         terraform docker \
@@ -9,7 +9,7 @@ apk add --no-cache \
 
 # kubectl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl && rm kubectl
 
 # docker
 addgroup vagrant docker

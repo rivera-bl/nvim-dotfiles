@@ -26,11 +26,30 @@ vagrant box remove
 * Useful commands if the `package` fails
 vboxmanage list vms
 vboxmanage unregistervm <vm-name> –delete
-px aux | grep /usr/lib/virtualbox/VBoxHeadless -> kill -9 pid
+pkill -f /usr/lib/virtualbox/VBoxHeadless
 vagrant global-status --prune
 
 * Export as a vm (this poweroffs the machine so we have to run vagrant up again if we want to ssh to it)
-`vagrant package <output of vagrant status> --output <vm-name>.tar.gz`
+`vagrant package $(va status --machine-readable | head -n 1 | awk -F ',' '{print $2}') --output <vm-name>.tar.gz`
+
+## COPY/PASTE
+
+* In order to copy to clipboard from host to server, and viceversa, through an ssh connection:
+
+host and server has to have installed `xauth` and `xclip`
+
+host machine has to have  in `~/.ssh/config`
+```
+ForwardX11Trusted yes
+ForwardX11 yes
+```
+
+server machine has to have in `/etc/ssh/sshd_config`
+```
+X11Forwarding yes
+```
+
+https://unix.stackexchange.com/questions/12755/how-to-forward-x-over-ssh-to-run-graphics-applications-remotely
 
 # BUILDING AS A DOCKER CONTAINER
 
@@ -60,9 +79,17 @@ only with neovim installed the image is of 25mb
 
 ## TODO
 
+- [x] build vagrant box from alpine box
+- [ ] manage folder structure of programs,docker,vagrant
+- [ ] share folder from host on vagrant
+- [x] install
+    - [x] xclip (or similar)
+- [ ] check how to run this box fast and consistently on windows
+    - [ ] write a bootstrap script
+
 - [ ] vagrant box built with packer (hcl)
-- [ ] check cannot find guest additions
-- [ ] virtualbox start automatically as part of the build process?
+  - [ ] check cannot find guest additions
+  - [ ] virtualbox start automatically as part of the build process?
 - [x] setup the pipeline in github actions for building the container and pushing to dockerhub
 - [x] add the repository contents to the image and they work good
 - [x] excluir del checkout o del COPY el .git folder
