@@ -136,7 +136,7 @@ alias tfaa="terraform apply --auto-approve"
 alias va="vagrant"
 
 # TMUX
-alias t="tmux"
+alias t="tmux -2"
 alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
@@ -151,6 +151,7 @@ alias zlst="man zshmodules | sed -n '251,$'p | less"
 #Completion System from zsh manpage
 alias zcom="man zshcompsys"
 
+# calculator
 function c() python3 -c "from math import *; print($*);"
 alias c='noglob c'
 
