@@ -39,6 +39,10 @@ setopt HIST_REDUCE_BLANKS
 
 source <(kubectl completion zsh)
 
+# set the shell background color to the one used on neovim
+# for when we are using default xterm inside of docker
+echo -ne '\e]11;rgb:1d/22/25\a'
+
 #################################################
 ### SYNTAX HIGHLIGHTING
 #################################################
