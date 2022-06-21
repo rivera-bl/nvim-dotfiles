@@ -1,8 +1,7 @@
-# PACKER
+# ABSTRACT
 
-* We are going to use Packer to build the base box of Vagrant
+* Despite having built a vm with Vagrant, I've realized that, until I begin to use Nixos, the simplest way to replicate my dev environment in a windows machine, is using a docker container. Virtualbox interface is clunky, using ssh in Windows requires Putty, and Cygwin is not linux. WSL2 which was the closest solution to running Linux on windows, has problems for port-forwarding when using Cisco anyconnect VPN. Finally docker desktop drops you into the console of your container in one click, and port forwarding with DinD should be easy.
 
-packer init -> installs the `required_plugins`
 
 # VAGRANT
 
@@ -51,7 +50,7 @@ X11Forwarding yes
 
 https://unix.stackexchange.com/questions/12755/how-to-forward-x-over-ssh-to-run-graphics-applications-remotely
 
-# BUILDING AS A DOCKER CONTAINER
+# DOCKER
 
 alpine:1.16
 only with neovim installed the image is of 25mb
@@ -61,7 +60,7 @@ only with neovim installed the image is of 25mb
 * LOCAL
 
 1. docker build -t neovim-test .
-2. docker run --name neovim-test -ti --rm neovim-test
+2. docker run --name neovim-test -ti -v "/var/run/docker.sock:/var/run/docker.sock:rw" --rm neovim-test
 3. export PATH="$HOME/.local:$PATH"
 3. nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 4. nvim
@@ -82,18 +81,16 @@ only with neovim installed the image is of 25mb
 - [x] build vagrant box from alpine box
 - [x] install
     - [x] xclip (or similar)
-- [ ] install 256 colors terminal
-- [ ] change keyboard language
-- [ ] swap esc keys
 
+- [x] setup main programs on docker alpine (awscli, kubectl)
+- [x] enable services on docker alpine
+- [x] enable usage of docker socket on docker alpine
+- [x] setup command to mount volumes when running docker alpine
 - [ ] manage folder structure of programs,docker,vagrant
-- [ ] share folder from host on vagrant
-- [ ] check how to run this box fast and consistently on windows
-    - [ ] write a bootstrap script
+- [ ] install openssh in docker and test its usage
+- [ ] use docker multi stage builds to minimize the size of the image, start with the awscli build
+- [ ] install the packer plugins inside the docker image
 
-- [ ] vagrant box built with packer (hcl)
-  - [ ] check cannot find guest additions
-  - [ ] virtualbox start automatically as part of the build process?
 - [x] setup the pipeline in github actions for building the container and pushing to dockerhub
 - [x] add the repository contents to the image and they work good
 - [x] excluir del checkout o del COPY el .git folder
