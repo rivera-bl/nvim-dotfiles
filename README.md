@@ -80,10 +80,14 @@ only with neovim installed the image is of 25mb
 ## TODO
 
 - [x] build vagrant box from alpine box
-- [ ] manage folder structure of programs,docker,vagrant
-- [ ] share folder from host on vagrant
 - [x] install
     - [x] xclip (or similar)
+- [ ] install 256 colors terminal
+- [ ] change keyboard language
+- [ ] swap esc keys
+
+- [ ] manage folder structure of programs,docker,vagrant
+- [ ] share folder from host on vagrant
 - [ ] check how to run this box fast and consistently on windows
     - [ ] write a bootstrap script
 
