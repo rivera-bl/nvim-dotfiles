@@ -65,4 +65,6 @@ COPY --chown=$USER:$USER . .config/
 
 USER $USER
 
+EXPOSE 22
+
 ENTRYPOINT [".config/entrypoint.sh"]

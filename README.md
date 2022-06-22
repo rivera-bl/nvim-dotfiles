@@ -2,7 +2,6 @@
 
 * Despite having built a vm with Vagrant, I've realized that, until I begin to use Nixos, the simplest way to replicate my dev environment in a windows machine, is using a docker container. Virtualbox interface is clunky, using ssh in Windows requires Putty, and Cygwin is not linux. WSL2 which was the closest solution to running Linux on windows, has problems for port-forwarding when using Cisco anyconnect VPN. Finally docker desktop drops you into the console of your container in one click, and port forwarding with DinD should be easy.
 
-
 # VAGRANT
 
 * Running our dev environment as a container on windows on top of wsl hasn't been so comfortable, feels heavy and clunky, so we are trying with a vm now
@@ -69,6 +68,13 @@ only with neovim installed the image is of 25mb
 
 - Made an action that builds and pushes the image to Dockerhub
 - Get it with: docker pull riverablo/neovim:latest
+
+docker run --name editor -ti \
+           -v "/var/run/docker.sock:/var/run/docker.sock:rw" \
+           -v "editor:/home/vim/.config" \
+           -v "C:/Users/cma0564/posregional-dev:/home/vim/posregional-dev" \
+           -p 22:22 \
+           --rm riverablo/neovim:latest
 
 ## NOTES
 
