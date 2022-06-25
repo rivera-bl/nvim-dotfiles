@@ -46,6 +46,9 @@ vim.cmd("hi VertSplit guifg=#1d2225 guibg=#1d2225")
 -- Disables automatic commenting on newline:
 vim.cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
 
+-- For some reason treesitter is not recognizing .nix files
+vim.cmd('autocmd FileType nix TSBufEnable highlight')
+
 -- Calcurse notes with markdown
 vim.cmd('autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown')
 vim.cmd('autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown')
@@ -55,7 +58,8 @@ vim.cmd('autocmd InsertLeave,InsertEnter * set cul!')
 vim.cmd('hi CursorLine guibg=#252e33')
 
 -- Maintain same size of splits when resizing the window
-vim.cmd('autocmd VimResized * wincmd =')
+-- Not so useful when resizing a vim window with 2 splits in tmux with 2 vertical panes
+-- vim.cmd('autocmd VimResized * wincmd =')
 
 -- Shows cursorline only in focused window
 vim.cmd([[

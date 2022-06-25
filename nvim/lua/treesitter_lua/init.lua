@@ -4,16 +4,15 @@ if not status_ok then
 end
 
 configs.setup {
-  highlight = {
-    enable = true,
-  },
+  highlight = { enable = true },
   ensure_installed = {
     "bash",
     "json",
+    "nix",
     "yaml",
     "python",
     "go",
     "regex",
-    "dockerfile",
+    "dockerfile"
   }
 }

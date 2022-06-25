@@ -1,4 +1,4 @@
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- for a list of installation per language server: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
 	return
@@ -58,6 +58,8 @@ require'lspconfig'.yamlls.setup {
   }
 }
 
+-- requires rust
+require'lspconfig'.rnix.setup{}
 
 -- terraform
 local capabilities = vim.lsp.protocol.make_client_capabilities()
