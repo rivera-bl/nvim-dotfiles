@@ -2,6 +2,10 @@
 -- wo = local to window
 -- bo = local to buffer
 
+-- -- indentline
+-- vim.opt.list = true
+-- vim.opt.listchars:append("eol:↴")
+
 vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
 vim.cmd('set nofoldenable')

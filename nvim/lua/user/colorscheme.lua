@@ -10,7 +10,7 @@ local Color, colors, Group, groups, styles = colorbuddy.setup()
 Color.new("gray0", "#1d2225") -- background
 Color.new("gray1", "#1d2225") -- background of the line numbers column
 Color.new("gray2", "#373b41")
-Color.new("gray3", "#969896") -- comments
+Color.new("gray3", "#969896") -- line numbers,comments
 Color.new("gray4", "#b4b7b4")
 Color.new("gray5", "#c5c8c6")
 Color.new("gray6", "#e0e0e0")
