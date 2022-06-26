@@ -19,6 +19,7 @@ require("user.lsp.handlers").setup()
 -- SERVERS
 -- requires ninja and bash
 require'lspconfig'.sumneko_lua.setup {
+  on_attach = require("user.lsp.handlers").on_attach,
   settings = {
     Lua = {
       runtime = {
@@ -43,12 +44,17 @@ require'lspconfig'.sumneko_lua.setup {
 }
 
 -- requires npm
-require'lspconfig'.jsonls.setup{}
-require'lspconfig'.bashls.setup{}
+require'lspconfig'.jsonls.setup{
+  on_attach = require("user.lsp.handlers").on_attach,
+}
+require'lspconfig'.bashls.setup{
+  on_attach = require("user.lsp.handlers").on_attach,
+}
 
 -- requires yarn
 -- https://www.schemastore.org/json/
 require'lspconfig'.yamlls.setup {
+  on_attach = require("user.lsp.handlers").on_attach,
   settings = {
     yaml = {
       schemas = {
@@ -59,7 +65,9 @@ require'lspconfig'.yamlls.setup {
 }
 
 -- requires rust
-require'lspconfig'.rnix.setup{}
+require'lspconfig'.rnix.setup{
+  on_attach = require("user.lsp.handlers").on_attach,
+}
 
 -- terraform
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -73,5 +81,6 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 }
 
 require'lspconfig'.terraformls.setup{
-    capabilities = capabilities
+  on_attach = require("user.lsp.handlers").on_attach,
+  capabilities = capabilities
 }
