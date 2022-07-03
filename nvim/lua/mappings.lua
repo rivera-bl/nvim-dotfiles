@@ -92,7 +92,7 @@ vim.cmd('nnoremap <expr> <C-P> ( &spell ) ? "[S"  : "<C-P>"') -- previous word
 -----------------------------
 
 -- Open Lazygit
-vim.api.nvim_set_keymap('n', '<leader>g', ':LazyGit<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>g', ':cd %:p:h | LazyGit<CR>', {noremap = true})
 
 -- Edit file in split in the same directory of current buffer
 vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-R>=expand("%:p:h") . "/"<CR>', {noremap = true})
