@@ -101,7 +101,6 @@ alias ki="sudo killall"
 alias ls="ls --color"
 alias ll="ls -al --color"
 alias grep="grep --color"
-alias vi="nvim && printf '\e[A\e[K'" # ?should use fzf to open files from terminal instead?
 alias py="python -c 'import code; import readline; readline.parse_and_bind(\"set editing-mode vi\"); code.interact(local=locals())'"
 alias duh="du -h --max-depth=1 | sort -hr"
 alias rm="gio trash"
@@ -197,6 +196,10 @@ local copy_widgets=(
 local paste_widgets=(
     vi-put-{before,after}
 )
+
+function vi {
+  nvim "$@" && printf '\e[A\e[K'
+}
 
 # NB: can atm. only wrap native widgets
 x11-clip-wrap-widgets copy $copy_widgets
