@@ -201,12 +201,11 @@ local paste_widgets=(
 x11-clip-wrap-widgets copy $copy_widgets
 x11-clip-wrap-widgets paste  $paste_widgets
 
-# # function to copy command output
-# # TODO: default to copy the last command, but have the option to pass a command
-# # TODO: not grabbing the !!, error command not found
-# function clip-last() {
-#   echo "$(!!)" | tee >(xclip -selection clipboard)
-# }
+# function to copy command output
+# use !! for last command
+function clipo() {
+  echo "$($@)" | tee >(xclip -selection clipboard)
+}
 
 #################################################
 ### PATHS
