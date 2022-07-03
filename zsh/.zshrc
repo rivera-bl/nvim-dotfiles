@@ -107,6 +107,7 @@ alias duh="du -h --max-depth=1 | sort -hr"
 alias rm="gio trash"
 alias bta="bta && exit"
 alias pwd="pwd | tee >(xclip -selection clipboard)"
+alias clipo="tee >(xclip -selection clipboard)"
 
 # GIT
 alias ga="git add"
@@ -200,12 +201,6 @@ local paste_widgets=(
 # NB: can atm. only wrap native widgets
 x11-clip-wrap-widgets copy $copy_widgets
 x11-clip-wrap-widgets paste  $paste_widgets
-
-# function to copy command output
-# use !! for last command
-function clipo() {
-  echo "$($@)" | tee >(xclip -selection clipboard)
-}
 
 #################################################
 ### PATHS
