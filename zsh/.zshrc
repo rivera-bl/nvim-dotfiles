@@ -105,6 +105,8 @@ alias vi="nvim"
 alias py="python -c 'import code; import readline; readline.parse_and_bind(\"set editing-mode vi\"); code.interact(local=locals())'"
 alias duh="du -h --max-depth=1 | sort -hr"
 alias rm="gio trash"
+alias bta="bta && exit"
+alias pwd="pwd | tee >(xclip -selection clipboard)"
 
 # GIT
 alias ga="git add"
