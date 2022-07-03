@@ -76,15 +76,16 @@ vim.api.nvim_set_keymap('n', '<leader>fv',  ':lua require("telescope_lua").searc
 -- SPELL CHECKING
 -----------------------------
 
+-- ,¿¿ - C-N - <TAB>
 -- Set spell
 vim.cmd('nnoremap <leader>¿¿ :setlocal spell!<CR>') -- toggle spellcheck
 vim.cmd('nnoremap <leader>¿s :setlocal spell <bar> setlocal spelllang=es<CR>')
 vim.cmd('nnoremap <leader>¿n :setlocal spell <bar> setlocal spelllang=en<CR>')
 -- Bind only when spell is set on
-vim.cmd('nnoremap <expr> <TAB> ( &spell ) ? "1z=" : "<TAB>"')
-vim.cmd('nnoremap <expr> <CR>  ( &spell ) ? "zg"  : "<CR>"')
-vim.cmd('nnoremap <expr> <C-N> ( &spell ) ? "]S"  : "<C-N>"')
-vim.cmd('nnoremap <expr> <C-P> ( &spell ) ? "[S"  : "<C-P>"')
+vim.cmd('nnoremap <expr> <TAB> ( &spell ) ? "1z=" : "<TAB>"') -- accept first suggestion
+vim.cmd('nnoremap <expr> <CR>  ( &spell ) ? "zg"  : "<CR>"')  -- add to dictionary
+vim.cmd('nnoremap <expr> <C-N> ( &spell ) ? "]S"  : "<C-N>"') -- next word
+vim.cmd('nnoremap <expr> <C-P> ( &spell ) ? "[S"  : "<C-P>"') -- previous word
 
 -----------------------------
 -- MISC
