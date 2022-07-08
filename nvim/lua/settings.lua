@@ -87,10 +87,8 @@ vim.cmd('au BufNewFile,BufRead Jenkinsfile setf groovy')
 
 -- Markdown format options
 -- t: auto-wrap based on tw, a: format paragraph, w: trailing white space continues paragraph
-vim.cmd('au filetype markdown setlocal tw=80 | setlocal fo=want')
--- FIX: only applies it to one line when fo=a,
--- TODO: should avoid the jump to do the replace
-vim.cmd('autocmd BufWritePost a.md silent g/\\w $/norm A ') -- add 2nd whitespace on save
+vim.cmd('au filetype markdown setlocal tw=90 | setlocal fo=wnt')
+-- vim.cmd('command MarkdownParagraphFormat g/\\S $/norm A ') -- add 2nd whitespace to break line on paragraph
 
 -- Create .pdf out of current .md file
 vim.cmd('autocmd BufWritePost ~/dev/jekyll/codeblog/_posts/*.md silent !mkdir -p /tmp/blog-preview && pandoc %:p -o /tmp/blog-preview/tmp.pdf &')
