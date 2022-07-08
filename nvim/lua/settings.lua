@@ -85,6 +85,9 @@ vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 -- Jenkisfile syntax highlight as groovy files
 vim.cmd('au BufNewFile,BufRead Jenkinsfile setf groovy')
 
+-- flake.lock syntax highlight as json files
+vim.cmd('au BufNewFile,BufRead flake.lock setf json')
+
 -- Markdown format options
 -- t: auto-wrap based on tw, a: format paragraph, w: trailing white space continues paragraph
 vim.cmd('au filetype markdown setlocal tw=90 | setlocal fo=wnt')
