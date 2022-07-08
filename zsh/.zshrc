@@ -105,7 +105,8 @@ alias py="python -c 'import code; import readline; readline.parse_and_bind(\"set
 alias duh="du -h --max-depth=1 | sort -hr"
 alias rm="gio trash"
 alias bta="bta && exit"
-alias pwd="pwd | tee >(xclip -selection clipboard)"
+# the terminal bugs out with "tee: invalid option -P" when naming to pwd
+alias cwd='pwd | tee >(xclip -selection clipboard)'
 alias clipo="tee >(xclip -selection clipboard)"
 
 # GIT
