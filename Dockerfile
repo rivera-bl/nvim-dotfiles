@@ -4,10 +4,10 @@ ENV USER=vim
 
 RUN apk add --no-cache \
             neovim tmux zsh fzf zsh-vcs zsh-syntax-highlighting zsh-autosuggestions \
-            git curl \
+            git curl xclip xauth \
             cmake make build-base libstdc++ perl \
             bash ninja yarn npm \
-            terraform openssh \
+            terraform openssh lazygit \
             sudo && \
             adduser -D $USER && \
             echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER && \
@@ -52,6 +52,7 @@ RUN apk --no-cache add \
     && apk --no-cache del \
         binutils \
         curl \
+        groff \
     && rm -rf /var/cache/apk/*
 
 # docker
