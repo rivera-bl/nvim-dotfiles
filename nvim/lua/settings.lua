@@ -83,7 +83,8 @@ vim.cmd([[autocmd User Startified for key in ['q','s','t','v'] | silent execute 
 vim.cmd('autocmd BufWritePost tmux.conf silent !tmux source %')
 
 -- Autoformat nix code with alejandra
-vim.cmd('autocmd BufWritePost *.nix silent !alejandra %:p:h')
+-- wget https://github.com/kamadorueda/alejandra/releases/download/1.5.0/alejandra-x86_64-unknown-linux-musl
+vim.cmd('autocmd BufWritePost *.nix silent !alejandra %:p')
 
 -- Jenkisfile syntax highlight as groovy files
 vim.cmd('au BufNewFile,BufRead Jenkinsfile setf groovy')
