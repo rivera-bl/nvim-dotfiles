@@ -3,9 +3,12 @@
 * Despite having built a vm with Vagrant, I've realized that, until I begin to use Nixos, the simplest way to replicate my dev environment in a windows machine, is using a docker container. Virtualbox interface is clunky, using ssh in Windows requires Putty, and Cygwin is not linux. WSL2 which was the closest solution to running Linux on windows, has problems for port-forwarding when using Cisco anyconnect VPN. Finally docker desktop drops you into the console of your container in one click, and port forwarding with DinD should be easy.
 * Finally, ctrl-space doesn't work on windows. So we can't use our default mapping for fish-like suggestions on zsh, and autocomplete trigger on neovim. This shows how messy it is to create a development environment even when it is vaguely connected to the windows ecosystem. The only bulletproof solution I can think of is to create a nixos machine an run in virtualization.
 
-# VAGRANT
+# Quickstart
 
-* Running our dev environment as a container on windows on top of wsl hasn't been so comfortable, feels heavy and clunky, so we are trying with a vm now
+```
+vagrant up
+vagrant ssh
+```
 
 ## BASE COMMANDS
 
