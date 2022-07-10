@@ -55,7 +55,5 @@ https://unix.stackexchange.com/questions/12755/how-to-forward-x-over-ssh-to-run-
 
 ## TODO
 
-- [ ] use docker multi stage builds to minimize the size of the image, start with the awscli build
-- [ ] build fzf from source
-- [ ] solve posible performance issues by running on docker
-    - lsp feels slow to start
+- [x] creat a nixos machine with vagrant
+- [ ] ci to push the box to cloud
