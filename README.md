@@ -15,6 +15,17 @@ programs.neovim.configure = {
 };
 ```
 
+## Examples
+
+### Vimconf
+
+[Nice example][5]
+
+- Contains a full pledged solution step by step
+- But uses `prev: final:` instead of `final: prev` like the [documentation][7]
+
+- Overlays are important
+
 ### Issues
 
 - Apparently `"lua require('init')"` doesn't work due to something related with the [lua 
@@ -46,6 +57,8 @@ end
       - what happens to lazy loading when not using packer?
       - how is the plugin `setup()` writen?
   - [ ] settings and mappings managed by `.lua` files to do fast changes
+  - [x] clone nixpkgs/nixos-22.05 to browse the source code
+      - thats the documentation
 
 ## Resources
 
@@ -55,3 +68,4 @@ end
 [4]: https://www.youtube.com/watch?v=iwsoF9ISfaw
 [5]: https://github.com/DieracDelta/vimconf_talk/tree/0_initial_flake
 [6]: https://github.com/malob/nixpkgs/blob/master/home/neovim.nix#L38
+[7]: https://nixos.wiki/wiki/Overlays
