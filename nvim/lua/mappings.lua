@@ -71,6 +71,7 @@ vim.api.nvim_set_keymap('n', '<leader>ff',  ':lua require("telescope_lua").proje
 vim.api.nvim_set_keymap('n', '<leader>fd',  ':lua require("telescope_lua").search_dev()<CR>'   , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fc',  ':lua require("telescope_lua").search_config()<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fv',  ':lua require("telescope_lua").search_vim()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fn',  ':lua require("telescope_lua").search_nixpkgs()<CR>', {noremap = true})
 
 -----------------------------
 -- SPELL CHECKING

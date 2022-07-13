@@ -99,5 +99,12 @@ M.search_vim = function()
     hidden = true
   })
 end
+ M.search_nixpkgs = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<nixpkgs>",
+    cwd = "~/dev/nix/nixpkgs",
+    hidden = true
+  })
+end
 
 return M
