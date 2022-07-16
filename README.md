@@ -2,6 +2,8 @@
 
 ## Neovim
 
+Build Neovim with plugins using nix flakes, but pass the settings/mappings as luafile
+
 ## What works
 
 We can use a single lua config file in `configuration.nix`
@@ -22,9 +24,13 @@ programs.neovim.configure = {
 [Nice example][5]
 
 - Contains a full pledged solution step by step
-- But uses `prev: final:` instead of `final: prev` like the [documentation][7]
+  - But uses `prev: final:` instead of `final: prev` like the [documentation][7]
 
-- Overlays are important
+- Mature [example][10] using multiple lua files
+
+### Others
+
+- Claims to be a [simple flake][9] to build neovim, we just add the plugins and the init.vim
 
 ### Issues
 
@@ -50,6 +56,9 @@ end
 
 ## TODO
 
+- [ ] ?where to get the full list of arguments that the vim pkgs provides in nix
+- [ ] set the foundations of the nvim overlay
+    - use `self: super:` correctly
 - [ ] do install/configuration with: plugins -> nix, config -> lua
   - [ ] watch this [setup example][4] and implement it without nix2vim
       - [ ] copy his indenline configs
@@ -69,3 +78,6 @@ end
 [5]: https://github.com/DieracDelta/vimconf_talk/tree/0_initial_flake
 [6]: https://github.com/malob/nixpkgs/blob/master/home/neovim.nix#L38
 [7]: https://nixos.wiki/wiki/Overlays
+[8]: https://ryantm.github.io/nixpkgs/using/overlays/
+[9]: https://github.com/Quoteme/neovim-flake
+[10]: https://git.sr.ht/~yaymukund/dotfiles/tree/main/item/common/neovim
