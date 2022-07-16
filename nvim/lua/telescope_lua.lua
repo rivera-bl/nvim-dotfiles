@@ -75,8 +75,7 @@ M.project_files = function()
     cwd = vim.fn.expand("%:p:h"),
     hidden = true
   } -- define here if you want to define something
-  local ok = pcall(require"telescope.builtin".git_files, opts)
-  if not ok then require"telescope.builtin".find_files(opts) end
+  require"telescope.builtin".find_files(opts)
 end
 M.search_dev = function()
   require("telescope.builtin").find_files({
@@ -89,6 +88,12 @@ M.search_config = function()
   require("telescope.builtin").find_files({
     prompt_title = "<Dotfiles>",
     cwd = "~/.config",
+    hidden = true
+  })
+end
+M.search_git = function()
+  require("telescope.builtin").git_files({
+    prompt_title = "<Git>",
     hidden = true
   })
 end
