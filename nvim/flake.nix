@@ -21,8 +21,8 @@
           configure = {
             packages.my-plugins = with pkgs.vimPlugins; {
               start = [
-                nvim-telescope
                 nvim-lspconfig
+                telescope-nvim
               ];
               opt = [];
             };
