@@ -29,7 +29,7 @@
 
             customRC = ''
               lua << EOF
-                ${builtins.readFile} ./lua/settings.lua
+                ${builtins.readFile ./lua/settings.lua}
               EOF
             '';
           };
