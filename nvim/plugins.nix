@@ -2,7 +2,20 @@
   pkgs,
   lib,
   ...
-}: {
+}: let customPlugins = {
+  vim-bufsurf = pkgs.vimUtils.buildVimPlugin rec {
+    pname = "vim-bufsurf";
+    version = "v0.3";
+    src = pkgs.fetchFromGitHub {
+      owner = "ton";
+      repo = "vim-bufsurf";
+      rev = "e6dbc7ad66c7e436e5eb20d304464e378bd7f28c";
+      sha256 = "sha256-o/Uf4bnh3IctKnT50JitTe5/+BUrCyrlOOzkmwAzxLk=";
+    };
+    meta.homepage = "https://github.com/ton/vim-bufsurf";
+  };
+};
+in { 
   myPlugins = with pkgs.vimPlugins; [
     # completion:
     nvim-cmp
@@ -16,10 +29,6 @@
     vim-snippets
     # lsp:
     nvim-lspconfig
-    # highlight:
-    vim-markdown
-    vim-terraform
-    nvim-colorizer-lua
     # fuzzy search
     popup-nvim
     plenary-nvim
@@ -36,15 +45,19 @@
     vim-eunuch
     vim-obsession
     auto-pairs
+    customPlugins.vim-bufsurf
     # external:
     zeavim-vim
     lazygit-nvim
     vim-tmux-navigator
     vimux
-    vim-bufsurf
     # misc:
     which-key-nvim
     indent-blankline-nvim
+    # highlight:
+    vim-markdown
+    vim-terraform
+    nvim-colorizer-lua
 
     (nvim-treesitter.withPlugins (
       plugins:
@@ -60,16 +73,4 @@
         ]
     ))
   ];
-  {
-  vim-bufsurf = pkgs.vimUtils.buildVimPlugin rec {
-    pname = "vim-bufsurf";
-    version = "v0.3";
-    src = pkgs.fetchFromGitHub {
-      owner = "ton";
-      repo = "vim-bufsurf";
-      rev = "e6dbc7ad66c7e436e5eb20d304464e378bd7f28c";
-      sha256 = "1nmpvnqlw4y2g1ki33nbj74vdnaxnaqshqv3238zxgvps44y3mw5";
-    };
-    meta.homepage = "https://github.com/ton/vim-bufsurf";
-  };
 }
