@@ -1,0 +1,8 @@
+.netrwhist
+plugin/packer_compiled.vim
+plugin/packer_compiled.lua
+session/*
+snippets/*
+spell/en.utf-8.add.spl
+Session.vim
+result
