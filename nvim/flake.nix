@@ -37,7 +37,7 @@
 
       packages.image = pkgs.dockerTools.buildLayeredImage {
         name = "nvim-flake";
-        tag = "test-0.1.0";
+        tag = "latest";
         contents = [self.packages.${system}.default];
 
         config = {

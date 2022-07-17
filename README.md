@@ -31,6 +31,16 @@ programs.neovim.configure = {
 
 - It isn't necessary to use an Overlay, since the `neovim` pkg has `override` available
 
+## Usage
+
+### Container
+
+```
+nix build .#image
+docker load < result
+docker run nvim-flake
+```
+
 ## Examples
 
 ### Vimconf
@@ -61,6 +71,8 @@ programs.neovim.configure = {
 
 - The `nixos-22.05` branch has the `v0.7.0` while `master` has the `v0.7.2` which is the latest stable release
 
+- When running the nvim docker image it executes nvim and exits immediately
+
 ```lua
 -- so nvim doesnt break on first start up before PackerInstall
 local status_ok, telescope = pcall(require, "telescope")
@@ -73,6 +85,7 @@ end
 
 - [ ] add a nix shell to test
 - [x] add a buildImage
+    - [ ] fix that it exits immediately
 - [ ] ?get plugins from source and place them on a different file like [this][11]
 - [ ] ?where to get the full list of arguments that the vim pkgs provides in nix
 - [ ] ?track our built package on the system wide configuration of nixos
