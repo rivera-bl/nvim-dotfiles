@@ -128,12 +128,12 @@ end
 ## TODO
 
 - [x] install vimplugins available on nixpkgs and place them on a different file
-!  - [ ] install treesitter languages
+  - [x] install treesitter languages
   - [ ] build BufSurf plugin from source like [this][11]
   - [ ] solve lsp servers since nvim-lsp-installer plugin is not available
       - [ ] may try to add the plugin like with BufSurf
   - [x] solve telescope functions load
-    - [ ] order mappings call
+    - [ ] format mappings calls using functions and loops
   - [ ] manage plugins with flakes so we can pin the versions
 - [ ] add all the configuration files
   - [ ] ?function to read recursively all the config files
