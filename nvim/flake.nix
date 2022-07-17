@@ -13,13 +13,12 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
     in {
-      packages = {};
-      defaultPackage = with pkgs;
+      packages.default = with pkgs;
         neovim.override {
           vimAlias = true;
           viAlias = true;
           configure = {
-            packages.my-plugins = with pkgs.vimPlugins; {
+            packages.plugins = with pkgs.vimPlugins; {
               start = [
                 nvim-lspconfig
                 telescope-nvim
@@ -35,6 +34,17 @@
             '';
           };
         };
+
+      packages.image = pkgs.dockerTools.buildLayeredImage {
+        name = "nvim-flake";
+        tag = "test-0.1.0";
+        contents = [self.packages.${system}.default];
+
+        config = {
+          Cmd = ["/bin/nvim"];
+          WorkingDir = "/";
+        };
+      };
 
       ## nixosModule = {config, ...}: {
       ##   environment.variables.EDITOR = "nvim";

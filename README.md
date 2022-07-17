@@ -59,6 +59,8 @@ programs.neovim.configure = {
     from `programs.neovim.configure` only `vi` gets the configuration. 
     - apparently theres a difference between nix aliases and shell aliases?
 
+- The `nixos-22.05` branch has the `v0.7.0` while `master` has the `v0.7.2` which is the latest stable release
+
 ```lua
 -- so nvim doesnt break on first start up before PackerInstall
 local status_ok, telescope = pcall(require, "telescope")
@@ -70,9 +72,10 @@ end
 ## TODO
 
 - [ ] add a nix shell to test
-- [ ] add a buildImage
+- [x] add a buildImage
 - [ ] ?get plugins from source and place them on a different file like [this][11]
 - [ ] ?where to get the full list of arguments that the vim pkgs provides in nix
+- [ ] ?track our built package on the system wide configuration of nixos
 - [ ] do install/configuration with: plugins -> nix, config -> lua
   - [ ] watch this [setup example][4] and implement it without nix2vim
       - [ ] copy his indenline configs
