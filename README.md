@@ -4,6 +4,44 @@
 
 Build Neovim with plugins using nix flakes, but pass the settings/mappings as luafile
 
+## Plugins
+
+### Exploring <nixpkgs> source & documentation
+
+- The source code can be the best documentation, much of the functions and the pkgs usage are documented. Here is a list of files that I find useful to customize plugins for the `neovim` pkg.
+
+#### nixpkgs/doc/languages-frameworks/vim.section.md
+
+- This file contains:
+    - How to add your own plugins
+    - How to manage `treesitter`
+    - Explanation of how the `.nix` code for plugins is generated
+    - Notes on how to add vim plugins to `nixpkgs`
+
+- The recommended way of managing the plugins is with `Vim packages`. See `:help packages`.
+
+#### pkgs/applications/editors/vim/plugins/generated.nix
+
+- Here we can get the list of vim plugins available in `nix`
+- The pkg name is the name we have to reference in `packages.plugins.start [ ];`
+
+#### nixpkgs/pkgs/top-level/all-packages.nix
+
+```nix
+vimPlugins = recurseIntoAttrs (callPackage ../applications/editors/vim/plugins {
+  llvmPackages = llvmPackages_6;
+  luaPackages = lua51Packages;
+});
+```
+
+### myPlugins
+
+- Check `plugins.nix`
+
+- Plugins missing from nix:
+  - williamboman/nvim-lsp-installer
+  - ton/vim-bufsurf
+
 ## What works
 
 - Can use a lua config file in `configuration.nix`
@@ -63,6 +101,14 @@ docker run -ti --rm nvim-flake
 - Apparently `"lua require('init')"` doesn't work due to something related with the [lua 
     runtime][1].
 
+```lua
+-- so nvim doesnt break on first start up before PackerInstall
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+  return
+end
+```
+
 - When configuring nvim in `configuration.nix` with `XDG_CONFIG_HOME` files, it doesn't 
     run the same nvim of `programs.neovim.viAlias`, because with `nvim` it gets the 
     configuration of XDG_CONFIG_HOME, but not with `vi`. While when configuring 
@@ -73,30 +119,17 @@ docker run -ti --rm nvim-flake
 
 - When running the nvim docker image it executes nvim and exits immediately
 
-```lua
--- so nvim doesnt break on first start up before PackerInstall
-local status_ok, telescope = pcall(require, "telescope")
-if not status_ok then
-  return
-end
-```
-
 ## TODO
 
-- [ ] add a nix shell to test
-- [x] add a buildImage
 - [ ] ?get plugins from source and place them on a different file like [this][11]
-- [ ] ?where to get the full list of arguments that the vim pkgs provides in nix
+- [ ] add all the configuration files
+- [ ] structure README's,
+  - one for each package and one for the main project
 - [ ] ?track our built package on the system wide configuration of nixos
-- [ ] do install/configuration with: plugins -> nix, config -> lua
-  - [ ] watch this [setup example][4] and implement it without nix2vim
-      - [ ] copy his indenline configs
-  - [ ] install plugins via nix code?
-      - what happens to lazy loading when not using packer?
-      - how is the plugin `setup()` writen?
-- [x] settings and mappings managed by `.lua` files to do fast changes
-  - [x] clone nixpkgs/nixos-22.05 to browse the source code
-      - thats the documentation
+
+- [x] add a buildImage
+- [ ] ?add a nix shell to test
+- [ ] ?where to get the full list of arguments that the pkgs.vimPlugins provides
 
 ## Resources
 
