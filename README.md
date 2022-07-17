@@ -59,7 +59,7 @@ programs.neovim.configure = {
     from `programs.neovim.configure` only `vi` gets the configuration. 
     - apparently theres a difference between nix aliases and shell aliases?
 
-- Weirdly the first nvim working flake has some plugins already installed, check 672e1df6
+- Weirdly the first nvim working flake has some plugins already installed like BufSurf, check 672e1df6
 
 ```lua
 -- so nvim doesnt break on first start up before PackerInstall
