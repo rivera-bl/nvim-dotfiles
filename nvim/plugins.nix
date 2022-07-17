@@ -13,7 +13,6 @@
     # lsp:
     nvim-lspconfig
     # highlight:
-    nvim-treesitter
     vim-markdown
     vim-terraform
     nvim-colorizer-lua
