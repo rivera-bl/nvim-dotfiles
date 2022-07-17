@@ -59,8 +59,6 @@ programs.neovim.configure = {
     from `programs.neovim.configure` only `vi` gets the configuration. 
     - apparently theres a difference between nix aliases and shell aliases?
 
-- Weirdly the first nvim working flake has some plugins already installed like BufSurf, check 672e1df6
-
 ```lua
 -- so nvim doesnt break on first start up before PackerInstall
 local status_ok, telescope = pcall(require, "telescope")
@@ -71,6 +69,8 @@ end
 
 ## TODO
 
+- [ ] add a nix shell to test
+- [ ] add a buildImage
 - [ ] ?get plugins from source and place them on a different file like [this][11]
 - [ ] ?where to get the full list of arguments that the vim pkgs provides in nix
 - [ ] do install/configuration with: plugins -> nix, config -> lua
