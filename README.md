@@ -59,8 +59,7 @@ programs.neovim.configure = {
     from `programs.neovim.configure` only `vi` gets the configuration. 
     - apparently theres a difference between nix aliases and shell aliases?
 
-- If putting all lua config files inside of a single `init.lua` we can't keep this
-    functionality (thanks to this we can install `headless`)
+- Weirdly the first nvim working flake has some plugins already installed, check 672e1df6
 
 ```lua
 -- so nvim doesnt break on first start up before PackerInstall
@@ -74,15 +73,13 @@ end
 
 - [ ] ?get plugins from source and place them on a different file like [this][11]
 - [ ] ?where to get the full list of arguments that the vim pkgs provides in nix
-- [ ] set the foundations of the nvim overlay
-    - use `self: super:` correctly
 - [ ] do install/configuration with: plugins -> nix, config -> lua
   - [ ] watch this [setup example][4] and implement it without nix2vim
       - [ ] copy his indenline configs
   - [ ] install plugins via nix code?
       - what happens to lazy loading when not using packer?
       - how is the plugin `setup()` writen?
-  - [ ] settings and mappings managed by `.lua` files to do fast changes
+- [x] settings and mappings managed by `.lua` files to do fast changes
   - [x] clone nixpkgs/nixos-22.05 to browse the source code
       - thats the documentation
 
