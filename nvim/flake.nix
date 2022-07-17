@@ -27,6 +27,8 @@
               lua << EOF
                 ${builtins.readFile ./lua/settings.lua}
                 ${builtins.readFile ./lua/mappings.lua}
+                ${builtins.readFile ./lua/lualine_lua/init.lua}
+                ${builtins.readFile ./lua/telescope_lua.lua}
               EOF
             '';
           };

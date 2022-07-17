@@ -68,54 +68,54 @@ telescope.setup{
 }
 telescope.load_extension('fzf')
 
-local M = {}
-M.project_files = function()
-  local opts = {
-    prompt_title = vim.fn.expand("%:p:h"),
-    cwd = vim.fn.expand("%:p:h"),
-    hidden = true
-  } -- define here if you want to define something
-  require"telescope.builtin".find_files(opts)
-end
-M.search_dev = function()
-  require("telescope.builtin").find_files({
-    prompt_title = "<Dev Folder>",
-    cwd = "~/dev",
-    hidden = true
-  })
-end
-M.search_config = function()
-  require("telescope.builtin").find_files({
-    prompt_title = "<Dotfiles>",
-    cwd = "~/.config",
-    hidden = true
-  })
-end
-M.search_git = function()
-  require("telescope.builtin").git_files({
-    prompt_title = "<Git>",
-    hidden = true
-  })
-end
-M.search_vim = function()
-  require("telescope.builtin").find_files({
-    prompt_title = "<Vim>",
-    cwd = "~/editor",
-    hidden = true
-  })
-end
- M.search_nixpkgs = function()
-  require("telescope.builtin").find_files({
-    prompt_title = "<nixpkgs>",
-    cwd = "~/dev/nix/nixpkgs",
-    hidden = true
-  })
-end
- M.search_grep = function()
-  require('telescope.builtin').live_grep(require('telescope.themes').get_ivy{
-    prompt_title = "Grep",
-    hidden = true
-  })
-end
+-- local M = {}
+-- M.project_files = function()
+--   local opts = {
+--     prompt_title = vim.fn.expand("%:p:h"),
+--     cwd = vim.fn.expand("%:p:h"),
+--     hidden = true
+--   } -- define here if you want to define something
+--   require"telescope.builtin".find_files(opts)
+-- end
+-- M.search_dev = function()
+--   require("telescope.builtin").find_files({
+--     prompt_title = "<Dev Folder>",
+--     cwd = "~/dev",
+--     hidden = true
+--   })
+-- end
+-- M.search_config = function()
+--   require("telescope.builtin").find_files({
+--     prompt_title = "<Dotfiles>",
+--     cwd = "~/.config",
+--     hidden = true
+--   })
+-- end
+-- M.search_git = function()
+--   require("telescope.builtin").git_files({
+--     prompt_title = "<Git>",
+--     hidden = true
+--   })
+-- end
+-- M.search_vim = function()
+--   require("telescope.builtin").find_files({
+--     prompt_title = "<Vim>",
+--     cwd = "~/editor",
+--     hidden = true
+--   })
+-- end
+--  M.search_nixpkgs = function()
+--   require("telescope.builtin").find_files({
+--     prompt_title = "<nixpkgs>",
+--     cwd = "~/dev/nix/nixpkgs",
+--     hidden = true
+--   })
+-- end
+--  M.search_grep = function()
+--   require('telescope.builtin').live_grep(require('telescope.themes').get_ivy{
+--     prompt_title = "Grep",
+--     hidden = true
+--   })
+-- end
 
-return M
+-- return M

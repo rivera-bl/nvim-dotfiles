@@ -66,14 +66,64 @@ vim.api.nvim_set_keymap('n', '<leader>tf', ':VimuxZoomRunner<CR>'       , {norem
 -- TELESCOPE
 -----------------------------
 
+project_files = function()
+  local opts = {
+    prompt_title = vim.fn.expand("%:p:h"),
+    cwd = vim.fn.expand("%:p:h"),
+    hidden = true
+  } -- define here if you want to define something
+  require"telescope.builtin".find_files(opts)
+end
+search_dev = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<Dev Folder>",
+    cwd = "~/dev",
+    hidden = true
+  })
+end
+search_config = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<Dotfiles>",
+    cwd = "~/.config",
+    hidden = true
+  })
+end
+search_git = function()
+  require("telescope.builtin").git_files({
+    prompt_title = "<Git>",
+    hidden = true
+  })
+end
+search_vim = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<Vim>",
+    cwd = "~/editor",
+    hidden = true
+  })
+end
+search_nixpkgs = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<nixpkgs>",
+    cwd = "~/dev/nix/nixpkgs",
+    hidden = true
+  })
+end
+
+search_grep = function()
+  require('telescope.builtin').live_grep(require('telescope.themes').get_ivy{
+    prompt_title = "Grep",
+    hidden = true
+  })
+end
+
 vim.api.nvim_set_keymap('n', '<leader>fb',  ':Telescope buffers<CR>'  , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>ff',  ':lua require("telescope_lua").project_files()<CR>' , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fd',  ':lua require("telescope_lua").search_dev()<CR>'   , {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fc',  ':lua require("telescope_lua").search_config()<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fg',  ':cd %:p:h | lua require("telescope_lua").search_git()<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fv',  ':lua require("telescope_lua").search_vim()<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fn',  ':lua require("telescope_lua").search_nixpkgs()<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fz',  ':lua require("telescope_lua").search_grep()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ff',  ':lua require("telescope.builtin").find_files({ prompt_title = vim.fn.expand("%:p:h"), cwd = vim.fn.expand("%:p:h"), hidden = true })<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fd',  ':lua search_dev()<CR>'     , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fc',  ':lua search_config()<CR>'  , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fg',  ':lua search_git()<CR>'     , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fv',  ':lua search_vim()<CR>'     , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fn',  ':lua search_nixpkgs()<CR>' , {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>fz',  ':lua search_grep()<CR>'    , {noremap = true})
 
 -----------------------------
 -- SPELL CHECKING
