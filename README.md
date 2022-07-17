@@ -38,13 +38,9 @@ vimPlugins = recurseIntoAttrs (callPackage ../applications/editors/vim/plugins {
 
 - Inside of this folder we can find all grammars available for `treesitter`
 
-### myPlugins
+### Language Servers
 
-- Check `plugins.nix`
-
-- Plugins missing from nix:
-  - williamboman/nvim-lsp-installer
-  - ton/vim-bufsurf
+- Language Servers are dependencies of our `neovim` pkg, so we should install them on a `devShell` and inside the container, but not within the pkg. The pkg should get those dependencies from the system it is installed, in our case NixOS.
 
 ## What works
 
@@ -147,25 +143,26 @@ error: builder for '/nix/store/alc9ngf1hdn2j8lnlrsgh40krn8w67xd-vimplugin-nvim-l
 dontBuild = true;
 dontCheck = true;
 ```
-- Nonetheless its pointless to install the LSs this way, besided I was getting a bunch of error still when `nvim-lsp-installer` started to do the automatic installs
-
+- Nonetheless its pointless to install the LSs this way, besides I was getting a bunch of error still when `nvim-lsp-installer` started to do the automatic installs
 
 ## TODO
 
 - [x] install vimplugins available on nixpkgs and place them on a different file
   - [x] install treesitter languages
   - [x] build BufSurf plugin from source like [this][11]
-  - [ ] solve lsp servers since nvim-lsp-installer plugin is not available
-      - [x] may try to add the plugin like with BufSurf
-         - but whats the point if I won't have them bundled with neovim, should I tho?
+!  - [ ] install every language server from a flake
+    - [ ] install rnix first which already has a flake.nix
+    - [ ] install sumneko_lua from nixpkgs
+    - rnix, terraformls, jsonls, sumneko_lua, yamlls
+    - [ ] get rid of nvim-lsp-installer
   - [x] solve telescope functions load
     - [ ] format mappings calls using functions and loops
   - [ ] manage plugins with flakes so we can pin the versions
-- [ ] add all the configuration files
+!- [ ] add all the configuration files
   - [ ] ?function to read recursively all the config files
 - [ ] structure README's,
   - one for each package and one for the main project
-- [ ] track our built package on the system wide configuration of nixos
+!- [ ] track our built package on the system wide configuration of nixos
 
 - [x] add a buildImage
 - [ ] ?add a nix shell to test
