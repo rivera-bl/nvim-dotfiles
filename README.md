@@ -38,7 +38,7 @@ programs.neovim.configure = {
 ```
 nix build .#image
 docker load < result
-docker run nvim-flake
+docker run -ti --rm nvim-flake
 ```
 
 ## Examples
@@ -85,7 +85,6 @@ end
 
 - [ ] add a nix shell to test
 - [x] add a buildImage
-    - [ ] fix that it exits immediately
 - [ ] ?get plugins from source and place them on a different file like [this][11]
 - [ ] ?where to get the full list of arguments that the vim pkgs provides in nix
 - [ ] ?track our built package on the system wide configuration of nixos
