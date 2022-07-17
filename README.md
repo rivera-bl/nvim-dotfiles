@@ -125,13 +125,39 @@ end
 
 - The `nixos-22.05` branch has the `v0.7.0` while `master` has the `v0.7.2` which is the latest stable release
 
+#### nvim-lsp-installer
+
+- Was getting this error when trying to build the `nvim-lsp-installer` plugin
+```
+error: builder for '/nix/store/alc9ngf1hdn2j8lnlrsgh40krn8w67xd-vimplugin-nvim-lsp-installer-v0.1.drv' failed with exit code 2;
+       last 10 log lines:
+       > unpacking source archive /nix/store/wjgw6wdpd0j6lamcxj8x8c9k8gagjc1c-source
+       > source root is source
+       > patching sources
+       > configuring
+       > no configure script, doing nothing
+       > building
+       > build flags: SHELL=/nix/store/iffl6dlplhv22i2xy7n1w51a5r631kmi-bash-5.1-p16/bin/bash
+       > git clone --depth 1 https://github.com/nvim-lua/plenary.nvim dependencies/pack/vendor/start/plenary.nvim
+       > /nix/store/iffl6dlplhv22i2xy7n1w51a5r631kmi-bash-5.1-p16/bin/bash: line 1: git: command not found
+       > make: *** [Makefile:5: dependencies] Error 127
+```
+- Solved it by adding 
+```
+dontBuild = true;
+dontCheck = true;
+```
+- Nonetheless its pointless to install the LSs this way, besided I was getting a bunch of error still when `nvim-lsp-installer` started to do the automatic installs
+
+
 ## TODO
 
 - [x] install vimplugins available on nixpkgs and place them on a different file
   - [x] install treesitter languages
-  - [ ] build BufSurf plugin from source like [this][11]
+  - [x] build BufSurf plugin from source like [this][11]
   - [ ] solve lsp servers since nvim-lsp-installer plugin is not available
-      - [ ] may try to add the plugin like with BufSurf
+      - [x] may try to add the plugin like with BufSurf
+         - but whats the point if I won't have them bundled with neovim, should I tho?
   - [x] solve telescope functions load
     - [ ] format mappings calls using functions and loops
   - [ ] manage plugins with flakes so we can pin the versions

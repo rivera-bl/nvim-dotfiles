@@ -27,8 +27,11 @@
               lua << EOF
                 ${builtins.readFile ./lua/settings.lua}
                 ${builtins.readFile ./lua/mappings.lua}
-                ${builtins.readFile ./lua/lualine_lua/init.lua}
                 ${builtins.readFile ./lua/telescope_lua.lua}
+                ${builtins.readFile ./lua/lualine_lua/init.lua}
+                ${builtins.readFile ./lua/user/indentline.lua}
+                ${builtins.readFile ./lua/user/cmp.lua}
+                ${builtins.readFile ./lua/user/lsp/init.lua}
               EOF
             '';
           };
