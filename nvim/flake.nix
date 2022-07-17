@@ -18,11 +18,8 @@
           vimAlias = true;
           viAlias = true;
           configure = {
-            packages.plugins = with pkgs.vimPlugins; {
-              start = [
-                nvim-lspconfig
-                telescope-nvim
-              ];
+            packages.myPlugins = with pkgs.vimPlugins; {
+              start = import ./plugins.nix;
               opt = [];
             };
 
