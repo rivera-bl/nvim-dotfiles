@@ -30,15 +30,16 @@
             customRC = ''
               lua << EOF
                 ${builtins.readFile ./lua/settings.lua}
+                ${builtins.readFile ./lua/mappings.lua}
               EOF
             '';
           };
         };
 
-      nixosModule = {config, ...}: {
-        environment.variables.EDITOR = "nvim";
-        environment.shellAliases = {more = "nvim -";};
-        environment.systemPackages = [self.defaultPackage."${system}"];
-      };
+      ## nixosModule = {config, ...}: {
+      ##   environment.variables.EDITOR = "nvim";
+      ##   environment.shellAliases = {more = "nvim -";};
+      ##   environment.systemPackages = [self.defaultPackage."${system}"];
+      ## };
     });
 }

@@ -6,9 +6,9 @@ Build Neovim with plugins using nix flakes, but pass the settings/mappings as lu
 
 ## What works
 
-We can use a single lua config file in `configuration.nix`
+- Can use a lua config file in `configuration.nix`
 
-```
+```nix
 programs.neovim.enable = true;
 programs.neovim.configure = {
   customRC= "
@@ -16,6 +16,20 @@ programs.neovim.configure = {
   ";
 };
 ```
+
+- Can also use multiple lua files
+
+```nix
+...
+  customRC = ''
+    lua << EOF
+      ${builtins.readFile ./lua/settings.lua}
+      ${builtins.readFile ./lua/mappings.lua}
+    EOF
+  '';
+```
+
+- It isn't necessary to use an Overlay, since the `neovim` pkg has `override` available
 
 ## Examples
 
@@ -26,7 +40,9 @@ programs.neovim.configure = {
 - Contains a full pledged solution step by step
   - But uses `prev: final:` instead of `final: prev` like the [documentation][7]
 
-- Mature [example][10] using multiple lua files
+### yaymukund's
+
+- Nice [example][10] using multiple lua files with `neovim.override` instead of overlays
 
 ### Others
 
@@ -56,6 +72,7 @@ end
 
 ## TODO
 
+- [ ] ?get plugins from source and place them on a different file like [this][11]
 - [ ] ?where to get the full list of arguments that the vim pkgs provides in nix
 - [ ] set the foundations of the nvim overlay
     - use `self: super:` correctly
@@ -81,3 +98,4 @@ end
 [8]: https://ryantm.github.io/nixpkgs/using/overlays/
 [9]: https://github.com/Quoteme/neovim-flake
 [10]: https://git.sr.ht/~yaymukund/dotfiles/tree/main/item/common/neovim
+[11]: https://framagit.org/vegaelle/nix-nvim/-/blob/main/plugins.nix
