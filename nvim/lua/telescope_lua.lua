@@ -111,5 +111,11 @@ end
     hidden = true
   })
 end
+ M.search_grep = function()
+  require('telescope.builtin').live_grep(require('telescope.themes').get_ivy{
+    prompt_title = "Grep",
+    hidden = true
+  })
+end
 
 return M
