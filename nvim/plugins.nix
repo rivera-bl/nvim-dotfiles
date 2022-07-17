@@ -41,5 +41,19 @@
     # misc:
     which-key-nvim
     indent-blankline-nvim
+
+    (nvim-treesitter.withPlugins (
+      plugins:
+        with plugins; [
+          tree-sitter-nix
+          tree-sitter-bash
+          tree-sitter-json
+          tree-sitter-yaml
+          tree-sitter-go
+          tree-sitter-regex
+          tree-sitter-dockerfile
+          tree-sitter-python
+        ]
+    ))
   ];
 }

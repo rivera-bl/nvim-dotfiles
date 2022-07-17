@@ -34,6 +34,10 @@ vimPlugins = recurseIntoAttrs (callPackage ../applications/editors/vim/plugins {
 });
 ```
 
+#### nixpkgs/pkgs/development/tools/parsing/tree-sitter/grammars
+
+- Inside of this folder we can find all grammars available for `treesitter`
+
 ### myPlugins
 
 - Check `plugins.nix`
@@ -111,7 +115,7 @@ end
 
 - not loading `lua/telescope_lua.lua` functions when called from `mappings.lua`
   - it only loads those from `telescope.builtin`
-  - ugly workaround: `':cd %:p:h | lua require("telescope.builtin").find_files()<CR>'`
+  - ugly fix by moving the functions to the `mappings.lua` file
 
 - When configuring nvim in `configuration.nix` with `XDG_CONFIG_HOME` files, it doesn't 
     run the same nvim of `programs.neovim.viAlias`, because with `nvim` it gets the 
@@ -121,15 +125,15 @@ end
 
 - The `nixos-22.05` branch has the `v0.7.0` while `master` has the `v0.7.2` which is the latest stable release
 
-- When running the nvim docker image it executes nvim and exits immediately
-
 ## TODO
 
 - [x] install vimplugins available on nixpkgs and place them on a different file
-  - [ ] install treesitter languages
+!  - [ ] install treesitter languages
   - [ ] build BufSurf plugin from source like [this][11]
   - [ ] solve lsp servers since nvim-lsp-installer plugin is not available
       - [ ] may try to add the plugin like with BufSurf
+  - [x] solve telescope functions load
+    - [ ] order mappings call
   - [ ] manage plugins with flakes so we can pin the versions
 - [ ] add all the configuration files
   - [ ] ?function to read recursively all the config files

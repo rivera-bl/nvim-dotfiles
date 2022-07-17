@@ -23,9 +23,6 @@
               opt = [];
             };
 
-            # not loading lua/telescope_lua.lua functions when called from mappings
-            # it only loads those from telescope.builtin
-            # ugly workaround ':cd %:p:h | lua require("telescope.builtin").find_files()<CR>'
             customRC = ''
               lua << EOF
                 ${builtins.readFile ./lua/settings.lua}
