@@ -109,6 +109,10 @@ if not status_ok then
 end
 ```
 
+- not loading `lua/telescope_lua.lua` functions when called from `mappings.lua`
+  - it only loads those from `telescope.builtin`
+  - ugly workaround: `':cd %:p:h | lua require("telescope.builtin").find_files()<CR>'`
+
 - When configuring nvim in `configuration.nix` with `XDG_CONFIG_HOME` files, it doesn't 
     run the same nvim of `programs.neovim.viAlias`, because with `nvim` it gets the 
     configuration of XDG_CONFIG_HOME, but not with `vi`. While when configuring 
@@ -121,15 +125,22 @@ end
 
 ## TODO
 
-- [ ] ?get plugins from source and place them on a different file like [this][11]
+- [x] install vimplugins available on nixpkgs and place them on a different file
+  - [ ] install treesitter languages
+  - [ ] build BufSurf plugin from source like [this][11]
+  - [ ] solve lsp servers since nvim-lsp-installer plugin is not available
+      - [ ] may try to add the plugin like with BufSurf
+  - [ ] manage plugins with flakes so we can pin the versions
 - [ ] add all the configuration files
+  - [ ] ?function to read recursively all the config files
 - [ ] structure README's,
   - one for each package and one for the main project
-- [ ] ?track our built package on the system wide configuration of nixos
+- [ ] track our built package on the system wide configuration of nixos
 
 - [x] add a buildImage
 - [ ] ?add a nix shell to test
-- [ ] ?where to get the full list of arguments that the pkgs.vimPlugins provides
+- [ ] ?how to manage snippets
+- [x] ?where to get the full list of arguments that the pkgs.vimPlugins provides
 
 ## Resources
 
