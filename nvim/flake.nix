@@ -19,7 +19,7 @@
           viAlias = true;
           configure = {
             packages.myPlugins = with pkgs.vimPlugins; {
-              start = import ./plugins.nix;
+              start = (import ./plugins.nix pkgs).myPlugins;
               opt = [];
             };
 
