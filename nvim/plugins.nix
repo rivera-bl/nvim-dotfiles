@@ -14,20 +14,6 @@
     };
     meta.homepage = "https://github.com/ton/vim-bufsurf";
   };
-  nvim-lsp-installer = pkgs.vimUtils.buildVimPlugin rec {
-    pname = "nvim-lsp-installer";
-    # doesn't have any release
-    version = "v0.1";
-    dontBuild = true;
-    dontCheck = true;
-    src = pkgs.fetchFromGitHub {
-      owner = "williamboman";
-      repo = "nvim-lsp-installer";
-      rev = "793f99660fa9212f52ee8b6164454e03ba1f42c9";
-      sha256 = "sha256-BTlDOCJZt8wIzRbyD44Scr5nv/M0LSMA5mZjYiip1iM=";
-    };
-    meta.homepage = "https://github.com/williamboman/nvim-lsp-installer";
-  };
 };
 in { 
   myPlugins = with pkgs.vimPlugins; [
@@ -43,7 +29,6 @@ in {
     vim-snippets
     # lsp:
     nvim-lspconfig
-    customPlugins.nvim-lsp-installer
     # fuzzy search
     popup-nvim
     plenary-nvim
